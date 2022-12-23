@@ -2,10 +2,13 @@ package app.model;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+
+
 
 public class Page {
 
@@ -113,5 +116,8 @@ public class Page {
     }
     public void back(){
         this.getParent().remove(this);
+    }
+    public void exit(){
+        ((Stage)root.getScene().getWindow()).close();
     }
 }

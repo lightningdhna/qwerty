@@ -13,8 +13,13 @@ module com.cnpm.qwerty {
     requires com.microsoft.sqlserver.jdbc;
     requires com.jfoenix;
 
-//    opens com.cnpm.qwerty to javafx.fxml;
-//    exports com.cnpm.qwerty;
+
     opens app to javafx.fxml;
     exports app;
+    opens app.model to javafx.fxml;
+    exports app.model;
+    opens app.view.login to javafx.fxml;
+    exports app.view.login;
+    opens app.view.main to javafx.fxml;
+    exports app.view.main;
 }
