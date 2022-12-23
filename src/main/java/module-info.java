@@ -12,6 +12,7 @@ module com.cnpm.qwerty {
     requires java.sql;
     requires com.microsoft.sqlserver.jdbc;
     requires com.jfoenix;
+    requires AnimateFX;
 
 
     opens app to javafx.fxml;

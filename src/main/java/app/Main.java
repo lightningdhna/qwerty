@@ -2,6 +2,7 @@ package app;
 
 import app.view.login.LoginPage;
 import app.view.main.MainPage;
+
 import components.database.DatabaseConnectionService;
 import javafx.application.Application;
 import javafx.scene.Scene;

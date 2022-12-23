@@ -14,7 +14,6 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="720.0" prefWidth="1200.0" style="-fx-background-color: transparent; -fx-background-radius: 15;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <ImageView fitHeight="720.0" fitWidth="1200.0" layoutX="94.0" layoutY="182.0" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -22,45 +21,45 @@
             <Image url="@../../../image/background5.png" />
          </image>
       </ImageView>
-      <Pane layoutX="810.0" layoutY="9.0" prefWidth="400.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <Pane layoutX="810.0" layoutY="9.0" prefWidth="400.0" style="-fx-background-color: #EFEFEF; -fx-background-radius: 15;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label layoutX="92.0" layoutY="92.0" prefHeight="76.0" prefWidth="179.0" text="Sign in" textFill="#2596be">
+            <Label layoutX="115.0" layoutY="122.0" prefHeight="76.0" prefWidth="179.0" text="Sign in" textFill="#2596be">
                <font>
                   <Font name="SansSerif Bold" size="50.0" />
                </font>
             </Label>
-            <TextField fx:id="textField" layoutX="92.0" layoutY="212.0" prefHeight="35.0" prefWidth="200.0" promptText="Username" style="-fx-background-radius: 15;">
+            <TextField fx:id="textField" layoutX="79.0" layoutY="241.0" prefHeight="40.0" prefWidth="250.0" promptText="Username" style="-fx-background-radius: 15;">
                <font>
                   <Font size="14.0" />
                </font>
                <padding>
-                  <Insets left="15.0" right="30.0" />
+                  <Insets left="15.0" right="50.0" />
                </padding>
             </TextField>
-            <PasswordField fx:id="passwordField" layoutX="92.0" layoutY="262.0" prefHeight="35.0" prefWidth="200.0" promptText="Passsword" style="-fx-background-radius: 15;">
+            <PasswordField fx:id="passwordField" layoutX="79.0" layoutY="291.0" prefHeight="40.0" prefWidth="250.0" promptText="Passsword" style="-fx-background-radius: 15;">
                <font>
                   <Font size="14.0" />
                </font>
                <padding>
-                  <Insets left="15.0" right="30.0" />
+                  <Insets left="15.0" right="50.0" />
                </padding>
             </PasswordField>
-            <JFXCheckBox fx:id="checkBox" layoutX="105.0" layoutY="343.0" selected="true" text="Remember me">
+            <JFXCheckBox fx:id="checkBox" layoutX="100.0" layoutY="373.0" selected="true" text="Remember me">
                <font>
                   <Font name="SansSerif Regular" size="20.0" />
                </font>
             </JFXCheckBox>
-            <JFXButton buttonType="RAISED" layoutX="92.0" layoutY="414.0" onMouseClicked="#logIn" prefHeight="54.0" prefWidth="200.0" ripplerFill="#194181" style="-fx-background-color: green;" text="Sign in" textFill="WHITE">
+            <JFXButton buttonType="RAISED" layoutX="100.0" layoutY="472.0" onMouseClicked="#logIn" prefHeight="54.0" prefWidth="200.0" ripplerFill="#194181" style="-fx-background-color: green;" text="Sign in" textFill="WHITE">
                <font>
                   <Font name="SansSerif Regular" size="20.0" />
                </font>
             </JFXButton>
-            <Label layoutX="74.0" layoutY="545.0" text="New here?">
+            <Label layoutX="74.0" layoutY="600.0" text="New here?">
                <font>
                   <Font name="SansSerif Regular" size="20.0" />
                </font>
             </Label>
-            <Label layoutX="172.0" layoutY="545.0" onMouseClicked="#signUp" text="Create an account" textFill="#2596be">
+            <Label layoutX="172.0" layoutY="600.0" onMouseClicked="#signUp" text="Create an account" textFill="#2596be">
                <font>
                   <Font name="SansSerif Regular" size="20.0" />
                </font>
@@ -68,7 +67,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Label>
-            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="52.0" layoutY="212.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="292.0" layoutY="246.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../../../../../qlpt/src/main/resources/icon/username.png" />
                </image>
@@ -77,7 +76,7 @@
                <graphic>
                   <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true">
                      <image>
-                        <Image url="@../../../../../../../qlpt/src/main/resources/icon/exit.png" />
+                        <Image url="@../../../icon/exit.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -85,7 +84,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </JFXButton>
-            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="53.0" layoutY="265.0">
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="292.0" layoutY="296.0">
                <image>
                   <Image url="@../../../../../../../qlpt/src/main/resources/icon/icons8-password-key-48.png" />
                </image>

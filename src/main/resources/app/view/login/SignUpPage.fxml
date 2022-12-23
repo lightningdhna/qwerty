@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="720.0" prefWidth="400.0" style="-fx-background-color: #EFEFEF; -fx-background-radius: 15;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label alignment="CENTER" layoutX="93.0" layoutY="123.0" prefHeight="76.0" prefWidth="228.0" text="Sign up" textFill="#2596be">
+         <font>
+            <Font name="SansSerif Bold" size="50.0" />
+         </font>
+      </Label>
+      <TextField fx:id="usernameTextField" layoutX="82.0" layoutY="241.0" prefHeight="40.0" prefWidth="250.0" promptText="Username" style="-fx-background-radius: 15;">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <padding>
+            <Insets left="15.0" right="30.0" />
+         </padding>
+      </TextField>
+      <PasswordField fx:id="passwordField" layoutX="82.0" layoutY="291.0" prefHeight="40.0" prefWidth="250.0" promptText="Passsword" style="-fx-background-radius: 15;">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <padding>
+            <Insets left="15.0" right="30.0" />
+         </padding>
+      </PasswordField>
+      <JFXButton buttonType="RAISED" layoutX="107.0" layoutY="472.0" prefHeight="54.0" prefWidth="200.0" ripplerFill="#194181" style="-fx-background-color: green;" text="Register" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Regular" size="20.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="42.0" layoutY="241.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../qlpt/src/main/resources/icon/username.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="43.0" layoutY="294.0">
+         <image>
+            <Image url="@../../../../../../../qlpt/src/main/resources/icon/icons8-password-key-48.png" />
+         </image>
+      </ImageView>
+      <JFXButton buttonType="RAISED" contentDisplay="CENTER" layoutX="350.0" onMouseClicked="#exit" prefHeight="30.0" prefWidth="30.0" ripplerFill="#df1616" AnchorPane.topAnchor="0.0">
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../../../icon/exit.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" contentDisplay="CENTER" layoutX="44.0" layoutY="69.0" onMouseClicked="#backToLogin" prefHeight="30.0" prefWidth="30.0" ripplerFill="#df1616" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="50.0">
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../../../icon/icons8-undo-52.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <PasswordField fx:id="passwordFieldRetype" layoutX="82.0" layoutY="346.0" prefHeight="40.0" prefWidth="250.0" promptText="Retype passsword" style="-fx-background-radius: 15;">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <padding>
+            <Insets left="15.0" right="30.0" />
+         </padding>
+      </PasswordField>
+      <TextField fx:id="emailTextField" layoutX="82.0" layoutY="399.0" prefHeight="40.0" prefWidth="250.0" promptText="Email@" style="-fx-background-radius: 15;">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <padding>
+            <Insets left="15.0" right="30.0" />
+         </padding>
+      </TextField>
+   </children>
+</AnchorPane>

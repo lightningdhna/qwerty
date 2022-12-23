@@ -1,5 +1,6 @@
 package app.model;
 
+import animatefx.animation.FadeIn;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -120,4 +121,5 @@ public class Page {
     public void exit(){
         ((Stage)root.getScene().getWindow()).close();
     }
+
 }
