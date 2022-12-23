@@ -35,19 +35,14 @@
             <Insets left="15.0" right="30.0" />
          </padding>
       </PasswordField>
-      <JFXButton buttonType="RAISED" layoutX="107.0" layoutY="472.0" prefHeight="54.0" prefWidth="200.0" ripplerFill="#194181" style="-fx-background-color: green;" text="Register" textFill="WHITE">
-         <font>
-            <Font name="SansSerif Regular" size="20.0" />
-         </font>
-      </JFXButton>
-      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="42.0" layoutY="241.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="30.0" layoutY="241.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../qlpt/src/main/resources/icon/username.png" />
+            <Image url="@../../../icon/username.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="43.0" layoutY="294.0">
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="30.0" layoutY="294.0">
          <image>
-            <Image url="@../../../../../../../qlpt/src/main/resources/icon/icons8-password-key-48.png" />
+            <Image url="@../../../icon/password.png" />
          </image>
       </ImageView>
       <JFXButton buttonType="RAISED" contentDisplay="CENTER" layoutX="350.0" onMouseClicked="#exit" prefHeight="30.0" prefWidth="30.0" ripplerFill="#df1616" AnchorPane.topAnchor="0.0">
@@ -90,5 +85,15 @@
             <Insets left="15.0" right="30.0" />
          </padding>
       </TextField>
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="30.0" layoutY="401.0">
+         <image>
+            <Image url="@../../../icon/email.png" />
+         </image>
+      </ImageView>
+      <JFXButton buttonType="RAISED" layoutX="78.0" layoutY="558.0" onMouseClicked="#signUp" prefHeight="66.0" prefWidth="228.0" ripplerFill="#194181" style="-fx-background-color: green; -fx-background-radius: 10;" text="Register" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Regular" size="24.0" />
+         </font>
+      </JFXButton>
    </children>
 </AnchorPane>

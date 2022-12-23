@@ -23,7 +23,7 @@
       </ImageView>
       <Pane layoutX="810.0" layoutY="9.0" prefWidth="400.0" style="-fx-background-color: #EFEFEF; -fx-background-radius: 15;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label layoutX="115.0" layoutY="122.0" prefHeight="76.0" prefWidth="179.0" text="Sign in" textFill="#2596be">
+            <Label layoutX="74.0" layoutY="126.0" prefHeight="76.0" prefWidth="179.0" text="Sign in" textFill="#2596be">
                <font>
                   <Font name="SansSerif Bold" size="50.0" />
                </font>
@@ -33,43 +33,43 @@
                   <Font size="14.0" />
                </font>
                <padding>
-                  <Insets left="15.0" right="50.0" />
+                  <Insets left="15.0" right="15.0" />
                </padding>
             </TextField>
-            <PasswordField fx:id="passwordField" layoutX="79.0" layoutY="291.0" prefHeight="40.0" prefWidth="250.0" promptText="Passsword" style="-fx-background-radius: 15;">
+            <PasswordField fx:id="passwordField" layoutX="79.0" layoutY="301.0" prefHeight="40.0" prefWidth="250.0" promptText="Passsword" style="-fx-background-radius: 15;">
                <font>
                   <Font size="14.0" />
                </font>
                <padding>
-                  <Insets left="15.0" right="50.0" />
+                  <Insets left="15.0" right="15.0" />
                </padding>
             </PasswordField>
-            <JFXCheckBox fx:id="checkBox" layoutX="100.0" layoutY="373.0" selected="true" text="Remember me">
+            <JFXCheckBox fx:id="checkBox" layoutX="82.0" layoutY="374.0" selected="true" text="Remember me">
                <font>
                   <Font name="SansSerif Regular" size="20.0" />
                </font>
             </JFXCheckBox>
-            <JFXButton buttonType="RAISED" layoutX="100.0" layoutY="472.0" onMouseClicked="#logIn" prefHeight="54.0" prefWidth="200.0" ripplerFill="#194181" style="-fx-background-color: green;" text="Sign in" textFill="WHITE">
+            <JFXButton buttonType="RAISED" layoutX="81.0" layoutY="446.0" onMouseClicked="#logIn" prefHeight="66.0" prefWidth="228.0" ripplerFill="#194181" style="-fx-background-color: green; -fx-background-radius: 10;" text="Sign in" textFill="WHITE">
                <font>
-                  <Font name="SansSerif Regular" size="20.0" />
+                  <Font name="SansSerif Regular" size="24.0" />
                </font>
             </JFXButton>
-            <Label layoutX="74.0" layoutY="600.0" text="New here?">
+            <Label layoutX="68.0" layoutY="604.0" text="New here?">
                <font>
-                  <Font name="SansSerif Regular" size="20.0" />
+                  <Font name="SansSerif Regular" size="22.0" />
                </font>
             </Label>
-            <Label layoutX="172.0" layoutY="600.0" onMouseClicked="#signUp" text="Create an account" textFill="#2596be">
+            <Label layoutX="175.0" layoutY="604.0" onMouseClicked="#signUp" text="Create an account" textFill="#2596be">
                <font>
-                  <Font name="SansSerif Regular" size="20.0" />
+                  <Font name="SansSerif Regular" size="22.0" />
                </font>
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Label>
-            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="292.0" layoutY="246.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="30.0" layoutY="246.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../../../qlpt/src/main/resources/icon/username.png" />
+                  <Image url="@../../../icon/username.png" />
                </image>
             </ImageView>
             <JFXButton buttonType="RAISED" contentDisplay="CENTER" layoutX="340.0" onMouseClicked="#exit" prefHeight="30.0" prefWidth="30.0" ripplerFill="#df1616">
@@ -84,9 +84,9 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </JFXButton>
-            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="292.0" layoutY="296.0">
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="30.0" layoutY="306.0">
                <image>
-                  <Image url="@../../../../../../../qlpt/src/main/resources/icon/icons8-password-key-48.png" />
+                  <Image url="@../../../icon/password.png" />
                </image>
             </ImageView>
          </children>

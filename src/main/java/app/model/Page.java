@@ -1,6 +1,8 @@
 package app.model;
 
 import animatefx.animation.FadeIn;
+import animatefx.animation.FadeOut;
+import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -9,6 +11,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import static java.lang.Thread.sleep;
 
 
 public class Page {
@@ -119,7 +122,21 @@ public class Page {
         this.getParent().remove(this);
     }
     public void exit(){
-        ((Stage)root.getScene().getWindow()).close();
+        new FadeOut(getRoot().getScene().getRoot()).play();
+        Thread thread  = new Thread(
+                ()->{
+                    try {
+                        Thread.sleep(1000);
+                        Platform.runLater(
+                                ()-> ((Stage)root.getScene().getWindow()).close()
+                        );
+                    } catch (InterruptedException e) {
+                        throw new RuntimeException(e);
+                    }
+
+                }
+        );
+        thread.start();
     }
 
 }
