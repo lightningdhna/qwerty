@@ -4,10 +4,11 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.PointLight?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.effect.Bloom?>
-<?import javafx.scene.effect.BoxBlur?>
 <?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
 <?import javafx.scene.effect.Reflection?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -15,15 +16,69 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
 <?import javafx.scene.paint.RadialGradient?>
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane fx:id="rootPane" prefHeight="720.0" prefWidth="1200.0" style="-fx-background-radius: 15; -fx-border-radius: 15; -fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <ImageView fitHeight="720.0" fitWidth="1200.0" layoutX="876.0" layoutY="202.0" opacity="0.95" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="0.0">
+      <image>
+         <Image url="@../../../image/warmwinterbackground3.jpg" />
+      </image>
+   </ImageView>
+   <Pane prefWidth="250.0" style="-fx-background-color: transparent; -fx-background-radius: 15 0 0 15;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="0.0">
+      <children>
+         <ImageView fitHeight="720.0" fitWidth="250.0" layoutX="10.0" opacity="0.7" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../../../image/snowflakebackground.jpg" />
+            </image>
+         </ImageView>
+         <Label fx:id="pageInfoLabel" layoutX="60.0" layoutY="25.0" text="Home">
+            <font>
+               <Font name="SansSerif Bold" size="30.0" />
+            </font>
+            <effect>
+               <Reflection fraction="0.45" topOpacity="0.14" />
+            </effect>
+            <textFill>
+               <LinearGradient cycleMethod="REFLECT" endX="1.0" endY="1.0">
+                  <stops>
+                     <Stop>
+                        <color>
+                           <Color red="0.12941177189350128" green="0.1882352977991104" blue="0.6784313917160034" />
+                        </color>
+                     </Stop>
+                     <Stop offset="1.0">
+                        <color>
+                           <Color red="0.20392157137393951" green="0.6509804129600525" blue="0.6313725709915161" />
+                        </color>
+                     </Stop>
+                  </stops>
+               </LinearGradient>
+            </textFill>
+         </Label>
+      </children>
+      <effect>
+         <DropShadow>
+            <color>
+               <Color red="0.6736842393875122" green="0.6736842393875122" blue="0.6736842393875122" />
+            </color>
+         </DropShadow>
+      </effect>
+   </Pane>
    <Pane fx:id="bigTaskBar" layoutX="425.0" onMouseExited="#unShowBigTaskBar" prefHeight="720.0" prefWidth="350.0" style="-fx-background-color: #0c0636; -fx-background-radius: 15 50 0 15; -fx-border-radius: 15 50 0 15;" AnchorPane.topAnchor="0.0">
       <effect>
-         <DropShadow />
+         <DropShadow>
+            <color>
+               <Color red="0.06315789371728897" green="0.27368420362472534" blue="0.5684210658073425" />
+            </color></DropShadow>
       </effect>
+      <ImageView fitHeight="255.0" fitWidth="326.0" layoutX="12.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../image/snowflakebackground2.png" />
+         </image>
+      </ImageView>
       <Pane layoutX="100.0" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #f7f7f7; -fx-background-radius: 50; -fx-border-radius: 50;">
          <effect>
             <DropShadow height="198.8" radius="80.7675" spread="0.13" width="126.27">
@@ -80,7 +135,7 @@
       <VBox layoutX="5.0" layoutY="100.0" prefWidth="350.0">
          <JFXButton fx:id="homeButton" ellipsisString="" prefHeight="60.0" prefWidth="325.0" style="-fx-alignment: center-left; -fx-background-radius: 15; -fx-border-radius: 15;" text="Home" textFill="WHITE" VBox.vgrow="ALWAYS">
             <font>
-               <Font name="Microsoft Sans Serif" size="30.0" />
+               <Font name="SansSerif Bold" size="30.0" />
             </font>
             <VBox.margin>
                <Insets bottom="5.0" />
@@ -117,7 +172,7 @@
          </JFXButton>
          <JFXButton fx:id="accountButton" ellipsisString="" prefHeight="60.0" prefWidth="325.0" style="-fx-alignment: center-left; -fx-background-radius: 15; -fx-border-radius: 15;" text="Account" textFill="WHITE" VBox.vgrow="ALWAYS">
             <font>
-               <Font name="Microsoft Sans Serif" size="30.0" />
+               <Font name="SansSerif Bold" size="30.0" />
             </font>
             <VBox.margin>
                <Insets bottom="5.0" />
@@ -154,7 +209,7 @@
          </JFXButton>
          <JFXButton fx:id="registerButton" ellipsisString="" prefHeight="60.0" prefWidth="325.0" style="-fx-alignment: center-left; -fx-background-radius: 15; -fx-border-radius: 15;" text="Register" textFill="WHITE" VBox.vgrow="ALWAYS">
             <font>
-               <Font name="Microsoft Sans Serif" size="30.0" />
+               <Font name="SansSerif Bold" size="30.0" />
             </font>
             <VBox.margin>
                <Insets bottom="5.0" />
@@ -191,7 +246,7 @@
          </JFXButton>
          <JFXButton fx:id="verifyButton" ellipsisString="" prefHeight="60.0" prefWidth="325.0" style="-fx-alignment: center-left; -fx-background-radius: 15; -fx-border-radius: 15;" text="Verify" textFill="WHITE" VBox.vgrow="ALWAYS">
             <font>
-               <Font name="Microsoft Sans Serif" size="30.0" />
+               <Font name="SansSerif Bold" size="30.0" />
             </font>
             <VBox.margin>
                <Insets bottom="5.0" />
@@ -228,7 +283,7 @@
          </JFXButton>
          <JFXButton fx:id="manageButton" ellipsisString="" prefHeight="60.0" prefWidth="325.0" style="-fx-alignment: center-left; -fx-background-radius: 15; -fx-border-radius: 15;" text="Manage" textFill="WHITE" VBox.vgrow="ALWAYS">
             <font>
-               <Font name="Microsoft Sans Serif" size="30.0" />
+               <Font name="SansSerif Bold" size="30.0" />
             </font>
             <VBox.margin>
                <Insets bottom="5.0" />
@@ -265,7 +320,7 @@
          </JFXButton>
          <JFXButton fx:id="statisticButton" ellipsisString="" prefHeight="60.0" prefWidth="325.0" style="-fx-alignment: center-left; -fx-background-radius: 15; -fx-border-radius: 15;" text="Statistic" textFill="WHITE" VBox.vgrow="ALWAYS">
             <font>
-               <Font name="Microsoft Sans Serif" size="30.0" />
+               <Font name="SansSerif Bold" size="30.0" />
             </font>
             <VBox.margin>
                <Insets bottom="5.0" />
@@ -303,11 +358,11 @@
       </VBox>
       <Separator layoutX="75.0" layoutY="100.0" orientation="VERTICAL" prefHeight="550.0">
          <effect>
-            <BoxBlur>
+            <Bloom>
                <input>
-                  <Bloom />
+                  <Glow />
                </input>
-            </BoxBlur>
+            </Bloom>
          </effect></Separator>
       <VBox layoutX="15.0" layoutY="575.0">
          <JFXButton prefHeight="30.0" prefWidth="30.0" style="-fx-background-radius: 15; -fx-border-radius: 15;">
@@ -479,6 +534,39 @@
          </JFXButton>
       </children>
    </VBox>
+   <JFXButton buttonType="RAISED" contentDisplay="CENTER" layoutX="370.0" layoutY="20.0" onMouseClicked="#logOut" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: transparent; -fx-background-radius: 0 15 0 20;" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="0.0">
+      <graphic>
+         <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true">
+            <image>
+               <Image url="@../../../icon/logout.png" />
+            </image>
+         </ImageView>
+      </graphic>
+      <cursor>
+         <Cursor fx:constant="HAND" />
+      </cursor>
+      <ripplerFill>
+         <RadialGradient centerX="0.5308370380149539" centerY="0.5" radius="0.3073394364173259">
+            <stops>
+               <Stop>
+                  <color>
+                     <Color red="1.0" green="1.0" blue="1.0" />
+                  </color>
+               </Stop>
+               <Stop offset="0.5208613728129207">
+                  <color>
+                     <Color red="0.9789473414421082" />
+                  </color>
+               </Stop>
+               <Stop offset="1.0">
+                  <color>
+                     <Color red="1.0" green="1.0" blue="1.0" />
+                  </color>
+               </Stop>
+            </stops>
+         </RadialGradient>
+      </ripplerFill>
+   </JFXButton>
    <effect>
       <DropShadow />
    </effect>

@@ -34,6 +34,22 @@
             <Insets left="15.0" right="30.0" />
          </padding>
       </PasswordField>
+      <PasswordField fx:id="passwordFieldRetype" layoutX="82.0" layoutY="346.0" prefHeight="40.0" prefWidth="250.0" promptText="Retype passsword" style="-fx-background-radius: 15;">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <padding>
+            <Insets left="15.0" right="30.0" />
+         </padding>
+      </PasswordField>
+      <TextField fx:id="emailTextField" layoutX="82.0" layoutY="399.0" prefHeight="40.0" prefWidth="250.0" promptText="Email@" style="-fx-background-radius: 15;">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <padding>
+            <Insets left="15.0" right="30.0" />
+         </padding>
+      </TextField>
       <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="30.0" layoutY="241.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../icon/username.png" />
@@ -68,22 +84,6 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </JFXButton>
-      <PasswordField fx:id="passwordFieldRetype" layoutX="82.0" layoutY="346.0" prefHeight="40.0" prefWidth="250.0" promptText="Retype passsword" style="-fx-background-radius: 15;">
-         <font>
-            <Font size="14.0" />
-         </font>
-         <padding>
-            <Insets left="15.0" right="30.0" />
-         </padding>
-      </PasswordField>
-      <TextField fx:id="emailTextField" layoutX="82.0" layoutY="399.0" prefHeight="40.0" prefWidth="250.0" promptText="Email@" style="-fx-background-radius: 15;">
-         <font>
-            <Font size="14.0" />
-         </font>
-         <padding>
-            <Insets left="15.0" right="30.0" />
-         </padding>
-      </TextField>
       <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="30.0" layoutY="401.0">
          <image>
             <Image url="@../../../icon/email.png" />

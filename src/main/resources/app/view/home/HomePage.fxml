@@ -1,8 +1,115 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
 
 
-<AnchorPane prefHeight="600.0" prefWidth="1100.0" style="-fx-background-radius: 0 0 15 0; -fx-background-color: red;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
-
+<AnchorPane prefHeight="620.0" prefWidth="1100.0" style="-fx-background-radius: 0 0 15 0; -fx-background-color: transparent;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <JFXButton graphicTextGap="20.0" prefHeight="40.0" prefWidth="175.0" style="-fx-alignment: center-left;" text="HomeBruh">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../image/cryo.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="SansSerif Regular" size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="7.5" />
+               </VBox.margin>
+               <textFill>
+                  <LinearGradient cycleMethod="REFLECT" endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.12919999659061432" green="0.18982522189617157" blue="0.6800000071525574" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.2030409425497055" green="0.6526315808296204" blue="0.6301520466804504" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </JFXButton>
+            <JFXButton graphicTextGap="20.0" prefHeight="40.0" prefWidth="175.0" style="-fx-alignment: center-left;" text="bruh">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../image/cryo.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="SansSerif Regular" size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="7.5" />
+               </VBox.margin>
+               <textFill>
+                  <LinearGradient cycleMethod="REFLECT" endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.12919999659061432" green="0.18982522189617157" blue="0.6800000071525574" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.2030409425497055" green="0.6526315808296204" blue="0.6301520466804504" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </JFXButton>
+            <JFXButton graphicTextGap="20.0" prefHeight="40.0" prefWidth="175.0" style="-fx-alignment: center-left;" text=":)">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../image/cryo.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="SansSerif Regular" size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="7.5" />
+               </VBox.margin>
+               <textFill>
+                  <LinearGradient cycleMethod="REFLECT" endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.12941177189350128" green="0.1882352977991104" blue="0.6784313917160034" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.20392157137393951" green="0.6509804129600525" blue="0.6313725709915161" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </JFXButton>
+         </children>
+      </VBox>
+   </children>
 </AnchorPane>
