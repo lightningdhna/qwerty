@@ -11,7 +11,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="720.0" prefWidth="400.0" style="-fx-background-color: #EFEFEF; -fx-background-radius: 15;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label alignment="CENTER" layoutX="93.0" layoutY="123.0" prefHeight="76.0" prefWidth="228.0" text="Sign up" textFill="#2596be">
@@ -45,7 +44,7 @@
             <Image url="@../../../icon/password.png" />
          </image>
       </ImageView>
-      <JFXButton buttonType="RAISED" contentDisplay="CENTER" layoutX="350.0" onMouseClicked="#exit" prefHeight="30.0" prefWidth="30.0" ripplerFill="#df1616" AnchorPane.topAnchor="0.0">
+      <JFXButton buttonType="RAISED" contentDisplay="CENTER" layoutX="350.0" onMouseClicked="#exit" prefHeight="30.0" prefWidth="30.0" ripplerFill="#df1616" style="-fx-background-radius: 0 15 0 0;" AnchorPane.topAnchor="0.0">
          <graphic>
             <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true">
                <image>

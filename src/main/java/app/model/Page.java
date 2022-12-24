@@ -23,6 +23,7 @@ public class Page {
     private String type = null;
     public Page(){
         type = getClass().getSimpleName();
+//        System.out.println(type);
         FXMLLoader fxmlLoader = new FXMLLoader( getClass().getResource(type+".fxml"));
         fxmlLoader.setController(this);
         try {

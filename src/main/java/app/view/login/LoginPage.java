@@ -47,4 +47,7 @@ public class LoginPage extends Page {
         alert.setY(250);
         alert.show();
     }
+    public void warningBlank(){
+
+    }
 }

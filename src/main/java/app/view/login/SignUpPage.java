@@ -33,4 +33,7 @@ public class SignUpPage extends Page {
         alert.show();
         backToLogin();
     }
+    public void warningBlank(){
+
+    };
 }
