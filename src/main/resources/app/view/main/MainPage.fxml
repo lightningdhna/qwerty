@@ -3,8 +3,12 @@
 <?import com.jfoenix.controls.JFXButton?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
+<?import javafx.scene.PointLight?>
 <?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.BoxBlur?>
 <?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Reflection?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -16,480 +20,466 @@
 <?import javafx.scene.text.Font?>
 
 <AnchorPane fx:id="rootPane" prefHeight="720.0" prefWidth="1200.0" style="-fx-background-radius: 15; -fx-border-radius: 15; -fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
-      <Pane fx:id="bigTaskBar" layoutX="425.0" onMouseExited="#unShowBigTaskBar" prefHeight="720.0" prefWidth="350.0" style="-fx-background-color: #0c0636; -fx-background-radius: 15 50 0 15; -fx-border-radius: 15 50 0 15;" AnchorPane.topAnchor="0.0">
+   <Pane fx:id="bigTaskBar" layoutX="425.0" onMouseExited="#unShowBigTaskBar" prefHeight="720.0" prefWidth="350.0" style="-fx-background-color: #0c0636; -fx-background-radius: 15 50 0 15; -fx-border-radius: 15 50 0 15;" AnchorPane.topAnchor="0.0">
+      <effect>
+         <DropShadow />
+      </effect>
+      <Pane layoutX="100.0" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #f7f7f7; -fx-background-radius: 50; -fx-border-radius: 50;">
          <effect>
-            <DropShadow />
+            <DropShadow height="198.8" radius="80.7675" spread="0.13" width="126.27">
+               <color>
+                  <Color red="0.9578947424888611" green="0.9401559233665466" blue="0.9401559233665466" />
+               </color>
+               <input>
+                  <Reflection fraction="0.61" topOpacity="0.1" />
+               </input>
+            </DropShadow>
          </effect>
-         <children>
-            <Pane layoutX="100.0" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #f7f7f7; -fx-background-radius: 50; -fx-border-radius: 50;">
-               <children>
-                  <ImageView fitHeight="70.0" fitWidth="70.0" layoutX="15.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../image/cryo.jpg" />
-                     </image>
-                  </ImageView>
-               </children>
-               <effect>
-                  <DropShadow>
-                     <color>
-                        <Color red="0.9578947424888611" green="0.9401559233665466" blue="0.9401559233665466" />
-                     </color>
-                  </DropShadow>
-               </effect>
-            </Pane>
-            <VBox layoutX="15.0" layoutY="100.0" prefWidth="60.0">
-               <children>
-                  <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../icon/home.png" />
-                     </image>
-                     <VBox.margin>
-                        <Insets bottom="20.0" />
-                     </VBox.margin>
-                  </ImageView>
-                  <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../icon/account.png" />
-                     </image>
-                     <VBox.margin>
-                        <Insets bottom="20.0" />
-                     </VBox.margin>
-                  </ImageView>
-                  <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../icon/form.png" />
-                     </image>
-                     <VBox.margin>
-                        <Insets bottom="20.0" />
-                     </VBox.margin>
-                  </ImageView>
-                  <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../icon/waiting.png" />
-                     </image>
-                     <VBox.margin>
-                        <Insets bottom="20.0" />
-                     </VBox.margin>
-                  </ImageView>
-                  <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../icon/manager_icon.png" />
-                     </image>
-                     <VBox.margin>
-                        <Insets bottom="20.0" />
-                     </VBox.margin>
-                  </ImageView>
-                  <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../icon/icons8-analytics-48%20(2).png" />
-                     </image>
-                     <VBox.margin>
-                        <Insets bottom="20.0" />
-                     </VBox.margin>
-                  </ImageView>
-               </children>
-            </VBox>
-            <VBox layoutX="5.0" layoutY="100.0" prefWidth="350.0">
-               <children>
-                  <JFXButton fx:id="homeButton" ellipsisString="" onMouseClicked="#abc" prefHeight="60.0" prefWidth="325.0" style="-fx-alignment: center-left; -fx-background-radius: 15; -fx-border-radius: 15;" text="Home" textFill="WHITE" VBox.vgrow="ALWAYS">
-                     <font>
-                        <Font name="Microsoft Sans Serif" size="30.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets bottom="5.0" />
-                     </VBox.margin>
-                     <padding>
-                        <Insets left="100.0" />
-                     </padding>
-                     <ripplerFill>
-                        <RadialGradient centerX="0.4383260079942611" centerY="0.5" cycleMethod="REFLECT" radius="0.5">
-                           <stops>
-                              <Stop>
-                                 <color>
-                                    <Color red="0.15925925970077515" green="0.7617900967597961" blue="1.0" />
-                                 </color>
-                              </Stop>
-                              <Stop offset="0.5921938088829071">
-                                 <color>
-                                    <Color red="0.46530213952064514" green="0.5467478632926941" blue="0.5789473652839661" />
-                                 </color>
-                              </Stop>
-                              <Stop offset="0.9975609756097561">
-                                 <color>
-                                    <Color red="1.0" green="1.0" blue="1.0" />
-                                 </color>
-                              </Stop>
-                              <Stop offset="1.0">
-                                 <color>
-                                    <Color red="1.0" green="0.14074073731899261" blue="0.14074073731899261" />
-                                 </color>
-                              </Stop>
-                           </stops>
-                        </RadialGradient>
-                     </ripplerFill>
-                  </JFXButton>
-                  <JFXButton fx:id="accountButton" ellipsisString="" prefHeight="60.0" prefWidth="325.0" style="-fx-alignment: center-left; -fx-background-radius: 15; -fx-border-radius: 15;" text="Account" textFill="WHITE" VBox.vgrow="ALWAYS">
-                     <font>
-                        <Font name="Microsoft Sans Serif" size="30.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets bottom="5.0" />
-                     </VBox.margin>
-                     <padding>
-                        <Insets left="100.0" />
-                     </padding>
-                     <ripplerFill>
-                        <RadialGradient centerX="0.4383260079942611" centerY="0.5" cycleMethod="REFLECT" radius="0.5">
-                           <stops>
-                              <Stop>
-                                 <color>
-                                    <Color red="0.15925925970077515" green="0.7617900967597961" blue="1.0" />
-                                 </color>
-                              </Stop>
-                              <Stop offset="0.5921938088829071">
-                                 <color>
-                                    <Color red="0.46530213952064514" green="0.5467478632926941" blue="0.5789473652839661" />
-                                 </color>
-                              </Stop>
-                              <Stop offset="0.9975609756097561">
-                                 <color>
-                                    <Color red="1.0" green="1.0" blue="1.0" />
-                                 </color>
-                              </Stop>
-                              <Stop offset="1.0">
-                                 <color>
-                                    <Color red="1.0" green="0.14074073731899261" blue="0.14074073731899261" />
-                                 </color>
-                              </Stop>
-                           </stops>
-                        </RadialGradient>
-                     </ripplerFill>
-                  </JFXButton>
-                  <JFXButton fx:id="registerButton" ellipsisString="" prefHeight="60.0" prefWidth="325.0" style="-fx-alignment: center-left; -fx-background-radius: 15; -fx-border-radius: 15;" text="Register" textFill="WHITE" VBox.vgrow="ALWAYS">
-                     <font>
-                        <Font name="Microsoft Sans Serif" size="30.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets bottom="5.0" />
-                     </VBox.margin>
-                     <padding>
-                        <Insets left="100.0" />
-                     </padding>
-                     <ripplerFill>
-                        <RadialGradient centerX="0.4383260079942611" centerY="0.5" cycleMethod="REFLECT" radius="0.5">
-                           <stops>
-                              <Stop>
-                                 <color>
-                                    <Color red="0.15925925970077515" green="0.7617900967597961" blue="1.0" />
-                                 </color>
-                              </Stop>
-                              <Stop offset="0.5921938088829071">
-                                 <color>
-                                    <Color red="0.46530213952064514" green="0.5467478632926941" blue="0.5789473652839661" />
-                                 </color>
-                              </Stop>
-                              <Stop offset="0.9975609756097561">
-                                 <color>
-                                    <Color red="1.0" green="1.0" blue="1.0" />
-                                 </color>
-                              </Stop>
-                              <Stop offset="1.0">
-                                 <color>
-                                    <Color red="1.0" green="0.14074073731899261" blue="0.14074073731899261" />
-                                 </color>
-                              </Stop>
-                           </stops>
-                        </RadialGradient>
-                     </ripplerFill>
-                  </JFXButton>
-                  <JFXButton fx:id="verifyButton" ellipsisString="" prefHeight="60.0" prefWidth="325.0" style="-fx-alignment: center-left; -fx-background-radius: 15; -fx-border-radius: 15;" text="Verify" textFill="WHITE" VBox.vgrow="ALWAYS">
-                     <font>
-                        <Font name="Microsoft Sans Serif" size="30.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets bottom="5.0" />
-                     </VBox.margin>
-                     <padding>
-                        <Insets left="100.0" />
-                     </padding>
-                     <ripplerFill>
-                        <RadialGradient centerX="0.4383260079942611" centerY="0.5" cycleMethod="REFLECT" radius="0.5">
-                           <stops>
-                              <Stop>
-                                 <color>
-                                    <Color red="0.15925925970077515" green="0.7617900967597961" blue="1.0" />
-                                 </color>
-                              </Stop>
-                              <Stop offset="0.5921938088829071">
-                                 <color>
-                                    <Color red="0.46530213952064514" green="0.5467478632926941" blue="0.5789473652839661" />
-                                 </color>
-                              </Stop>
-                              <Stop offset="0.9975609756097561">
-                                 <color>
-                                    <Color red="1.0" green="1.0" blue="1.0" />
-                                 </color>
-                              </Stop>
-                              <Stop offset="1.0">
-                                 <color>
-                                    <Color red="1.0" green="0.14074073731899261" blue="0.14074073731899261" />
-                                 </color>
-                              </Stop>
-                           </stops>
-                        </RadialGradient>
-                     </ripplerFill>
-                  </JFXButton>
-                  <JFXButton fx:id="manageButton" ellipsisString="" prefHeight="60.0" prefWidth="325.0" style="-fx-alignment: center-left; -fx-background-radius: 15; -fx-border-radius: 15;" text="Manage" textFill="WHITE" VBox.vgrow="ALWAYS">
-                     <font>
-                        <Font name="Microsoft Sans Serif" size="30.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets bottom="5.0" />
-                     </VBox.margin>
-                     <padding>
-                        <Insets left="100.0" />
-                     </padding>
-                     <ripplerFill>
-                        <RadialGradient centerX="0.4383260079942611" centerY="0.5" cycleMethod="REFLECT" radius="0.5">
-                           <stops>
-                              <Stop>
-                                 <color>
-                                    <Color red="0.15925925970077515" green="0.7617900967597961" blue="1.0" />
-                                 </color>
-                              </Stop>
-                              <Stop offset="0.5921938088829071">
-                                 <color>
-                                    <Color red="0.46530213952064514" green="0.5467478632926941" blue="0.5789473652839661" />
-                                 </color>
-                              </Stop>
-                              <Stop offset="0.9975609756097561">
-                                 <color>
-                                    <Color red="1.0" green="1.0" blue="1.0" />
-                                 </color>
-                              </Stop>
-                              <Stop offset="1.0">
-                                 <color>
-                                    <Color red="1.0" green="0.14074073731899261" blue="0.14074073731899261" />
-                                 </color>
-                              </Stop>
-                           </stops>
-                        </RadialGradient>
-                     </ripplerFill>
-                  </JFXButton>
-                  <JFXButton fx:id="statisticButton" ellipsisString="" prefHeight="60.0" prefWidth="325.0" style="-fx-alignment: center-left; -fx-background-radius: 15; -fx-border-radius: 15;" text="Statistic" textFill="WHITE" VBox.vgrow="ALWAYS">
-                     <font>
-                        <Font name="Microsoft Sans Serif" size="30.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets bottom="5.0" />
-                     </VBox.margin>
-                     <padding>
-                        <Insets left="100.0" />
-                     </padding>
-                     <ripplerFill>
-                        <RadialGradient centerX="0.4383260079942611" centerY="0.5" cycleMethod="REFLECT" radius="0.5">
-                           <stops>
-                              <Stop>
-                                 <color>
-                                    <Color red="0.15925925970077515" green="0.7617900967597961" blue="1.0" />
-                                 </color>
-                              </Stop>
-                              <Stop offset="0.5921938088829071">
-                                 <color>
-                                    <Color red="0.46530213952064514" green="0.5467478632926941" blue="0.5789473652839661" />
-                                 </color>
-                              </Stop>
-                              <Stop offset="0.9975609756097561">
-                                 <color>
-                                    <Color red="1.0" green="1.0" blue="1.0" />
-                                 </color>
-                              </Stop>
-                              <Stop offset="1.0">
-                                 <color>
-                                    <Color red="1.0" green="0.14074073731899261" blue="0.14074073731899261" />
-                                 </color>
-                              </Stop>
-                           </stops>
-                        </RadialGradient>
-                     </ripplerFill>
-                  </JFXButton>
-               </children>
-            </VBox>
-            <Separator layoutX="75.0" layoutY="100.0" orientation="VERTICAL" prefHeight="550.0" />
-            <VBox layoutX="15.0" layoutY="575.0">
-               <children>
-                  <JFXButton prefHeight="30.0" prefWidth="30.0" style="-fx-background-radius: 15; -fx-border-radius: 15;">
-                     <graphic>
-                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../icon/info.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </JFXButton>
-                  <JFXButton prefHeight="30.0" prefWidth="30.0" style="-fx-background-radius: 15; -fx-border-radius: 15;">
-                     <graphic>
-                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../icon/setting.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </JFXButton>
-                  <JFXButton prefHeight="30.0" prefWidth="30.0" style="-fx-background-radius: 15; -fx-border-radius: 15;">
-                     <graphic>
-                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../icon/more.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </JFXButton>
-               </children>
-            </VBox>
-            <JFXButton layoutX="10.0" layoutY="20.0" onMouseClicked="#abc">
-               <graphic>
-                  <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../icon/menu.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </JFXButton>
-         </children>
+         <ImageView fitHeight="70.0" fitWidth="70.0" layoutX="15.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../../../image/cryo.jpg" />
+         </ImageView>
       </Pane>
-      <JFXButton buttonType="RAISED" contentDisplay="CENTER" layoutX="360.0" layoutY="10.0" onMouseClicked="#exit" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: transparent; -fx-background-radius: 0 15 0 20;" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <VBox layoutX="15.0" layoutY="100.0" prefWidth="60.0">
+         <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+            <VBox.margin>
+               <Insets bottom="20.0" />
+            </VBox.margin>
+            <Image url="@../../../icon/home.png" />
+         </ImageView>
+         <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+            <VBox.margin>
+               <Insets bottom="20.0" />
+            </VBox.margin>
+            <Image url="@../../../icon/account.png" />
+         </ImageView>
+         <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+            <VBox.margin>
+               <Insets bottom="20.0" />
+            </VBox.margin>
+            <Image url="@../../../icon/form.png" />
+         </ImageView>
+         <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+            <VBox.margin>
+               <Insets bottom="20.0" />
+            </VBox.margin>
+            <Image url="@../../../icon/waiting.png" />
+         </ImageView>
+         <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+            <VBox.margin>
+               <Insets bottom="20.0" />
+            </VBox.margin>
+            <Image url="@../../../icon/manager_icon.png" />
+         </ImageView>
+         <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+            <VBox.margin>
+               <Insets bottom="20.0" />
+            </VBox.margin>
+            <Image url="@../../../icon/icons8-analytics-48%20(2).png" />
+         </ImageView>
+      </VBox>
+      <VBox layoutX="5.0" layoutY="100.0" prefWidth="350.0">
+         <JFXButton fx:id="homeButton" ellipsisString="" prefHeight="60.0" prefWidth="325.0" style="-fx-alignment: center-left; -fx-background-radius: 15; -fx-border-radius: 15;" text="Home" textFill="WHITE" VBox.vgrow="ALWAYS">
+            <font>
+               <Font name="Microsoft Sans Serif" size="30.0" />
+            </font>
+            <VBox.margin>
+               <Insets bottom="5.0" />
+            </VBox.margin>
+            <padding>
+               <Insets left="100.0" />
+            </padding>
+            <ripplerFill>
+               <RadialGradient centerX="0.4383260079942611" centerY="0.5" cycleMethod="REFLECT" radius="0.5">
+                  <stops>
+                     <Stop>
+                        <color>
+                           <Color red="0.15925925970077515" green="0.7617900967597961" blue="1.0" />
+                        </color>
+                     </Stop>
+                     <Stop offset="0.5921938088829071">
+                        <color>
+                           <Color red="0.46530213952064514" green="0.5467478632926941" blue="0.5789473652839661" />
+                        </color>
+                     </Stop>
+                     <Stop offset="0.9975609756097561">
+                        <color>
+                           <Color red="1.0" green="1.0" blue="1.0" />
+                        </color>
+                     </Stop>
+                     <Stop offset="1.0">
+                        <color>
+                           <Color red="1.0" green="0.14074073731899261" blue="0.14074073731899261" />
+                        </color>
+                     </Stop>
+                  </stops>
+               </RadialGradient>
+            </ripplerFill>
+         </JFXButton>
+         <JFXButton fx:id="accountButton" ellipsisString="" prefHeight="60.0" prefWidth="325.0" style="-fx-alignment: center-left; -fx-background-radius: 15; -fx-border-radius: 15;" text="Account" textFill="WHITE" VBox.vgrow="ALWAYS">
+            <font>
+               <Font name="Microsoft Sans Serif" size="30.0" />
+            </font>
+            <VBox.margin>
+               <Insets bottom="5.0" />
+            </VBox.margin>
+            <padding>
+               <Insets left="100.0" />
+            </padding>
+            <ripplerFill>
+               <RadialGradient centerX="0.4383260079942611" centerY="0.5" cycleMethod="REFLECT" radius="0.5">
+                  <stops>
+                     <Stop>
+                        <color>
+                           <Color red="0.15925925970077515" green="0.7617900967597961" blue="1.0" />
+                        </color>
+                     </Stop>
+                     <Stop offset="0.5921938088829071">
+                        <color>
+                           <Color red="0.46530213952064514" green="0.5467478632926941" blue="0.5789473652839661" />
+                        </color>
+                     </Stop>
+                     <Stop offset="0.9975609756097561">
+                        <color>
+                           <Color red="1.0" green="1.0" blue="1.0" />
+                        </color>
+                     </Stop>
+                     <Stop offset="1.0">
+                        <color>
+                           <Color red="1.0" green="0.14074073731899261" blue="0.14074073731899261" />
+                        </color>
+                     </Stop>
+                  </stops>
+               </RadialGradient>
+            </ripplerFill>
+         </JFXButton>
+         <JFXButton fx:id="registerButton" ellipsisString="" prefHeight="60.0" prefWidth="325.0" style="-fx-alignment: center-left; -fx-background-radius: 15; -fx-border-radius: 15;" text="Register" textFill="WHITE" VBox.vgrow="ALWAYS">
+            <font>
+               <Font name="Microsoft Sans Serif" size="30.0" />
+            </font>
+            <VBox.margin>
+               <Insets bottom="5.0" />
+            </VBox.margin>
+            <padding>
+               <Insets left="100.0" />
+            </padding>
+            <ripplerFill>
+               <RadialGradient centerX="0.4383260079942611" centerY="0.5" cycleMethod="REFLECT" radius="0.5">
+                  <stops>
+                     <Stop>
+                        <color>
+                           <Color red="0.15925925970077515" green="0.7617900967597961" blue="1.0" />
+                        </color>
+                     </Stop>
+                     <Stop offset="0.5921938088829071">
+                        <color>
+                           <Color red="0.46530213952064514" green="0.5467478632926941" blue="0.5789473652839661" />
+                        </color>
+                     </Stop>
+                     <Stop offset="0.9975609756097561">
+                        <color>
+                           <Color red="1.0" green="1.0" blue="1.0" />
+                        </color>
+                     </Stop>
+                     <Stop offset="1.0">
+                        <color>
+                           <Color red="1.0" green="0.14074073731899261" blue="0.14074073731899261" />
+                        </color>
+                     </Stop>
+                  </stops>
+               </RadialGradient>
+            </ripplerFill>
+         </JFXButton>
+         <JFXButton fx:id="verifyButton" ellipsisString="" prefHeight="60.0" prefWidth="325.0" style="-fx-alignment: center-left; -fx-background-radius: 15; -fx-border-radius: 15;" text="Verify" textFill="WHITE" VBox.vgrow="ALWAYS">
+            <font>
+               <Font name="Microsoft Sans Serif" size="30.0" />
+            </font>
+            <VBox.margin>
+               <Insets bottom="5.0" />
+            </VBox.margin>
+            <padding>
+               <Insets left="100.0" />
+            </padding>
+            <ripplerFill>
+               <RadialGradient centerX="0.4383260079942611" centerY="0.5" cycleMethod="REFLECT" radius="0.5">
+                  <stops>
+                     <Stop>
+                        <color>
+                           <Color red="0.15925925970077515" green="0.7617900967597961" blue="1.0" />
+                        </color>
+                     </Stop>
+                     <Stop offset="0.5921938088829071">
+                        <color>
+                           <Color red="0.46530213952064514" green="0.5467478632926941" blue="0.5789473652839661" />
+                        </color>
+                     </Stop>
+                     <Stop offset="0.9975609756097561">
+                        <color>
+                           <Color red="1.0" green="1.0" blue="1.0" />
+                        </color>
+                     </Stop>
+                     <Stop offset="1.0">
+                        <color>
+                           <Color red="1.0" green="0.14074073731899261" blue="0.14074073731899261" />
+                        </color>
+                     </Stop>
+                  </stops>
+               </RadialGradient>
+            </ripplerFill>
+         </JFXButton>
+         <JFXButton fx:id="manageButton" ellipsisString="" prefHeight="60.0" prefWidth="325.0" style="-fx-alignment: center-left; -fx-background-radius: 15; -fx-border-radius: 15;" text="Manage" textFill="WHITE" VBox.vgrow="ALWAYS">
+            <font>
+               <Font name="Microsoft Sans Serif" size="30.0" />
+            </font>
+            <VBox.margin>
+               <Insets bottom="5.0" />
+            </VBox.margin>
+            <padding>
+               <Insets left="100.0" />
+            </padding>
+            <ripplerFill>
+               <RadialGradient centerX="0.4383260079942611" centerY="0.5" cycleMethod="REFLECT" radius="0.5">
+                  <stops>
+                     <Stop>
+                        <color>
+                           <Color red="0.15925925970077515" green="0.7617900967597961" blue="1.0" />
+                        </color>
+                     </Stop>
+                     <Stop offset="0.5921938088829071">
+                        <color>
+                           <Color red="0.46530213952064514" green="0.5467478632926941" blue="0.5789473652839661" />
+                        </color>
+                     </Stop>
+                     <Stop offset="0.9975609756097561">
+                        <color>
+                           <Color red="1.0" green="1.0" blue="1.0" />
+                        </color>
+                     </Stop>
+                     <Stop offset="1.0">
+                        <color>
+                           <Color red="1.0" green="0.14074073731899261" blue="0.14074073731899261" />
+                        </color>
+                     </Stop>
+                  </stops>
+               </RadialGradient>
+            </ripplerFill>
+         </JFXButton>
+         <JFXButton fx:id="statisticButton" ellipsisString="" prefHeight="60.0" prefWidth="325.0" style="-fx-alignment: center-left; -fx-background-radius: 15; -fx-border-radius: 15;" text="Statistic" textFill="WHITE" VBox.vgrow="ALWAYS">
+            <font>
+               <Font name="Microsoft Sans Serif" size="30.0" />
+            </font>
+            <VBox.margin>
+               <Insets bottom="5.0" />
+            </VBox.margin>
+            <padding>
+               <Insets left="100.0" />
+            </padding>
+            <ripplerFill>
+               <RadialGradient centerX="0.4383260079942611" centerY="0.5" cycleMethod="REFLECT" radius="0.5">
+                  <stops>
+                     <Stop>
+                        <color>
+                           <Color red="0.15925925970077515" green="0.7617900967597961" blue="1.0" />
+                        </color>
+                     </Stop>
+                     <Stop offset="0.5921938088829071">
+                        <color>
+                           <Color red="0.46530213952064514" green="0.5467478632926941" blue="0.5789473652839661" />
+                        </color>
+                     </Stop>
+                     <Stop offset="0.9975609756097561">
+                        <color>
+                           <Color red="1.0" green="1.0" blue="1.0" />
+                        </color>
+                     </Stop>
+                     <Stop offset="1.0">
+                        <color>
+                           <Color red="1.0" green="0.14074073731899261" blue="0.14074073731899261" />
+                        </color>
+                     </Stop>
+                  </stops>
+               </RadialGradient>
+            </ripplerFill>
+         </JFXButton>
+      </VBox>
+      <Separator layoutX="75.0" layoutY="100.0" orientation="VERTICAL" prefHeight="550.0">
+         <effect>
+            <BoxBlur>
+               <input>
+                  <Bloom />
+               </input>
+            </BoxBlur>
+         </effect></Separator>
+      <VBox layoutX="15.0" layoutY="575.0">
+         <JFXButton prefHeight="30.0" prefWidth="30.0" style="-fx-background-radius: 15; -fx-border-radius: 15;">
+            <graphic>
+               <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../../../icon/info.png" />
+                  </image>
+               </ImageView>
+            </graphic>
+         </JFXButton>
+         <JFXButton fx:id="settingButton" prefHeight="30.0" prefWidth="30.0" style="-fx-background-radius: 15; -fx-border-radius: 15;">
+            <graphic>
+               <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../../../icon/setting.png" />
+                  </image>
+               </ImageView>
+            </graphic>
+         </JFXButton>
+         <JFXButton prefHeight="30.0" prefWidth="30.0" style="-fx-background-radius: 15; -fx-border-radius: 15;">
+            <graphic>
+               <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../../../icon/more.png" />
+                  </image>
+               </ImageView>
+            </graphic>
+         </JFXButton>
+      </VBox>
+      <JFXButton layoutX="10.0" layoutY="20.0" onMouseClicked="#abc">
          <graphic>
-            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true">
+            <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../icon/exit.png" />
+                  <Image url="@../../../icon/menu.png" />
                </image>
             </ImageView>
          </graphic>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-         <ripplerFill>
-            <RadialGradient centerX="0.5308370380149539" centerY="0.5" radius="0.3073394364173259">
-               <stops>
-                  <Stop>
-                     <color>
-                        <Color red="1.0" green="1.0" blue="1.0" />
-                     </color>
-                  </Stop>
-                  <Stop offset="0.5208613728129207">
-                     <color>
-                        <Color red="0.9789473414421082" />
-                     </color>
-                  </Stop>
-                  <Stop offset="1.0">
-                     <color>
-                        <Color red="1.0" green="1.0" blue="1.0" />
-                     </color>
-                  </Stop>
-               </stops>
-            </RadialGradient>
-         </ripplerFill>
       </JFXButton>
-      <Pane fx:id="smallTaskBar" layoutY="302.0" onMouseEntered="#showBigTaskBar" prefHeight="720.0" prefWidth="75.0" style="-fx-background-color: #0c0636; -fx-border-radius: 15; -fx-background-radius: 15;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <effect>
-            <DropShadow />
-         </effect>
-         <children>
-            <VBox layoutX="15.0" layoutY="100.0" prefWidth="60.0">
-               <children>
-                  <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../icon/home.png" />
-                     </image>
-                     <VBox.margin>
-                        <Insets bottom="20.0" />
-                     </VBox.margin>
-                  </ImageView>
-                  <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../icon/account.png" />
-                     </image>
-                     <VBox.margin>
-                        <Insets bottom="20.0" />
-                     </VBox.margin>
-                  </ImageView>
-                  <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../icon/form.png" />
-                     </image>
-                     <VBox.margin>
-                        <Insets bottom="20.0" />
-                     </VBox.margin>
-                  </ImageView>
-                  <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../icon/waiting.png" />
-                     </image>
-                     <VBox.margin>
-                        <Insets bottom="20.0" />
-                     </VBox.margin>
-                  </ImageView>
-                  <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../icon/manager_icon.png" />
-                     </image>
-                     <VBox.margin>
-                        <Insets bottom="20.0" />
-                     </VBox.margin>
-                  </ImageView>
-                  <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../icon/icons8-analytics-48%20(2).png" />
-                     </image>
-                     <VBox.margin>
-                        <Insets bottom="20.0" />
-                     </VBox.margin>
-                  </ImageView>
-               </children>
-            </VBox>
-            <JFXButton layoutX="10.0" layoutY="20.0">
-               <graphic>
-                  <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../icon/menu.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </JFXButton>
-         </children>
-      </Pane>
-      <VBox layoutY="575.0" AnchorPane.leftAnchor="15.0">
-         <children>
-            <JFXButton prefHeight="30.0" prefWidth="30.0" style="-fx-background-radius: 15; -fx-border-radius: 15;">
-               <graphic>
-                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../icon/info.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </JFXButton>
-            <JFXButton prefHeight="30.0" prefWidth="30.0" style="-fx-background-radius: 15; -fx-border-radius: 15;">
-               <graphic>
-                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../icon/setting.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </JFXButton>
-            <JFXButton prefHeight="30.0" prefWidth="30.0" style="-fx-background-radius: 15; -fx-border-radius: 15;">
-               <graphic>
-                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../icon/more.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </JFXButton>
-         </children>
-      </VBox>
-   </children>
+      <PointLight layoutX="222.0" layoutY="50.0" lightOn="true" />
+   </Pane>
+   <JFXButton buttonType="RAISED" contentDisplay="CENTER" layoutX="360.0" layoutY="10.0" onMouseClicked="#exit" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: transparent; -fx-background-radius: 0 15 0 20;" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <graphic>
+         <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true">
+            <Image url="@../../../icon/exit.png" />
+         </ImageView>
+      </graphic>
+      <cursor>
+         <Cursor fx:constant="HAND" />
+      </cursor>
+      <ripplerFill>
+         <RadialGradient centerX="0.5308370380149539" centerY="0.5" radius="0.3073394364173259">
+            <stops>
+               <Stop>
+                  <color>
+                     <Color red="1.0" green="1.0" blue="1.0" />
+                  </color>
+               </Stop>
+               <Stop offset="0.5208613728129207">
+                  <color>
+                     <Color red="0.9789473414421082" />
+                  </color>
+               </Stop>
+               <Stop offset="1.0">
+                  <color>
+                     <Color red="1.0" green="1.0" blue="1.0" />
+                  </color>
+               </Stop>
+            </stops>
+         </RadialGradient>
+      </ripplerFill>
+   </JFXButton>
+   <Pane fx:id="smallTaskBar" layoutY="302.0" onMouseEntered="#showBigTaskBar" prefHeight="720.0" prefWidth="75.0" style="-fx-background-color: #050520; -fx-border-radius: 15; -fx-background-radius: 15;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <effect>
+         <DropShadow />
+      </effect>
+      <children>
+         <VBox layoutX="15.0" layoutY="100.0" prefWidth="60.0">
+            <children>
+               <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../../../icon/home.png" />
+                  </image>
+                  <VBox.margin>
+                     <Insets bottom="20.0" />
+                  </VBox.margin>
+               </ImageView>
+               <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../../../icon/account.png" />
+                  </image>
+                  <VBox.margin>
+                     <Insets bottom="20.0" />
+                  </VBox.margin>
+               </ImageView>
+               <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../../../icon/form.png" />
+                  </image>
+                  <VBox.margin>
+                     <Insets bottom="20.0" />
+                  </VBox.margin>
+               </ImageView>
+               <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../../../icon/waiting.png" />
+                  </image>
+                  <VBox.margin>
+                     <Insets bottom="20.0" />
+                  </VBox.margin>
+               </ImageView>
+               <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../../../icon/manager_icon.png" />
+                  </image>
+                  <VBox.margin>
+                     <Insets bottom="20.0" />
+                  </VBox.margin>
+               </ImageView>
+               <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../../../icon/icons8-analytics-48%20(2).png" />
+                  </image>
+                  <VBox.margin>
+                     <Insets bottom="20.0" />
+                  </VBox.margin>
+               </ImageView>
+            </children>
+         </VBox>
+         <JFXButton layoutX="10.0" layoutY="20.0">
+            <graphic>
+               <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../../../icon/menu.png" />
+                  </image>
+               </ImageView>
+            </graphic>
+         </JFXButton>
+      </children>
+   </Pane>
+   <VBox layoutY="575.0" AnchorPane.leftAnchor="15.0">
+      <children>
+         <JFXButton prefHeight="30.0" prefWidth="30.0" style="-fx-background-radius: 15; -fx-border-radius: 15;">
+            <graphic>
+               <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../../../icon/info.png" />
+                  </image>
+               </ImageView>
+            </graphic>
+         </JFXButton>
+         <JFXButton prefHeight="30.0" prefWidth="30.0" style="-fx-background-radius: 15; -fx-border-radius: 15;">
+            <graphic>
+               <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../../../icon/setting.png" />
+                  </image>
+               </ImageView>
+            </graphic>
+         </JFXButton>
+         <JFXButton prefHeight="30.0" prefWidth="30.0" style="-fx-background-radius: 15; -fx-border-radius: 15;">
+            <graphic>
+               <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../../../icon/more.png" />
+                  </image>
+               </ImageView>
+            </graphic>
+         </JFXButton>
+      </children>
+   </VBox>
+   <effect>
+      <DropShadow />
+   </effect>
 </AnchorPane>
