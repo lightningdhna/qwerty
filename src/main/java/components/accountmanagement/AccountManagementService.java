@@ -4,7 +4,7 @@ package components.accountmanagement;
 
 
 
-import components.accountmanagement.database.AccountTable;
+import components.accountmanagement.model.AccountTable;
 import components.accountmanagement.model.Account;
 
 import java.util.List;

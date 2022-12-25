@@ -1,4 +1,4 @@
-package components.accountmanagement.database;
+package components.accountmanagement.model;
 
 
 
