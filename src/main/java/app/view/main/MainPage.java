@@ -1,6 +1,5 @@
 package app.view.main;
 
-import animatefx.animation.FadeInLeft;
 import animatefx.animation.*;
 import app.Main;
 import app.model.Page;

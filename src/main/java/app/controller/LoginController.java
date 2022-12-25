@@ -1,6 +1,7 @@
 package app.controller;
 
 import animatefx.animation.FadeOut;
+import app.Main;
 import app.view.login.LoginPage;
 import app.view.login.SignUpPage;
 import components.accountmanagement.AccountManagementService;
@@ -13,15 +14,16 @@ import java.io.IOException;
 public class LoginController {
     public static void login(LoginPage page, Account account){
         if(AccountManagementService.getManager().checkExist(account)){
+            Main.setAccountID(account.getId());
             page.setMainPage();
 //            new FadeOut(page.getRoot()).play();
             Thread thread = new Thread(
                     () -> {
+                        Main.setAccountID(account.getId());
                         if(page.getCheckBoxState()){
                             try {
                                 BufferedWriter writer = new BufferedWriter(new FileWriter("src/main/resources/save/account-save.txt"));
                                 writer.write(account.getUsername()+'\n'+account.getPassword());
-                                System.out.println(1);
                                 writer.close();
                             } catch (IOException e) {
                                 e.printStackTrace();
@@ -34,7 +36,6 @@ public class LoginController {
                                 writer.write("");
                                 writer.flush();
                                 writer.close();
-                                System.out.println(1);
                             } catch (IOException e) {
                                 e.printStackTrace();
                             }

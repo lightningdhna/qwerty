@@ -1,7 +1,6 @@
 package app;
 
 import app.view.login.LoginPage;
-import app.view.main.MainPage;
 
 import components.database.DatabaseConnectionService;
 import javafx.application.Application;
@@ -10,10 +9,15 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
-import static org.controlsfx.tools.Utils.getWindow;
-
 public class Main extends Application {
 
+    private static int accountID;
+    public static int getAccountID(){
+        return accountID;
+    }
+    public static void setAccountID(int id){
+        accountID = id;
+    }
     public static void main(String... args){
         Thread thread = new Thread(DatabaseConnectionService::startConnecting);
         thread.start();
