@@ -14,7 +14,7 @@ import java.io.IOException;
 public class LoginController {
     public static void login(LoginPage page, Account account){
         if(AccountManagementService.getManager().checkExist(account)){
-            Main.setAccountID(account.getId());
+            Main.setAccountID(AccountManagementService.getManager().getAccountID(account));
             page.setMainPage();
 //            new FadeOut(page.getRoot()).play();
             Thread thread = new Thread(

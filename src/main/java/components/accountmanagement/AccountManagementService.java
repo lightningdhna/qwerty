@@ -24,11 +24,13 @@ public class AccountManagementService {
     }
     public boolean checkExist(Account account){
         List<Account> resultSearch= AccountTable.search(account);
-         if(resultSearch.size()==1){
-             account.assign(resultSearch.get(0));
-             return true;
-         }
-         else return false;
+        return resultSearch.size() == 1;
+    }
+    public int getAccountID(Account account){
+        List<Account> resultSearch= AccountTable.search(account);
+        if(resultSearch.size()==0)
+            return -1;
+        return resultSearch.get(0).getId();
     }
 
     public boolean add(Account account){
