@@ -1,11 +1,10 @@
 package app.controller;
 
-import animatefx.animation.FadeOut;
 import app.Main;
 import app.view.login.LoginPage;
 import app.view.login.SignUpPage;
-import components.accountmanagement.AccountManagementService;
-import components.accountmanagement.model.Account;
+import service.AccountManagementService;
+import components.account.Account;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;

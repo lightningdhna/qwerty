@@ -1,4 +1,4 @@
-package components.accountmanagement.model;
+package components.account;
 
 public class Account {
     private int id;

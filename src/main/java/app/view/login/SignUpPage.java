@@ -1,15 +1,13 @@
 package app.view.login;
 
 import animatefx.animation.ZoomOutLeft;
-import animatefx.animation.ZoomOutUp;
 import app.controller.LoginController;
 import app.model.Page;
-import components.accountmanagement.model.Account;
+import components.account.Account;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import org.w3c.dom.events.MouseEvent;
 
 public class SignUpPage extends Page {
 

@@ -23,4 +23,6 @@ module com.cnpm.qwerty {
     exports app.view.login;
     opens app.view.main to javafx.fxml;
     exports app.view.main;
+    exports service;
+    opens service to javafx.fxml;
 }

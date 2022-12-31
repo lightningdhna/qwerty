@@ -1,20 +1,16 @@
 package app.view.login;
 
 import app.controller.LoginController;
-import app.model.Icon;
 import app.model.Page;
 import app.view.main.MainPage;
-import com.almasb.fxgl.animation.AnimationBuilder;
 import com.jfoenix.controls.JFXCheckBox;
-import components.accountmanagement.model.Account;
+import components.account.Account;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import animatefx.animation.*;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

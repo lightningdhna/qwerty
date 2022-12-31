@@ -2,7 +2,7 @@ package app;
 
 import app.view.login.LoginPage;
 
-import components.database.DatabaseConnectionService;
+import service.DatabaseConnectionService;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.paint.Color;

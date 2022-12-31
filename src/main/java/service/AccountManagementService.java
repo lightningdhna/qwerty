@@ -1,11 +1,9 @@
-package components.accountmanagement;
+package service;
 
 
 
-
-
-import components.accountmanagement.model.AccountTable;
-import components.accountmanagement.model.Account;
+import components.account.AccountTable;
+import components.account.Account;
 
 import java.util.List;
 

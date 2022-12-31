@@ -1,9 +1,8 @@
-package components.accountmanagement.model;
+package components.account;
 
 
 
-import components.accountmanagement.model.Account;
-import components.database.DatabaseConnectionService;
+import service.DatabaseConnectionService;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
