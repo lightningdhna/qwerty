@@ -1,0 +1,22 @@
+/*AnchorPane-login-page*/
+.AnchorPane{
+     -fx-background-color: green;
+     -fx-background-size: cover;
+     -fx-background-radius: 15 15 15 15;
+}
+
+
+/*AnchorPane-main-view*/
+.AnchorPane{
+    -fx-background-color: #48b1bf;
+    -fx-background-radius: 15 15 15 15;
+}
+
+
+/*AnchorPane-Title-main-view*/
+.AnchorPane-Title{
+    -fx-background-color: #1C8D73;
+    -fx-background-radius: 15 15 0 0;
+}
+
+

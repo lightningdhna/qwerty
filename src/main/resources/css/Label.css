@@ -1,0 +1,21 @@
+/*Label-Login-page, Signup-page*/
+.Label{
+    -fx-font-family: Cursive;
+}
+
+
+/*Label Create-Account-Login-Page*/
+#lblCreateAccount{
+    -fx-text-fill: linear-gradient(#000046, #1cb5e0);
+}
+#lblCreateAccount:hover{
+    -fx-text-fill: linear-gradient(#1a2980, #26d0ce);
+    -fx-font-weight: bold;
+}
+
+
+/*Label main-view*/
+.Label{
+    -fx-text-fill: White;
+    -fx-font-size: 14px;
+}

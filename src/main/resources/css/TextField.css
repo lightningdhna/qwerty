@@ -1,0 +1,12 @@
+/*TextField-Login-Page, Signup-Page*/
+.TextField{
+    -fx-background-radius: 15 15 15 15;
+    -fx-font-family: Sans-Serif;
+    -fx-text-fill: linear-gradient(#000046, #1cb5e0);
+    -fx-prompt-text-fill: #c0c0c0;
+    -fx-font-size: 20px;
+}
+.TextField:hover{
+    -fx-prompt-text-fill: #a9a9a9;
+    -fx-font-size: 20px;
+}

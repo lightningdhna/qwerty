@@ -1,0 +1,14 @@
+/*CheckBox-Login-Page*/
+.JFXCheckBox{
+    -fx-background-color: #f5f5f5;
+    /*-fx-border-color: linear-gradient(#c0c0aa, #1cefff);*/
+    -fx-border-radius: 5;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+.JFXCheckBox:selected{
+    /*-fx-border-color: linear-gradient(#c0c0aa, #1cefff);*/
+}
+.JFXCheckBox:hover{
+    -fx-font-size: 20px;
+}

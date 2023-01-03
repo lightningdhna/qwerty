@@ -1,0 +1,34 @@
+/*table-view*/
+.table-view{
+    -fx-background-color: transparent;
+}
+.table-view .column-header-background .filler {
+    -fx-background-color: transparent;
+}
+.table-view .corner {
+    -fx-background-color: transparent;
+}
+.table-view .column-header-background{
+    -fx-background-color: linear-gradient(to bottom, #1dbbdd44, #93f9b9ff);
+    -fx-background-radius: 10px 10px 0px 0px;
+    -fx-background-insets: 0 0 0 0;
+    -fx-padding: 0 0 5 0;
+}
+.table-view .column-header {
+    -fx-background-color: transparent;
+}
+.table-view .table-cell{
+    -fx-font-family: Sans-Serif;
+    -fx-text-fill: linear-gradient(#203A43, #2C5364);
+    -fx-padding: 2 0 2 10px;
+}
+.table-view .virtual-flow .scroll-bar:vertical .thumb{
+    -fx-background-color:  linear-gradient(to bottom, #1dbbdd44, #93f9b9ff);
+}
+.table-view .virtual-flow .scroll-bar:horizontal .thumb {
+    -fx-background-color:  linear-gradient(to right, #1dbbdd44, #93f9b9ff);
+}
+.table-row-cell{
+    -fx-border-color: transparent;
+    /*-fx-table-cell-border-color: linear-gradient(#c0c0aa, #1cefff);*/
+}
