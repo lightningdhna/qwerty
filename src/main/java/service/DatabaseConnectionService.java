@@ -7,12 +7,10 @@ public class DatabaseConnectionService {
     private static Statement statement = null;
 
     public static void startConnecting() {
-        if(conn==null) {
-            createConnection();
-        }
         try {
-            if(conn.isClosed())
-                conn.beginRequest();
+            if(conn==null||conn.isClosed()) {
+                createConnection();
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -31,13 +29,11 @@ public class DatabaseConnectionService {
     public static ResultSet executeQuery(String query) throws SQLException {
         startConnecting();
         ResultSet rs =  statement.executeQuery(query);
-        closeConnection();
         return rs;
     }
     public static void execute(String query) throws SQLException {
         startConnecting();
         statement.execute(query);
-        closeConnection();
     }
     public static void createConnection(String serverName, String user, String password,String databaseName ,String port ){
         try {

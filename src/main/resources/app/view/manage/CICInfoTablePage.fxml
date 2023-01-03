@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ScrollPane layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="750.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="725.0">
+               <children>
+                  <TableView prefHeight="600.0" prefWidth="725.0">
+                     <columns>
+                        <TableColumn prefWidth="75.0" text="Số CCCD" />
+                        <TableColumn prefWidth="75.0" text="Họ Tên" />
+                        <TableColumn prefWidth="75.0" text="Số hộ khẩu" />
+                        <TableColumn prefWidth="97.60006713867188" text="Trạng thái " />
+                        <TableColumn prefWidth="104.79998779296875" text="Người xác thực" />
+                        <TableColumn prefWidth="112.79998779296875" text="Ngày xác thực" />
+                     </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>
