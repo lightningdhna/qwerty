@@ -28,7 +28,32 @@ public class CIC {
 
     String backCICImageURL ="/";                    //Ảnh mặc sau
 
+    public CIC(String cicNumber, String name, String otherName, LocalDate dateOfBirth, String gender,
+               String placeOfOrigin, String placeOfResidence, String placeOfTemporaryResidence, String nationality,
+               String ethnic, String passportNumber, String personalIdentification, LocalDate dateOfExpiry,
+               String verifyState, LocalDate dateVerify, String idVerifier, String note,
+               String frontCICImageURL, String backCICImageURL) {
 
+        this.cicNumber = cicNumber;
+        this.name = name;
+        this.otherName = otherName;
+        this.dateOfBirth = dateOfBirth;
+        this.gender = gender;
+        this.placeOfOrigin = placeOfOrigin;
+        this.placeOfResidence = placeOfResidence;
+        this.placeOfTemporaryResidence = placeOfTemporaryResidence;
+        this.nationality = nationality;
+        this.ethnic = ethnic;
+        this.passportNumber = passportNumber;
+        this.personalIdentification = personalIdentification;
+        this.dateOfExpiry = dateOfExpiry;
+        this.verifyState = verifyState;
+        this.dateVerify = dateVerify;
+        this.idVerifier = idVerifier;
+        this.note = note;
+        this.frontCICImageURL = frontCICImageURL;
+        this.backCICImageURL = backCICImageURL;
+    }
 
     public LocalDate getDateOfBirth() {
         return dateOfBirth;
