@@ -1,15 +1,16 @@
-package components.account;
+package components.database;
 
 
 
-import service.DatabaseConnectionService;
+import components.account.Account;
+import components.database.DatabaseConnection;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AccountTable {
+public class AccountTable extends DatabaseConnection {
 
     private static boolean hasTable = true;
     public static List<Account> castResultSet(ResultSet rs) throws SQLException {
@@ -37,7 +38,7 @@ public class AccountTable {
                 )
                 """;
         try {
-            DatabaseConnectionService.execute(query);
+            execute(query);
         } catch (SQLException ignored) {
 
         }
@@ -53,7 +54,7 @@ public class AccountTable {
                 ,account.getUsername(),account.getPassword()
         );
         try {
-            ResultSet rs = DatabaseConnectionService.executeQuery(query);
+            ResultSet rs = executeQuery(query);
             return castResultSet(rs);
         } catch (SQLException e) {
             e.printStackTrace();
@@ -68,7 +69,7 @@ public class AccountTable {
                         """,account.getUsername(),account.getPassword()
         );
         try {
-            DatabaseConnectionService.execute(query);
+            execute(query);
             return true;
         } catch (SQLException e) {
 //            e.printStackTrace();
@@ -80,7 +81,7 @@ public class AccountTable {
         String query= "select id, username, password,[access authority]\n" +
                 "from account_table";
         try {
-            ResultSet rs = DatabaseConnectionService.executeQuery(query);
+            ResultSet rs = executeQuery(query);
             return castResultSet(rs);
         } catch (SQLException e) {
             e.printStackTrace();
@@ -97,7 +98,7 @@ public class AccountTable {
                 """,id
         );
         try {
-            ResultSet rs = DatabaseConnectionService.executeQuery(query);
+            ResultSet rs = executeQuery(query);
             return castResultSet(rs);
         } catch (SQLException e) {
             e.printStackTrace();

@@ -2,7 +2,7 @@ package service;
 
 
 
-import components.account.AccountTable;
+import components.database.AccountTable;
 import components.account.Account;
 
 import java.util.List;

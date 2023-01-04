@@ -2,7 +2,7 @@ package app;
 
 import app.view.login.LoginPage;
 
-import service.DatabaseConnectionService;
+import components.database.DatabaseConnection;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.paint.Color;
@@ -19,10 +19,10 @@ public class Main extends Application {
         accountID = id;
     }
     public static void main(String... args){
-        Thread thread = new Thread(DatabaseConnectionService::startConnecting);
+        Thread thread = new Thread(DatabaseConnection::startConnecting);
         thread.start();
         launch();
-        DatabaseConnectionService.closeConnection();
+        DatabaseConnection.closeConnection();
     }
     @Override
     public void start(Stage stage) {

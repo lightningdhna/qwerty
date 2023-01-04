@@ -1,8 +1,8 @@
-package service;
+package components.database;
 
 import java.sql.*;
 
-public class DatabaseConnectionService {
+public class DatabaseConnection {
     private static Connection conn = null;
     private static Statement statement = null;
 
@@ -27,12 +27,10 @@ public class DatabaseConnectionService {
     }
 
     public static ResultSet executeQuery(String query) throws SQLException {
-        startConnecting();
         ResultSet rs =  statement.executeQuery(query);
         return rs;
     }
     public static void execute(String query) throws SQLException {
-        startConnecting();
         statement.execute(query);
     }
     public static void createConnection(String serverName, String user, String password,String databaseName ,String port ){
@@ -44,7 +42,7 @@ public class DatabaseConnectionService {
                     encrypt=true; trustServerCertificate=true;
                     sslProtocol=TLSv1.2
                     """,serverName, port , databaseName
-                    );
+            );
             conn = DriverManager.getConnection(dbURL, user, password);
             statement=conn.createStatement();
         } catch (SQLException ex) {
