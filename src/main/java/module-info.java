@@ -27,4 +27,7 @@ module com.cnpm.qwerty {
     exports app.view.manage;
     exports service;
     opens service to javafx.fxml;
+    opens components.demogrpahic to javafx.base;
+    opens app.controller to javafx.base;
+    opens app.model.manage to javafx.base;
 }
