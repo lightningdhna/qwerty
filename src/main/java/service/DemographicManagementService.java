@@ -15,11 +15,11 @@ public class DemographicManagementService extends Service{
     }
     public List<CIC> getAllCICInfo() {
         //Lấy tất cả thoogon tin nhân khẩu
-        return CICTable.getAllCIC();
+        return CICTable.getTable().getAllCIC();
     }
 
     public void addCIC(CIC cic) {
-        CICTable.add(cic);
+        CICTable.getTable().add(cic);
     }
 
     public CIC getCICInfoByAccountID(int accountID){
@@ -32,7 +32,7 @@ public class DemographicManagementService extends Service{
     }
     public CIC getCICInfoByCICNumber(String cicNumber){
         // Trả về thông tin nhân khẩu biết số cccd
-        List<CIC> cic = CICTable.getCICByCICNumber(cicNumber);
+        List<CIC> cic = CICTable.getTable().getCICByCICNumber(cicNumber);
         if(cic.size()==0){
             System.out.println("Bug getCICInfo by CICNumber");
             return new CIC(cicNumber);

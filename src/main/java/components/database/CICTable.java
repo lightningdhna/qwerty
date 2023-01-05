@@ -11,9 +11,14 @@ import java.util.List;
 
 //Nguyen 1
 public class CICTable extends DatabaseConnection {
+
+    private static CICTable table ;
+    public static CICTable getTable(){
+        return table;
+    }
     private static boolean hasTable = false;
 
-    public static List<CIC> castResultSet(ResultSet rs) throws SQLException {
+    public List<CIC> castResultSet(ResultSet rs) throws SQLException {
         List<CIC> cicList = new ArrayList<>();
         while (rs.next()) {
             cicList.add(new CIC(
@@ -42,7 +47,7 @@ public class CICTable extends DatabaseConnection {
     }
 
     //Tạo bảng
-    public static void createTable() {
+    public void createTable() {
         if (hasTable) {
             return;
         }
@@ -77,7 +82,7 @@ public class CICTable extends DatabaseConnection {
     }
 
     //Thêm cic
-    public static boolean add(CIC cic) {
+    public boolean add(CIC cic) {
         createTable();
         String query = String.format(
                 """
@@ -207,7 +212,7 @@ public class CICTable extends DatabaseConnection {
 //    }
 
     //Lấy hết CIC
-    public static List<CIC> getAllCIC() {
+    public List<CIC> getAllCIC() {
         createTable();
         String query = """
             select *
@@ -223,7 +228,7 @@ public class CICTable extends DatabaseConnection {
     }
 
     //Tìm CIC theo cicNumber
-    public static List<CIC> getCICByCICNumber(String cicNumber) {
+    public List<CIC> getCICByCICNumber(String cicNumber) {
         createTable();
         String query = String.format(
                 """
