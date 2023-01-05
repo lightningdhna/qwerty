@@ -67,7 +67,7 @@
          </DropShadow>
       </effect>
    </Pane>
-   <Pane fx:id="bigTaskBar" layoutX="425.0" onMouseExited="#unShowBigTaskBar" prefHeight="720.0" prefWidth="400.0" style="-fx-background-color: #0c0636; -fx-background-radius: 15 50 0 15; -fx-border-radius: 15 50 0 15;" AnchorPane.topAnchor="0.0">
+   <Pane fx:id="bigTaskBar" layoutX="425.0" onMouseExited="#unShowBigTaskBar" prefHeight="720.0" prefWidth="400.0" style="-fx-background-color: #000000; -fx-background-radius: 15 50 0 15; -fx-border-radius: 15 50 0 15;" AnchorPane.topAnchor="0.0">
       <effect>
          <DropShadow>
             <color>
@@ -95,42 +95,50 @@
          </ImageView>
       </Pane>
       <VBox layoutX="15.0" layoutY="100.0" prefWidth="60.0">
-         <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
-            <VBox.margin>
-               <Insets bottom="20.0" />
-            </VBox.margin>
-            <Image url="@../../../icon/home.png" />
-         </ImageView>
-         <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
-            <VBox.margin>
-               <Insets bottom="20.0" />
-            </VBox.margin>
-            <Image url="@../../../icon/account.png" />
-         </ImageView>
-         <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
-            <VBox.margin>
-               <Insets bottom="20.0" />
-            </VBox.margin>
-            <Image url="@../../../icon/form.png" />
-         </ImageView>
-         <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
-            <VBox.margin>
-               <Insets bottom="20.0" />
-            </VBox.margin>
-            <Image url="@../../../icon/waiting.png" />
-         </ImageView>
-         <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
-            <VBox.margin>
-               <Insets bottom="20.0" />
-            </VBox.margin>
-            <Image url="@../../../icon/manager_icon.png" />
-         </ImageView>
-         <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
-            <VBox.margin>
-               <Insets bottom="20.0" />
-            </VBox.margin>
-            <Image url="@../../../icon/icons8-analytics-48%20(2).png" />
-         </ImageView>
+         <children>
+            <ImageView fitHeight="60.0" fitWidth="60.0">
+               <image>
+                  <Image url="@../../../icon/icon-dark/home-2.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="60.0" fitWidth="60.0">
+               <image>
+                  <Image url="@../../../icon/icon-dark/account-2.png" />
+               </image>
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin>
+            </ImageView>
+            <ImageView fitHeight="60.0" fitWidth="60.0">
+               <image>
+                  <Image url="@../../../icon/icon-dark/register-2.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="60.0" fitWidth="60.0">
+               <image>
+                  <Image url="@../../../icon/icon-dark/verify-2.png" />
+               </image>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </ImageView>
+            <ImageView fitHeight="60.0" fitWidth="60.0">
+               <image>
+                  <Image url="@../../../icon/icon-dark/manager-2.png" />
+               </image>
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin>
+            </ImageView>
+            <ImageView fitHeight="60.0" fitWidth="60.0">
+               <image>
+                  <Image url="@../../../icon/icon-dark/statistic-2.png" />
+               </image>
+            </ImageView>
+         </children>
+         <padding>
+            <Insets left="-8.0" />
+         </padding>
       </VBox>
       <VBox layoutX="5.0" layoutY="100.0" prefWidth="350.0">
          <JFXButton fx:id="homeButton" ellipsisString="" prefHeight="60.0" prefWidth="325.0" style="-fx-alignment: center-left; -fx-background-radius: 15; -fx-border-radius: 15;" text="Home" textFill="WHITE" VBox.vgrow="ALWAYS">
@@ -367,18 +375,18 @@
       <VBox layoutX="15.0" layoutY="575.0">
          <JFXButton prefHeight="30.0" prefWidth="30.0" style="-fx-background-radius: 15; -fx-border-radius: 15;">
             <graphic>
-               <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <ImageView fitHeight="30.0" fitWidth="30.0">
                   <image>
-                     <Image url="@../../../icon/info.png" />
+                     <Image url="@../../../icon/icon-dark/information-2.png" />
                   </image>
                </ImageView>
             </graphic>
          </JFXButton>
          <JFXButton fx:id="settingButton" prefHeight="30.0" prefWidth="30.0" style="-fx-background-radius: 15; -fx-border-radius: 15;">
             <graphic>
-               <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <ImageView fitHeight="30.0" fitWidth="30.0">
                   <image>
-                     <Image url="@../../../icon/setting.png" />
+                     <Image url="@../../../icon/icon-dark/setting-2.png" />
                   </image>
                </ImageView>
             </graphic>
@@ -435,62 +443,62 @@
          </RadialGradient>
       </ripplerFill>
    </JFXButton>
-   <Pane fx:id="smallTaskBar" layoutY="302.0" onMouseEntered="#showBigTaskBar" prefHeight="720.0" prefWidth="75.0" style="-fx-background-color: #050520; -fx-border-radius: 15; -fx-background-radius: 15;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+   <Pane fx:id="smallTaskBar" layoutY="302.0" onMouseEntered="#showBigTaskBar" prefHeight="720.0" prefWidth="75.0" style="-fx-background-color: #000000; -fx-border-radius: 15; -fx-background-radius: 15;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
       <effect>
          <DropShadow />
       </effect>
       <children>
          <VBox layoutX="15.0" layoutY="100.0" prefWidth="60.0">
             <children>
-               <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+               <ImageView fitHeight="60.0" fitWidth="60.0">
                   <image>
-                     <Image url="@../../../icon/home.png" />
+                     <Image url="@../../../icon/icon-dark/home-2.png" />
                   </image>
                   <VBox.margin>
-                     <Insets bottom="20.0" />
+                     <Insets />
                   </VBox.margin>
                </ImageView>
-               <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+               <ImageView fitHeight="60.0" fitWidth="60.0">
                   <image>
-                     <Image url="@../../../icon/account.png" />
+                     <Image url="@../../../icon/icon-dark/account-2.png" />
                   </image>
                   <VBox.margin>
-                     <Insets bottom="20.0" />
+                     <Insets bottom="5.0" top="5.0" />
                   </VBox.margin>
                </ImageView>
-               <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+               <ImageView fitHeight="60.0" fitWidth="60.0">
                   <image>
-                     <Image url="@../../../icon/form.png" />
+                     <Image url="@../../../icon/icon-dark/register-2.png" />
+                  </image>
+               </ImageView>
+               <ImageView fitHeight="60.0" fitWidth="60.0">
+                  <image>
+                     <Image url="@../../../icon/icon-dark/verify-2.png" />
                   </image>
                   <VBox.margin>
-                     <Insets bottom="20.0" />
+                     <Insets top="5.0" />
                   </VBox.margin>
                </ImageView>
-               <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+               <ImageView fitHeight="60.0" fitWidth="60.0">
                   <image>
-                     <Image url="@../../../icon/waiting.png" />
+                     <Image url="@../../../icon/icon-dark/manager-2.png" />
                   </image>
                   <VBox.margin>
-                     <Insets bottom="20.0" />
+                     <Insets bottom="5.0" top="5.0" />
                   </VBox.margin>
                </ImageView>
-               <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+               <ImageView fitHeight="60.0" fitWidth="60.0">
                   <image>
-                     <Image url="@../../../icon/manager_icon.png" />
+                     <Image url="@../../../icon/icon-dark/statistic-2.png" />
                   </image>
                   <VBox.margin>
-                     <Insets bottom="20.0" />
-                  </VBox.margin>
-               </ImageView>
-               <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                     <Image url="@../../../icon/icons8-analytics-48%20(2).png" />
-                  </image>
-                  <VBox.margin>
-                     <Insets bottom="20.0" />
+                     <Insets />
                   </VBox.margin>
                </ImageView>
             </children>
+            <padding>
+               <Insets left="-8.0" />
+            </padding>
          </VBox>
          <JFXButton layoutX="10.0" layoutY="20.0">
             <graphic>
@@ -507,18 +515,18 @@
       <children>
          <JFXButton prefHeight="30.0" prefWidth="30.0" style="-fx-background-radius: 15; -fx-border-radius: 15;">
             <graphic>
-               <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <ImageView fitHeight="30.0" fitWidth="30.0">
                   <image>
-                     <Image url="@../../../icon/info.png" />
+                     <Image url="@../../../icon/icon-dark/information-2.png" />
                   </image>
                </ImageView>
             </graphic>
          </JFXButton>
          <JFXButton prefHeight="30.0" prefWidth="30.0" style="-fx-background-radius: 15; -fx-border-radius: 15;">
             <graphic>
-               <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <ImageView fitHeight="30.0" fitWidth="30.0">
                   <image>
-                     <Image url="@../../../icon/setting.png" />
+                     <Image url="@../../../icon/icon-dark/setting-2.png" />
                   </image>
                </ImageView>
             </graphic>
