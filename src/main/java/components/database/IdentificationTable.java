@@ -6,7 +6,7 @@ import java.sql.SQLException;
 //Nguyên 3
 public class IdentificationTable extends DatabaseConnection{
     // Bẩng định danh
-    private static  IdentificationTable table;
+    private static  IdentificationTable table = new IdentificationTable();
     public static IdentificationTable getTable(){
         return table;
     }

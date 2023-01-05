@@ -9,7 +9,7 @@ import java.util.List;
 //Nguyên 2,4
 
 public class DemographicManagementService extends Service{
-    private static DemographicManagementService service;
+    private static DemographicManagementService service = new DemographicManagementService();
     public static DemographicManagementService getService(){
         return service;
     }
@@ -39,4 +39,5 @@ public class DemographicManagementService extends Service{
         }
         return cic.get(0);
     }
+
 }

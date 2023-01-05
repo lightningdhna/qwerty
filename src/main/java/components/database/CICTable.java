@@ -12,7 +12,7 @@ import java.util.List;
 //Nguyen 1
 public class CICTable extends DatabaseConnection {
 
-    private static CICTable table ;
+    private static CICTable table  = new CICTable();
     public static CICTable getTable(){
         return table;
     }
@@ -55,22 +55,22 @@ public class CICTable extends DatabaseConnection {
         String query = """
                 create table cic_table(
                     cic_number varchar(100) primary key,
-                    name varchar(100) not null,
-                    other_name varchar(100) not null,
+                    name nvarchar(100) not null,
+                    other_name nvarchar(100) ,
                     date_of_birth date not null,
                     gender varchar(10) not null,
-                    place_of_origin varchar(100) not null,
-                    place_of_residence varchar(100) not null,
-                    place_of_temporary_residence varchar(100) not null,
-                    nationality varchar(50) not null,
-                    ethnic varchar(50) not null,
-                    passport_number varchar(50) not null,
-                    personal_identification varchar(200) not null,
-                    date_of_expiry date not null,
+                    place_of_origin nvarchar(100) not null,
+                    place_of_residence nvarchar(100) not null,
+                    place_of_temporary_residence nvarchar(100) not null,
+                    nationality nvarchar(50) not null,
+                    ethnic nvarchar(50) not null,
+                    passport_number varchar(50) ,
+                    personal_identification nvarchar(200) ,
+                    date_of_expiry date ,
                     verify_state varchar(10) not null,
-                    date_verify date not null,
-                    id_verifier varchar(100) not null,
-                    note varchar(200) not null,
+                    date_verify date ,
+                    id_verifier int ,
+                    note nvarchar(200),
                     front_cic_image_url varchar(200) not null,
                     back_cic_image_url varchar(200) not null
                 )
