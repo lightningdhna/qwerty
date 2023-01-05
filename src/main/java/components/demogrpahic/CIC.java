@@ -21,7 +21,7 @@ public class CIC {
 
     String verifyState = "No";                      //Trạng thái được xác thực
     LocalDate dateVerify = LocalDate.now();         //Ngày được xác thực
-    String idVerifier ="-1";                        //Id tài khoản người được xác thực
+    int idVerifier = -1;                        //Id tài khoản người được xác thực
     String note = "";                               //Ghi chú
 
     String frontCICImageURL ="/";                   //Ảnh mặt trước
@@ -31,7 +31,7 @@ public class CIC {
     public CIC(String cicNumber, String name, String otherName, LocalDate dateOfBirth, String gender,
                String placeOfOrigin, String placeOfResidence, String placeOfTemporaryResidence, String nationality,
                String ethnic, String passportNumber, String personalIdentification, LocalDate dateOfExpiry,
-               String verifyState, LocalDate dateVerify, String idVerifier, String note,
+               String verifyState, LocalDate dateVerify, int idVerifier, String note,
                String frontCICImageURL, String backCICImageURL) {
 
         this.cicNumber = cicNumber;
@@ -83,7 +83,7 @@ public class CIC {
         return gender;
     }
 
-    public String getIdVerifier() {
+    public int getIdVerifier() {
         return idVerifier;
     }
 
@@ -156,7 +156,7 @@ public class CIC {
         this.gender = gender;
     }
 
-    public void setIdVerifier(String idVerifier) {
+    public void setIdVerifier(int idVerifier) {
         this.idVerifier = idVerifier;
     }
 
@@ -209,6 +209,31 @@ public class CIC {
     }
     public boolean equals(CIC obj) {
         return this.cicNumber.equals( obj.getCicNumber());
+    }
+
+    @Override
+    public String toString() {
+        return "CIC{" +
+                "cicNumber='" + cicNumber + '\'' +
+                ", name='" + name + '\'' +
+                ", otherName='" + otherName + '\'' +
+                ", dateOfBirth=" + dateOfBirth +
+                ", gender='" + gender + '\'' +
+                ", placeOfOrigin='" + placeOfOrigin + '\'' +
+                ", placeOfResidence='" + placeOfResidence + '\'' +
+                ", placeOfTemporaryResidence='" + placeOfTemporaryResidence + '\'' +
+                ", nationality='" + nationality + '\'' +
+                ", ethnic='" + ethnic + '\'' +
+                ", passportNumber='" + passportNumber + '\'' +
+                ", personalIdentification='" + personalIdentification + '\'' +
+                ", dateOfExpiry=" + dateOfExpiry +
+                ", verifyState='" + verifyState + '\'' +
+                ", dateVerify=" + dateVerify +
+                ", idVerifier=" + idVerifier +
+                ", note='" + note + '\'' +
+                ", frontCICImageURL='" + frontCICImageURL + '\'' +
+                ", backCICImageURL='" + backCICImageURL + '\'' +
+                '}';
     }
 
 }
