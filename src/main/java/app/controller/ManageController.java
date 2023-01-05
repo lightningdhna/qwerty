@@ -1,7 +1,9 @@
 package app.controller;
 
+import app.PageManager;
 import app.model.manage.CICRowInfo;
 import app.view.manage.CICInfoTablePage;
+import app.view.manage.ManageCICDetailPage;
 import components.demogrpahic.CIC;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -27,8 +29,9 @@ public class ManageController {
             tableRow.setOnMouseClicked(event -> {
                 if (! tableRow.isEmpty() && event.getButton()== MouseButton.PRIMARY && event.getClickCount() == 2) {
                     CICRowInfo cicRow = tableRow.getItem();
-                    System.out.println(cicRow.getUsername());
-                    page.showCICDetail(cicRow);
+                    ManageCICDetailPage detailPage = new ManageCICDetailPage();
+                    detailPage.setInfo(cicRow);
+                    PageManager.getManager().getManagePage().showPage(detailPage);
                 }
             });
             return tableRow ;

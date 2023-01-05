@@ -14,34 +14,31 @@ public class ManagePage extends Page implements Initializable {
     Pane showPane;
     Page currentPage;
     CICInfoTablePage cicInfoTablePage;
-    ManageCICDetailPage manageCICDetailPage;
     public void showPage(Page page ){
         currentPage = page;
-        if(!showPane.getChildren().contains(page))
+        if(!showPane.getChildren().contains(page.getRoot()))
             showPane.getChildren().add(page.getRoot());
     }
     public void unShowPage(Page page){
-        showPane.getChildren().remove(page);
+        showPane.getChildren().remove(page.getRoot());
     }
     public void switchPage(Page page){
+        if(page==currentPage) return;
         unShowPage(currentPage);
         showPage(page);
     }
     public void showTable(){
         switchPage(cicInfoTablePage);
     }
-    public void showManageDetailCIC(){
-        switchPage(manageCICDetailPage);
-    }
 
     public ManagePage(){
         super();
         PageManager.getManager().setManagePage(this);
         Thread thread = new Thread(()->{
-            cicInfoTablePage = new CICInfoTablePage();
-            manageCICDetailPage = new ManageCICDetailPage();
+
         });
-        thread.start();
+        cicInfoTablePage = new CICInfoTablePage();
+        showPage(cicInfoTablePage);
     }
     @Override
     public void initialize(URL location, ResourceBundle resources) {
