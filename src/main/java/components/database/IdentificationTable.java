@@ -6,12 +6,12 @@ import java.sql.SQLException;
 //Nguyên 3
 public class IdentificationTable extends DatabaseConnection{
     // Bẩng định danh
-    private static  IdentificationTable table;
+    private static  IdentificationTable table = new IdentificationTable();
     public static IdentificationTable getTable(){
         return table;
     }
-    private static boolean hasTable = false;
-    public static void createTable() {
+    private boolean hasTable = false;
+    public void createTable() {
         if (hasTable) {
             return;
         }
@@ -26,7 +26,7 @@ public class IdentificationTable extends DatabaseConnection{
         } catch (SQLException ignored) {
         }
     }
-    public static String getCICNumberByAccountID(int accountID) {
+    public String getCICNumberByAccountID(int accountID) {
         createTable();
         String query = String.format("select cic_number from identification_table where account_id = %d", accountID);
         try {

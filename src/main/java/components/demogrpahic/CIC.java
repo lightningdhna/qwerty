@@ -203,6 +203,10 @@ public class CIC {
     public CIC(String ID){
         this.cicNumber = ID;
     }
+    public CIC(){};
+    public String getCICNumber(){
+        return this.cicNumber;
+    }
     public boolean equals(CIC obj) {
         return this.cicNumber.equals( obj.getCicNumber());
     }

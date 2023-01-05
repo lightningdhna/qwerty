@@ -11,9 +11,14 @@ import java.util.List;
 
 //Nguyen 1
 public class CICTable extends DatabaseConnection {
+
+    private static CICTable table  = new CICTable();
+    public static CICTable getTable(){
+        return table;
+    }
     private static boolean hasTable = false;
 
-    public static List<CIC> castResultSet(ResultSet rs) throws SQLException {
+    public List<CIC> castResultSet(ResultSet rs) throws SQLException {
         List<CIC> cicList = new ArrayList<>();
         while (rs.next()) {
             cicList.add(new CIC(
@@ -42,7 +47,7 @@ public class CICTable extends DatabaseConnection {
     }
 
     //Tạo bảng
-    public static void createTable() {
+    public void createTable() {
         if (hasTable) {
             return;
         }
@@ -50,22 +55,22 @@ public class CICTable extends DatabaseConnection {
         String query = """
                 create table cic_table(
                     cic_number varchar(100) primary key,
-                    name varchar(100) not null,
-                    other_name varchar(100) not null,
+                    name nvarchar(100) not null,
+                    other_name nvarchar(100) ,
                     date_of_birth date not null,
                     gender varchar(10) not null,
-                    place_of_origin varchar(100) not null,
-                    place_of_residence varchar(100) not null,
-                    place_of_temporary_residence varchar(100) not null,
-                    nationality varchar(50) not null,
-                    ethnic varchar(50) not null,
-                    passport_number varchar(50) not null,
-                    personal_identification varchar(200) not null,
-                    date_of_expiry date not null,
+                    place_of_origin nvarchar(100) not null,
+                    place_of_residence nvarchar(100) not null,
+                    place_of_temporary_residence nvarchar(100) not null,
+                    nationality nvarchar(50) not null,
+                    ethnic nvarchar(50) not null,
+                    passport_number varchar(50) ,
+                    personal_identification nvarchar(200) ,
+                    date_of_expiry date ,
                     verify_state varchar(10) not null,
-                    date_verify date not null,
-                    id_verifier varchar(100) not null,
-                    note varchar(200) not null,
+                    date_verify date ,
+                    id_verifier int ,
+                    note nvarchar(200),
                     front_cic_image_url varchar(200) not null,
                     back_cic_image_url varchar(200) not null
                 )
@@ -77,7 +82,7 @@ public class CICTable extends DatabaseConnection {
     }
 
     //Thêm cic
-    public static boolean add(CIC cic) {
+    public boolean add(CIC cic) {
         createTable();
         String query = String.format(
                 """
@@ -207,7 +212,7 @@ public class CICTable extends DatabaseConnection {
 //    }
 
     //Lấy hết CIC
-    public static List<CIC> getAllCIC() {
+    public List<CIC> getAllCIC() {
         createTable();
         String query = """
             select *
@@ -223,7 +228,7 @@ public class CICTable extends DatabaseConnection {
     }
 
     //Tìm CIC theo cicNumber
-    public static List<CIC> getCICByCICNumber(String cicNumber) {
+    public List<CIC> getCICByCICNumber(String cicNumber) {
         createTable();
         String query = String.format(
                 """
