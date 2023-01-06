@@ -11,14 +11,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="720.0" prefWidth="400.0" style="-fx-background-color: #EFEFEF; -fx-background-radius: 15;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="720.0" prefWidth="400.0" styleClass="anchor-pane-login" stylesheets="@../../../css/anchorpane.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label alignment="CENTER" layoutX="93.0" layoutY="123.0" prefHeight="76.0" prefWidth="228.0" text="Sign up" textFill="#2596be">
          <font>
             <Font name="SansSerif Bold" size="50.0" />
          </font>
       </Label>
-      <TextField fx:id="usernameTextField" layoutX="82.0" layoutY="241.0" prefHeight="40.0" prefWidth="250.0" promptText="Username" style="-fx-background-radius: 15;">
+      <TextField fx:id="usernameTextField" layoutX="82.0" layoutY="241.0" prefHeight="40.0" prefWidth="250.0" promptText="Username" styleClass="text-field-login" stylesheets="@../../../css/textfield.css">
          <font>
             <Font size="14.0" />
          </font>
@@ -26,7 +26,7 @@
             <Insets left="15.0" right="30.0" />
          </padding>
       </TextField>
-      <PasswordField fx:id="passwordField" layoutX="82.0" layoutY="291.0" prefHeight="40.0" prefWidth="250.0" promptText="Passsword" style="-fx-background-radius: 15;">
+      <PasswordField fx:id="passwordField" layoutX="82.0" layoutY="291.0" prefHeight="40.0" prefWidth="250.0" promptText="Passsword" styleClass="text-field-login" stylesheets="@../../../css/textfield.css">
          <font>
             <Font size="14.0" />
          </font>
@@ -34,7 +34,7 @@
             <Insets left="15.0" right="30.0" />
          </padding>
       </PasswordField>
-      <PasswordField fx:id="passwordFieldRetype" layoutX="82.0" layoutY="346.0" prefHeight="40.0" prefWidth="250.0" promptText="Retype passsword" style="-fx-background-radius: 15;">
+      <PasswordField fx:id="passwordFieldRetype" layoutX="82.0" layoutY="346.0" prefHeight="40.0" prefWidth="250.0" promptText="Retype passsword" styleClass="text-field-login" stylesheets="@../../../css/textfield.css">
          <font>
             <Font size="14.0" />
          </font>
@@ -42,7 +42,7 @@
             <Insets left="15.0" right="30.0" />
          </padding>
       </PasswordField>
-      <TextField fx:id="emailTextField" layoutX="82.0" layoutY="399.0" prefHeight="40.0" prefWidth="250.0" promptText="Email@" style="-fx-background-radius: 15;">
+      <TextField fx:id="emailTextField" layoutX="82.0" layoutY="399.0" prefHeight="40.0" prefWidth="250.0" promptText="Email@" styleClass="text-field-login" stylesheets="@../../../css/textfield.css">
          <font>
             <Font size="14.0" />
          </font>
@@ -52,12 +52,12 @@
       </TextField>
       <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="30.0" layoutY="241.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../icon/username.png" />
+            <Image url="@../../../icon/icon-dark/username-2.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="30.0" layoutY="294.0">
          <image>
-            <Image url="@../../../icon/password.png" />
+            <Image url="@../../../icon/icon-dark/password-2.png" />
          </image>
       </ImageView>
       <JFXButton buttonType="RAISED" contentDisplay="CENTER" layoutX="350.0" onMouseClicked="#exit" prefHeight="30.0" prefWidth="30.0" ripplerFill="#df1616" style="-fx-background-radius: 0 15 0 0;" AnchorPane.topAnchor="0.0">
@@ -86,13 +86,18 @@
       </JFXButton>
       <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="30.0" layoutY="401.0">
          <image>
-            <Image url="@../../../icon/email.png" />
+            <Image url="@../../../icon/icon-dark/mail-2.png" />
          </image>
       </ImageView>
-      <JFXButton buttonType="RAISED" layoutX="78.0" layoutY="558.0" onMouseClicked="#signUp" prefHeight="66.0" prefWidth="228.0" ripplerFill="#194181" style="-fx-background-color: green; -fx-background-radius: 10;" text="Register" textFill="WHITE">
+      <JFXButton buttonType="RAISED" layoutX="117.0" layoutY="531.0" onMouseClicked="#signUp" prefHeight="66.0" prefWidth="180.0" ripplerFill="#194181" styleClass="jfx-button-signup" stylesheets="@../../../css/button.css" text="Register" textFill="WHITE">
          <font>
             <Font name="SansSerif Regular" size="24.0" />
          </font>
       </JFXButton>
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="30.0" layoutY="351.0">
+         <image>
+            <Image url="@../../../icon/icon-dark/rewrite-2.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

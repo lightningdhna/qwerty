@@ -1,0 +1,31 @@
+.jfx-button-login{
+    -fx-background-color: linear-gradient(#000046, #1cb5e0);
+    -fx-background-insets: 0,1,2,3;
+    -fx-background-radius: 26 26 26 26;
+    -fx-padding: 12 30 12 30;
+    -fx-text-fill: white;
+    -fx-font-size: 20px;
+}
+.jfx-button-login:hover{
+    -fx-background-color: linear-gradient(#1a2980, #26d0ce);
+    -fx-font-weight:bold;
+}
+.jfx-button-login:pressed{
+    -fx-background-color: linear-gradient(#1a3030, #26d0ce);
+}
+
+.jfx-button-signup{
+    -fx-background-color: linear-gradient(#000046, #1cb5e0);
+    -fx-background-insets: 0,1,2,3;
+    -fx-background-radius: 26 26 26 26;
+    -fx-padding: 12 30 12 30;
+    -fx-text-fill: white;
+    -fx-font-size: 20px;
+}
+.jfx-button-signup:hover{
+    -fx-background-color: linear-gradient(#1a2980, #26d0ce);
+    -fx-font-weight:bold;
+}
+.jfx-button-signup:pressed{
+    -fx-background-color: linear-gradient(#1a3030, #26d0ce);
+}
