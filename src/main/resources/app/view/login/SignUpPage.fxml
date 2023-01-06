@@ -72,11 +72,11 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </JFXButton>
-      <JFXButton buttonType="RAISED" contentDisplay="CENTER" layoutX="44.0" layoutY="69.0" onMouseClicked="#backToLogin" prefHeight="30.0" prefWidth="30.0" ripplerFill="#df1616" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="50.0">
+      <JFXButton buttonType="RAISED" contentDisplay="CENTER" layoutX="39.0" layoutY="32.0" onMouseClicked="#backToLogin" prefHeight="58.0" prefWidth="63.0" ripplerFill="#df1616" styleClass="jfx-button-signup-back" stylesheets="@../../../css/button.css" AnchorPane.leftAnchor="39.0" AnchorPane.topAnchor="32.0">
          <graphic>
-            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true">
+            <ImageView fitHeight="46.0" fitWidth="49.0" pickOnBounds="true">
                <image>
-                  <Image url="@../../../icon/icons8-undo-52.png" />
+                  <Image url="@../../../icon/icon-dark/signup-back-2.png" />
                </image>
             </ImageView>
          </graphic>

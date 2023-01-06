@@ -121,7 +121,7 @@
          </ImageView>
       </VBox>
       <VBox layoutX="5.0" layoutY="100.0" prefWidth="350.0">
-         <JFXButton fx:id="homeButton" ellipsisString="" prefHeight="60.0" prefWidth="325.0" style="-fx-alignment: center-left; -fx-background-radius: 15; -fx-border-radius: 15;" text="Home" textFill="WHITE" VBox.vgrow="ALWAYS">
+         <JFXButton fx:id="homeButton" ellipsisString="" prefHeight="60.0" prefWidth="325.0" styleClass="jfx-button-main-view" stylesheets="@../../../css/button.css" text="Home" textFill="WHITE" VBox.vgrow="ALWAYS">
             <font>
                <Font name="SansSerif Bold" size="30.0" />
             </font>
@@ -158,7 +158,7 @@
                </RadialGradient>
             </ripplerFill>
          </JFXButton>
-         <JFXButton fx:id="accountButton" ellipsisString="" prefHeight="60.0" prefWidth="325.0" style="-fx-alignment: center-left; -fx-background-radius: 15; -fx-border-radius: 15;" text="Account" textFill="WHITE" VBox.vgrow="ALWAYS">
+         <JFXButton fx:id="accountButton" ellipsisString="" prefHeight="60.0" prefWidth="325.0" styleClass="jfx-button-main-view" stylesheets="@../../../css/button.css" text="Account" textFill="WHITE" VBox.vgrow="ALWAYS">
             <font>
                <Font name="SansSerif Bold" size="30.0" />
             </font>
@@ -195,7 +195,7 @@
                </RadialGradient>
             </ripplerFill>
          </JFXButton>
-         <JFXButton fx:id="registerButton" ellipsisString="" prefHeight="60.0" prefWidth="325.0" style="-fx-alignment: center-left; -fx-background-radius: 15; -fx-border-radius: 15;" text="Register" textFill="WHITE" VBox.vgrow="ALWAYS">
+         <JFXButton fx:id="registerButton" ellipsisString="" prefHeight="60.0" prefWidth="325.0" styleClass="jfx-button-main-view" stylesheets="@../../../css/button.css" text="Register" textFill="WHITE" VBox.vgrow="ALWAYS">
             <font>
                <Font name="SansSerif Bold" size="30.0" />
             </font>
@@ -232,7 +232,7 @@
                </RadialGradient>
             </ripplerFill>
          </JFXButton>
-         <JFXButton fx:id="verifyButton" ellipsisString="" prefHeight="60.0" prefWidth="325.0" style="-fx-alignment: center-left; -fx-background-radius: 15; -fx-border-radius: 15;" text="Verify" textFill="WHITE" VBox.vgrow="ALWAYS">
+         <JFXButton fx:id="verifyButton" ellipsisString="" prefHeight="60.0" prefWidth="325.0" styleClass="jfx-button-main-view" stylesheets="@../../../css/button.css" text="Verify" textFill="WHITE" VBox.vgrow="ALWAYS">
             <font>
                <Font name="SansSerif Bold" size="30.0" />
             </font>
@@ -269,7 +269,7 @@
                </RadialGradient>
             </ripplerFill>
          </JFXButton>
-         <JFXButton fx:id="manageButton" ellipsisString="" prefHeight="60.0" prefWidth="325.0" style="-fx-alignment: center-left; -fx-background-radius: 15; -fx-border-radius: 15;" text="Manage" textFill="WHITE" VBox.vgrow="ALWAYS">
+         <JFXButton fx:id="manageButton" ellipsisString="" prefHeight="60.0" prefWidth="325.0" styleClass="jfx-button-main-view" stylesheets="@../../../css/button.css" text="Manage" textFill="WHITE" VBox.vgrow="ALWAYS">
             <font>
                <Font name="SansSerif Bold" size="30.0" />
             </font>
@@ -306,7 +306,7 @@
                </RadialGradient>
             </ripplerFill>
          </JFXButton>
-         <JFXButton fx:id="statisticButton" ellipsisString="" prefHeight="60.0" prefWidth="325.0" style="-fx-alignment: center-left; -fx-background-radius: 15; -fx-border-radius: 15;" text="Statistic" textFill="WHITE" VBox.vgrow="ALWAYS">
+         <JFXButton fx:id="statisticButton" ellipsisString="" prefHeight="60.0" prefWidth="325.0" styleClass="jfx-button-main-view" stylesheets="@../../../css/button.css" text="Statistic" textFill="WHITE" VBox.vgrow="ALWAYS">
             <font>
                <Font name="SansSerif Bold" size="30.0" />
             </font>
@@ -353,7 +353,7 @@
             </Bloom>
          </effect></Separator>
       <VBox layoutX="15.0" layoutY="575.0">
-         <JFXButton prefHeight="30.0" prefWidth="30.0" style="-fx-background-radius: 15; -fx-border-radius: 15;">
+         <JFXButton contentDisplay="CENTER" prefHeight="30.0" prefWidth="30.0" styleClass="jfx-button-main-view-icon" stylesheets="@../../../css/button.css">
             <graphic>
                <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                   <image>
@@ -362,7 +362,7 @@
                </ImageView>
             </graphic>
          </JFXButton>
-         <JFXButton fx:id="settingButton" prefHeight="30.0" prefWidth="30.0" style="-fx-background-radius: 15; -fx-border-radius: 15;">
+         <JFXButton fx:id="settingButton" contentDisplay="CENTER" prefHeight="30.0" prefWidth="30.0" styleClass="jfx-button-main-view-icon" stylesheets="@../../../css/button.css">
             <graphic>
                <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                   <image>
@@ -371,7 +371,7 @@
                </ImageView>
             </graphic>
          </JFXButton>
-         <JFXButton prefHeight="30.0" prefWidth="30.0" style="-fx-background-radius: 15; -fx-border-radius: 15;">
+         <JFXButton contentDisplay="CENTER" prefHeight="30.0" prefWidth="30.0" styleClass="jfx-button-main-view-icon" stylesheets="@../../../css/button.css">
             <graphic>
                <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                   <image>
@@ -522,7 +522,7 @@
          </JFXButton>
       </children>
    </VBox>
-   <JFXButton buttonType="RAISED" contentDisplay="CENTER" layoutX="370.0" layoutY="20.0" onMouseClicked="#logOut" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: transparent; -fx-background-radius: 0 15 0 20;" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="0.0">
+   <JFXButton buttonType="RAISED" contentDisplay="CENTER" layoutX="370.0" layoutY="20.0" onMouseClicked="#logOut" prefHeight="30.0" prefWidth="30.0" styleClass="jfx-button-main-view-icon" stylesheets="@../../../css/button.css" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="0.0">
       <graphic>
          <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true">
             <image>

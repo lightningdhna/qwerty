@@ -29,3 +29,55 @@
 .jfx-button-signup:pressed{
     -fx-background-color: linear-gradient(#1a3030, #26d0ce);
 }
+
+.jfx-button-main-view{
+    -fx-background-color: transparent;
+    -fx-alignment: center-left;
+    -fx-font-family: Sans-Serif;
+    -fx-background-radius: 15 15 15 15;
+    -fx-border-radius: 15 15 15 15;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+.jfx-button-main-view:hover{
+    -fx-border-color: rgba(44, 83, 100, 0.7);
+    -fx-background-color: transparent;
+    /*-fx-background-color: rgb(44, 83, 100);*/
+    -fx-font-weight: bold;
+    -fx-font-size: 32px;
+}
+.jfx-button-main-view:focused{
+    -fx-background-color: rgba(44, 83, 100, 0.7);
+    -fx-font-size: 30px;
+}
+
+.jfx-button-main-view-icon{
+    -fx-background-color: transparent;
+    -fx-alignment: center-left;
+    -fx-font-family: Sans-Serif;
+    -fx-background-radius: 15 15 15 15;
+    -fx-border-radius: 15 15 15 15;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+.jfx-button-main-view-icon:hover{
+    -fx-border-color: rgba(44, 83, 100, 0.7);
+    -fx-background-color: transparent;
+    /*-fx-background-color: rgb(44, 83, 100);*/
+    -fx-font-weight: bold;
+    -fx-font-size: 12px;
+}
+.jfx-button-main-view-icon:focused{
+    -fx-background-color: rgba(44, 83, 100, 0.7);
+}
+
+.jfx-button-signup-back{
+    -fx-background-color: transparent;
+    -fx-background-radius: 15 15 15 15;
+    -fx-border-radius: 15 15 15 15;
+}
+.jfx-button-signup-back:hover{
+    -fx-border-color: rgba(44, 83, 100, 0.7);
+    -fx-background-color: transparent;
+    -fx-font-weight: bold;
+}
