@@ -1,7 +1,7 @@
 package app.model;
 
-import animatefx.animation.FadeIn;
-import animatefx.animation.FadeOut;
+import animatefx.animation.*;
+import app.PageManager;
 import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.AnchorPane;

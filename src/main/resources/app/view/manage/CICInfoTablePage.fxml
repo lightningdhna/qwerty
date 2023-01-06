@@ -8,17 +8,16 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <ScrollPane layoutY="29.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="750.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="29.0">
+      <ScrollPane layoutY="29.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="750.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
          <content>
             <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="725.0">
                <children>
-                  <TableView fx:id="tableView" prefHeight="600.0" prefWidth="725.0">
+                  <TableView fx:id="tableView" prefHeight="500.0" prefWidth="725.0">
                      <columns>
                         <TableColumn prefWidth="75.0" text="Số CCCD" />
                         <TableColumn prefWidth="75.0" text="Họ Tên" />
                         <TableColumn prefWidth="83.20001220703125" text="Số hộ khẩu" />
-                        <TableColumn prefWidth="90.40005493164062" text="Trạng thái " />
-                        <TableColumn prefWidth="136.79998779296875" text="Trạng thái xác thực" />
+                        <TableColumn prefWidth="90.40005493164062" text="Trạng thái xác thực" />
                         <TableColumn prefWidth="115.20001220703125" text="Tài khoản" />
                      </columns>
                   </TableView>

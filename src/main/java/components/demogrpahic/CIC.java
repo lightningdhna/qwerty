@@ -3,26 +3,26 @@ package components.demogrpahic;
 import java.time.LocalDate;
 
 public class CIC {
-    String cicNumber;
-    String name="<default>";                        //Tên
-    String otherName = "";                          //Tên gọi khác nếu có
-    LocalDate dateOfBirth=LocalDate.now();          //Ngày sinh
-    String gender="<No>";                           //Giới tính
+    String cicNumber        = "0000000000";
+    String name             = "<default>";                        //Tên
+    String otherName        = "";                          //Tên gọi khác nếu có
+    LocalDate dateOfBirth   = LocalDate.now();          //Ngày sinh
+    String gender           = "<No>";                           //Giới tính
 
-    String placeOfOrigin="<default>";               // quê quán
-    String placeOfResidence="<default>";            //Thường trú
+    String placeOfOrigin    ="<default>";               // quê quán
+    String placeOfResidence ="<default>";            //Thường trú
     String placeOfTemporaryResidence = "";          //Tạm tr
-    String nationality = "Việt Nam";                //Quốc tịch
-    String ethnic = "Kinh";                         //Dân tộc
-    String passportNumber ="<default>";             //Số hộ chiếu
+    String nationality      = "Việt Nam";                //Quốc tịch
+    String ethnic           = "Kinh";                         //Dân tộc
+    String passportNumber   ="<default>";             //Số hộ chiếu
     String personalIdentification ="<default>";     //Đặc điểm nhân dạng
 
-    LocalDate dateOfExpiry = LocalDate.now();       //Thời gian hiệu lực CIC
+    LocalDate dateOfExpiry  = LocalDate.now();       //Thời gian hiệu lực CIC
 
-    String verifyState = "No";                      //Trạng thái được xác thực
-    LocalDate dateVerify = LocalDate.now();         //Ngày được xác thực
-    String idVerifier ="-1";                        //Id tài khoản người được xác thực
-    String note = "";                               //Ghi chú
+    String verifyState      = "No";                      //Trạng thái được xác thực
+    LocalDate dateVerify    = LocalDate.now();         //Ngày được xác thực
+    String idVerifier       ="-1";                        //Id tài khoản người được xác thực
+    String note             = "";                               //Ghi chú
 
     String frontCICImageURL ="/";                   //Ảnh mặt trước
 

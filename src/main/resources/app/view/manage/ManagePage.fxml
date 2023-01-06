@@ -6,6 +6,7 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.paint.Color?>
@@ -112,7 +113,7 @@
             </JFXButton>
          </children>
       </VBox>
-      <Pane fx:id="showPane" layoutX="287.0" layoutY="-12.0" opacity="0.9" prefHeight="575.0" prefWidth="750.0" style="-fx-background-color: #efefef; -fx-background-radius: 20;" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="0.0">
+      <Pane fx:id="showPane" layoutX="287.0" layoutY="-12.0" opacity="0.9" prefHeight="500.0" prefWidth="750.0" style="-fx-background-color: #efefef; -fx-background-radius: 20;" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="75.0">
          <effect>
             <DropShadow blurType="GAUSSIAN" offsetX="-1.0" offsetY="2.0" spread="0.04">
                <color>
@@ -121,5 +122,6 @@
             </DropShadow>
          </effect>
       </Pane>
+      <HBox layoutX="300.0" prefHeight="50.0" prefWidth="493.0" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="0.0" />
    </children>
 </AnchorPane>
