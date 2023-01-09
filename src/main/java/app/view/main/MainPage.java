@@ -29,7 +29,7 @@ import javafx.stage.StageStyle;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class MainPage extends Page implements Initializable {
+public class MainPage extends Page  {
 
     @FXML
     Pane bigTaskBar, smallTaskBar;
@@ -76,8 +76,17 @@ public class MainPage extends Page implements Initializable {
         pageInfoLabel.setText(pageName[index]);
     }
 
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
+    EventHandler<MouseEvent> buttonEventHandler = mouseEvent -> {
+        int index = getSourceIndexButtons(mouseEvent);
+        if(mouseEvent.getEventType() == MouseEvent.MOUSE_CLICKED){
+            if(pages[index]==null){
+                System.out.println(pages[index].getClass().toString());
+            }
+            showPage(index);
+        }
+    };
+    public MainPage(){
+        super();
         rootPane.getChildren().remove(bigTaskBar);
         bigTaskBar.setLayoutX(0);
 
@@ -91,15 +100,6 @@ public class MainPage extends Page implements Initializable {
         buttons = new JFXButton[]{homeButton,accountButton, registerButton, verifyButton, manageButton, statisticButton,settingButton};
         pages   =  new Page[]    {homePage  ,  accountPage, registerPage  , verifyPage  , managePage  , statisticPage  , statisticPage};
 
-        EventHandler<MouseEvent> buttonEventHandler = mouseEvent -> {
-            int index = getSourceIndexButtons(mouseEvent);
-            if(mouseEvent.getEventType() == MouseEvent.MOUSE_CLICKED){
-                if(pages[index]==null){
-                    System.out.println(pages[index].getClass().toString());
-                }
-                showPage(index);
-            }
-        };
         for(var button : buttons){
             button.addEventHandler(MouseEvent.ANY,buttonEventHandler);
         }

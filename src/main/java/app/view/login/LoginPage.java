@@ -33,15 +33,14 @@ public class LoginPage extends Page implements Initializable {
     public void logIn(){
         String username= textField.getText();
         String password = passwordField.getText();
-        if(username.trim().equals("")||password.trim().equals("")){
+        if(username==null||username.trim().equals("")||password==null||password.trim().equals("")){
             warningBlank();
             return;
         }
         LoginController.login(this,new Account(username,password));
     }
-
+    MainPage mainPage = new MainPage();
     public void setMainPage(){
-        MainPage mainPage = new MainPage();
         getRoot().getScene().setRoot(mainPage.getRoot());
         new ZoomIn(mainPage.getRoot()).play();
 

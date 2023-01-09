@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1200.0" style="-fx-background-color: #EEEEEE;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Separator layoutY="153.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="75.0">
+         <effect>
+            <Bloom />
+         </effect>
+      </Separator>
+      <Label alignment="CENTER" layoutX="109.0" prefHeight="76.0" prefWidth="442.0" style="-fx-background-color: #DDDDDD; -fx-background-radius: 10;" text="Sửa thông tin nhân khẩu" textFill="#2596be" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <font>
+            <Font name="SansSerif Bold" size="35.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" contentDisplay="CENTER" onMouseClicked="#close" prefHeight="30.0" prefWidth="30.0" ripplerFill="#df1616" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="12.0">
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../../../icon/icons8-undo-52.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <ScrollPane layoutX="-14.0" layoutY="92.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0">
+               <children>
+                  <VBox AnchorPane.leftAnchor="10.0">
+                     <children>
+                        <HBox>
+                           <children>
+                              <Label prefHeight="50.0" prefWidth="250.0" text="Họ tên">
+                                 <font>
+                                    <Font name="SansSerif Regular" size="25.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="name" prefHeight="45.0" prefWidth="500.0">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <Label prefHeight="50.0" prefWidth="250.0" text="Tên khác">
+                                 <font>
+                                    <Font name="SansSerif Regular" size="25.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="otherName" prefHeight="45.0" prefWidth="500.0">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <Label prefHeight="50.0" prefWidth="250.0" text="Số CCCD">
+                                 <font>
+                                    <Font name="SansSerif Regular" size="25.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="cicNumber" editable="false" prefHeight="45.0" prefWidth="500.0">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <Label prefHeight="50.0" prefWidth="250.0" text="Ngày sinh">
+                                 <font>
+                                    <Font name="SansSerif Regular" size="25.0" />
+                                 </font>
+                              </Label>
+                              <DatePicker fx:id="dob" prefHeight="40.0" prefWidth="300.0">
+                                 <HBox.margin>
+                                    <Insets top="5.0" />
+                                 </HBox.margin>
+                              </DatePicker>
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <Label prefHeight="50.0" prefWidth="250.0" text="Giới tính">
+                                 <font>
+                                    <Font name="SansSerif Regular" size="25.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="gender" prefHeight="40.0" prefWidth="300.0" promptText="Chọn giới tính" visibleRowCount="3">
+                                 <HBox.margin>
+                                    <Insets top="5.0" />
+                                 </HBox.margin>
+                              </ComboBox>
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <Label prefHeight="50.0" prefWidth="250.0" text="Quê quán">
+                                 <font>
+                                    <Font name="SansSerif Regular" size="25.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="placeOfOrigin" prefHeight="45.0" prefWidth="500.0">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <Label prefHeight="50.0" prefWidth="250.0" text="Nơi thường trú">
+                                 <font>
+                                    <Font name="SansSerif Regular" size="25.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="placeOfResidence" prefHeight="45.0" prefWidth="500.0">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <Label prefHeight="50.0" prefWidth="250.0" text="Nơi tạm trú">
+                                 <font>
+                                    <Font name="SansSerif Regular" size="25.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="placeOfTemporary" prefHeight="45.0" prefWidth="500.0">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <Label prefHeight="50.0" prefWidth="250.0" text="Quốc tịch">
+                                 <font>
+                                    <Font name="SansSerif Regular" size="25.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="nationality" prefHeight="45.0" prefWidth="500.0">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <Label prefHeight="50.0" prefWidth="250.0" text="Dân tộc">
+                                 <font>
+                                    <Font name="SansSerif Regular" size="25.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="ethnic" prefHeight="45.0" prefWidth="500.0">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <Label prefHeight="50.0" prefWidth="250.0" text="Số hộ chiếu">
+                                 <font>
+                                    <Font name="SansSerif Regular" size="25.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="passportNumber" prefHeight="45.0" prefWidth="500.0">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <Label prefHeight="50.0" prefWidth="250.0" text="Ghi chú">
+                                 <font>
+                                    <Font name="SansSerif Regular" size="25.0" />
+                                 </font>
+                              </Label>
+                              <TextArea fx:id="note" prefHeight="200.0" prefWidth="500.0" wrapText="true">
+                                 <font>
+                                    <Font name="SansSerif Regular" size="24.0" />
+                                 </font>
+                              </TextArea>
+                           </children>
+                        </HBox>
+                        <Pane prefHeight="300.0" prefWidth="200.0" />
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="20.0">
+         <children>
+            <JFXButton buttonType="RAISED" prefHeight="70.0" prefWidth="250.0" ripplerFill="#194181" style="-fx-background-color: green; -fx-background-radius: 10;" text="Cập nhật" textFill="WHITE">
+               <font>
+                  <Font name="SansSerif Regular" size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="15.0" />
+               </VBox.margin>
+            </JFXButton>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

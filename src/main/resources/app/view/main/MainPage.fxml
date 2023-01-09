@@ -79,21 +79,6 @@
             <Image url="@../../../image/snowflakebackground2.png" />
          </image>
       </ImageView>
-      <Pane layoutX="100.0" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #f7f7f7; -fx-background-radius: 50; -fx-border-radius: 50;">
-         <effect>
-            <DropShadow height="198.8" radius="80.7675" spread="0.13" width="126.27">
-               <color>
-                  <Color red="0.9578947424888611" green="0.9401559233665466" blue="0.9401559233665466" />
-               </color>
-               <input>
-                  <Reflection fraction="0.61" topOpacity="0.1" />
-               </input>
-            </DropShadow>
-         </effect>
-         <ImageView fitHeight="70.0" fitWidth="70.0" layoutX="15.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
-            <Image url="@../../../image/cryo.jpg" />
-         </ImageView>
-      </Pane>
       <VBox layoutX="15.0" layoutY="100.0" prefWidth="60.0">
          <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
             <VBox.margin>
@@ -170,7 +155,7 @@
                </RadialGradient>
             </ripplerFill>
          </JFXButton>
-         <JFXButton fx:id="accountButton" ellipsisString="" prefHeight="60.0" prefWidth="325.0" style="-fx-alignment: center-left; -fx-background-radius: 15; -fx-border-radius: 15;" text="Account" textFill="WHITE" VBox.vgrow="ALWAYS">
+         <JFXButton fx:id="accountButton" ellipsisString="" prefHeight="60.0" prefWidth="325.0" style="-fx-alignment: center-left; -fx-background-radius: 15; -fx-border-radius: 15;" text="Tài khoản" textFill="WHITE" VBox.vgrow="ALWAYS">
             <font>
                <Font name="SansSerif Bold" size="30.0" />
             </font>
@@ -207,7 +192,7 @@
                </RadialGradient>
             </ripplerFill>
          </JFXButton>
-         <JFXButton fx:id="registerButton" ellipsisString="" prefHeight="60.0" prefWidth="325.0" style="-fx-alignment: center-left; -fx-background-radius: 15; -fx-border-radius: 15;" text="Register" textFill="WHITE" VBox.vgrow="ALWAYS">
+         <JFXButton fx:id="registerButton" ellipsisString="" prefHeight="60.0" prefWidth="325.0" style="-fx-alignment: center-left; -fx-background-radius: 15; -fx-border-radius: 15;" text="Đăng kí" textFill="WHITE" VBox.vgrow="ALWAYS">
             <font>
                <Font name="SansSerif Bold" size="30.0" />
             </font>
@@ -244,7 +229,7 @@
                </RadialGradient>
             </ripplerFill>
          </JFXButton>
-         <JFXButton fx:id="verifyButton" ellipsisString="" prefHeight="60.0" prefWidth="325.0" style="-fx-alignment: center-left; -fx-background-radius: 15; -fx-border-radius: 15;" text="Verify" textFill="WHITE" VBox.vgrow="ALWAYS">
+         <JFXButton fx:id="verifyButton" ellipsisString="" prefHeight="60.0" prefWidth="325.0" style="-fx-alignment: center-left; -fx-background-radius: 15; -fx-border-radius: 15;" text="Xác thực" textFill="WHITE" VBox.vgrow="ALWAYS">
             <font>
                <Font name="SansSerif Bold" size="30.0" />
             </font>
@@ -281,7 +266,7 @@
                </RadialGradient>
             </ripplerFill>
          </JFXButton>
-         <JFXButton fx:id="manageButton" ellipsisString="" prefHeight="60.0" prefWidth="325.0" style="-fx-alignment: center-left; -fx-background-radius: 15; -fx-border-radius: 15;" text="Manage" textFill="WHITE" VBox.vgrow="ALWAYS">
+         <JFXButton fx:id="manageButton" ellipsisString="" prefHeight="60.0" prefWidth="325.0" style="-fx-alignment: center-left; -fx-background-radius: 15; -fx-border-radius: 15;" text="Quản lí" textFill="WHITE" VBox.vgrow="ALWAYS">
             <font>
                <Font name="SansSerif Bold" size="30.0" />
             </font>
@@ -318,7 +303,7 @@
                </RadialGradient>
             </ripplerFill>
          </JFXButton>
-         <JFXButton fx:id="statisticButton" ellipsisString="" prefHeight="60.0" prefWidth="325.0" style="-fx-alignment: center-left; -fx-background-radius: 15; -fx-border-radius: 15;" text="Statistic" textFill="WHITE" VBox.vgrow="ALWAYS">
+         <JFXButton fx:id="statisticButton" ellipsisString="" prefHeight="60.0" prefWidth="325.0" style="-fx-alignment: center-left; -fx-background-radius: 15; -fx-border-radius: 15;" text="Thống kê" textFill="WHITE" VBox.vgrow="ALWAYS">
             <font>
                <Font name="SansSerif Bold" size="30.0" />
             </font>
