@@ -4,6 +4,8 @@ import app.PageManager;
 import app.model.Window;
 import app.model.manage.CICRowInfo;
 import components.demogrpahic.CIC;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import service.DemographicManagementService;
@@ -18,6 +20,7 @@ public class EditCICInfoWindow extends Window {
     ComboBox<String> gender;
     @FXML
     TextArea note;
+
     public void setInfo(CICRowInfo cicInfo){
         name.setText(cicInfo.getName());
         otherName.setText(cicInfo.getOtherName());
@@ -32,8 +35,13 @@ public class EditCICInfoWindow extends Window {
         gender.setValue(cicInfo.getGender());
         note.setText(cicInfo.getNote());
     }
-    public EditCICInfoWindow(){}
+    public EditCICInfoWindow(){
+        ObservableList<String> genderList = FXCollections.observableArrayList();
+        genderList.addAll("Nam", "Nữ","Khác");
+        gender.setItems(genderList);
+    }
     public EditCICInfoWindow(CICRowInfo cicInfo){
+        this();
         setInfo(cicInfo);
     }
 

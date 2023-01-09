@@ -2,6 +2,8 @@ package app.view.manage;
 
 import app.model.Window;
 import components.demogrpahic.CIC;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
@@ -16,6 +18,14 @@ public class AddCICInfoWindow extends Window {
     @FXML ComboBox<String> gender;
     @FXML
     TextArea note;
+    public AddCICInfoWindow(){
+        ObservableList<String> genderList = FXCollections.observableArrayList();
+        genderList.addAll("Nam", "Nữ","Khác");
+        gender.setItems(genderList);
+        nationality.setText("Việt Nam");
+        ethnic.setText("Kinh");
+
+    }
     public void addNewCIC(){
         CIC info = new CIC(cicNumber.getText());
         info.setName(name.getText());
