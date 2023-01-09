@@ -27,7 +27,8 @@ public class AddCICInfoWindow extends Window {
 
     }
     public void addNewCIC(){
-        CIC info = new CIC(cicNumber.getText());
+        CIC info = new CIC();
+        info.setCICNumber(cicNumber.getText());
         info.setName(name.getText());
         info.setOtherName(otherName.getText());
         info.setPlaceOfOrigin(placeOfOrigin.getText());

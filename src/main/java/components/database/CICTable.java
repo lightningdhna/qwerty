@@ -24,7 +24,7 @@ public class CICTable extends DatabaseConnection {
             cicList.add(new CIC(
                     rs.getString("cic_number"),
                     rs.getString("name"),
-                    rs.getString("other_name")==null?"":  rs.getString("other_name"),
+                    rs.getString("other_name"),
                     rs.getDate("date_of_birth").toLocalDate(),
                     rs.getString("gender"),
                     rs.getString("place_of_origin"),
@@ -34,9 +34,9 @@ public class CICTable extends DatabaseConnection {
                     rs.getString("ethnic"),
                     rs.getString("passport_number")==null?"":rs.getString("passport_number"),
                     rs.getString("personal_identification")==null?"":rs.getString("personal_identification"),
-                    rs.getDate("date_of_expiry") == null ? LocalDate.now():rs.getDate("date_of_expiry").toLocalDate(),
+                    rs.getDate("date_of_expiry") == null ? LocalDate.MIN:rs.getDate("date_of_expiry").toLocalDate(),
                     rs.getString("verify_state"),
-                    rs.getDate("date_verify") == null ? LocalDate.now(): rs.getDate("date_verify").toLocalDate(),
+                    rs.getDate("date_verify") == null ? LocalDate.MIN: rs.getDate("date_verify").toLocalDate(),
                     rs.getInt("id_verifier"),
                     rs.getString("note")==null?"": rs.getString("note"),
                     rs.getString("front_cic_image_url"),
@@ -55,8 +55,8 @@ public class CICTable extends DatabaseConnection {
         String query = """
                 create table cic_table(
                     cic_number varchar(100) primary key,
-                    name nvarchar(100) not null,
-                    other_name nvarchar(100) ,
+                    name nvarchar(100) not null ,
+                    other_name nvarchar(100),
                     date_of_birth date not null,
                     gender varchar(10) not null,
                     place_of_origin nvarchar(100) not null,
@@ -80,10 +80,22 @@ public class CICTable extends DatabaseConnection {
         } catch (SQLException ignored) {
         }
     }
-
+    public boolean checkExist(String cicNumber){
+        String query = String.format("SELECT cic_number FROM cic_table WHERE cic_number='%s'", cicNumber);
+        try {
+            ResultSet rs = executeQuery(query);
+            return rs.next();
+        } catch (SQLException e) {
+            return false;
+        }
+    }
     //Thêm cic
     public boolean add(CIC cic) {
         createTable();
+        if (checkExist(cic.getCICNumber())){
+            System.out.println("Đã tồn tại CIC với cicNumber: "+cic.getCICNumber());
+            return false;
+        }
         String query = String.format(
                 """
                 insert into cic_table(
@@ -111,7 +123,7 @@ public class CICTable extends DatabaseConnection {
                     '%s', '%s', '%s', '%s', '%s', '%d', '%s', '%s', '%s'
             )
             """,
-                cic.getCicNumber(),
+                cic.getCICNumber(),
                 cic.getName(),
                 cic.getOtherName(),
                 cic.getDateOfBirth(),
@@ -140,77 +152,76 @@ public class CICTable extends DatabaseConnection {
     }
 
 //Update CIC
-//    public static boolean update(CIC cic) {
-//        createTable();
-//        String query = String.format(
-//                """
-//                update cic_table set
-//                    name='%s',
-//                    other_name='%s',
-//                    date_of_birth='%s',
-//                    gender='%s',
-//                    place_of_origin='%s',
-//                    place_of_residence='%s',
-//                    place_of_temporary_residence='%s',
-//                    nationality='%s',
-//                    ethnic='%s',
-//                    passport_number='%s',
-//                    personal_identification='%s',
-//                    date_of_expiry='%s',
-//                    verify_state='%s',
-//                    date_verify='%s',
-//                    id_verifier='%s',
-//                    note='%s',
-//                    front_cic_image_url='%s',
-//                    back_cic_image_url='%s'
-//                where cic_number='%s'
-//                """,
-//                cic.getName(),
-//                cic.getOtherName(),
-//                cic.getDateOfBirth(),
-//                cic.getGender(),
-//                cic.getPlaceOfOrigin(),
-//                cic.getPlaceOfResidence(),
-//                cic.getPlaceOfTemporaryResidence(),
-//                cic.getNationality(),
-//                cic.getEthnic(),
-//                cic.getPassportNumber(),
-//                cic.getPersonalIdentification(),
-//                cic.getDateOfExpiry(),
-//                cic.getVerifyState(),
-//                cic.getDateVerify(),
-//                cic.getIdVerifier(),
-//                cic.getNote(),
-//                cic.getFrontCICImageURL(),
-//                cic.getBackCICImageURL(),
-//                cic.getCicNumber()
-//        );
-//        try {
-//            execute(query);
-//            return true;
-//        } catch (SQLException e) {
-//            return false;
-//        }
-//    }
-//
-//Xóa CIC
-//    public static boolean delete(String cicNumber) {
-//        createTable();
-//        String query = String.format(
-//                """
-//                delete from cic_table
-//                where cic_number='%s'
-//                """,
-//                cicNumber
-//        );
-//        try {
-//            execute(query);
-//            return true;
-//        } catch (SQLException e) {
-//            return false;
-//        }
-//    }
+    public boolean update(CIC cic) {
+        createTable();
+        String query = String.format(
+                """
+                update cic_table set
+                    name='%s',
+                    other_name='%s',
+                    date_of_birth='%s',
+                    gender='%s',
+                    place_of_origin='%s',
+                    place_of_residence='%s',
+                    place_of_temporary_residence='%s',
+                    nationality='%s',
+                    ethnic='%s',
+                    passport_number='%s',
+                    personal_identification='%s',
+                    date_of_expiry='%s',
+                    verify_state='%s',
+                    date_verify='%s',
+                    id_verifier='%s',
+                    note='%s',
+                    front_cic_image_url='%s',
+                    back_cic_image_url='%s'
+                where cic_number='%s'
+                """,
+                cic.getName(),
+                cic.getOtherName(),
+                cic.getDateOfBirth(),
+                cic.getGender(),
+                cic.getPlaceOfOrigin(),
+                cic.getPlaceOfResidence(),
+                cic.getPlaceOfTemporaryResidence(),
+                cic.getNationality(),
+                cic.getEthnic(),
+                cic.getPassportNumber(),
+                cic.getPersonalIdentification(),
+                cic.getDateOfExpiry(),
+                cic.getVerifyState(),
+                cic.getDateVerify(),
+                cic.getIdVerifier(),
+                cic.getNote(),
+                cic.getFrontCICImageURL(),
+                cic.getBackCICImageURL(),
+                cic.getCICNumber()
+        );
+        try {
+            execute(query);
+            return true;
+        } catch (SQLException e) {
+            return false;
+        }
+    }
 
+//Xóa CIC
+    public boolean delete(String cicNumber) {
+        createTable();
+        String query = String.format(
+                """
+                delete from cic_table
+                where cic_number='%s'
+                """,
+                cicNumber
+        );
+        try {
+            execute(query);
+            return true;
+        } catch (SQLException e) {
+            return false;
+        }
+    }
     //Lấy hết CIC
     public List<CIC> getAllCIC() {
         createTable();
@@ -230,6 +241,10 @@ public class CICTable extends DatabaseConnection {
     //Tìm CIC theo cicNumber
     public List<CIC> getCICByCICNumber(String cicNumber) {
         createTable();
+        if (!checkExist(cicNumber)){
+            System.out.println("Không tìm thấy thông tin nhân với cicNumber: "+cicNumber);
+            return new ArrayList<>();
+        }
         String query = String.format(
                 """
                 select *
@@ -245,6 +260,17 @@ public class CICTable extends DatabaseConnection {
             e.printStackTrace();
         }
         return new ArrayList<>();
+    }
+
+    public List<CIC> searchCICByName(String searchString) {
+        String query = "SELECT * FROM cic_table WHERE LOWER(name) LIKE N'%" + searchString.toLowerCase().trim() + "%'";
+        try {
+            ResultSet rs = executeQuery(query);
+            return castResultSet(rs);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return new ArrayList<>();
+        }
     }
 
 

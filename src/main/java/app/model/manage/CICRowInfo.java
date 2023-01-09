@@ -1,5 +1,6 @@
 package app.model.manage;
 
+import components.database.DatabaseConnection;
 import components.demogrpahic.CIC;
 
 public class CICRowInfo extends CIC {
@@ -24,4 +25,10 @@ public class CICRowInfo extends CIC {
     public String getVerifierUsername(){
         return this.verifierUsername;
     }
+
+    public void setVerifierUsername(String verifierUsername) {
+        this.verifierUsername = verifierUsername;
+    }
+
+
 }
