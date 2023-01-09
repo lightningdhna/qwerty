@@ -1,14 +1,47 @@
 package app.view.manage;
 
+import app.PageManager;
 import app.model.Page;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.layout.Pane;
 
-public class ManagePage extends Page {
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class ManagePage extends Page implements Initializable {
     @FXML
     Pane showPane;
+    Page currentPage;
+    CICInfoTablePage cicInfoTablePage;
+    public void showPage(Page page ){
+        currentPage = page;
+        if(!showPane.getChildren().contains(page.getRoot()))
+            showPane.getChildren().add(page.getRoot());
+    }
+    public void unShowPage(Page page){
+        showPane.getChildren().remove(page.getRoot());
+    }
+    public void switchPage(Page page){
+        if(page==currentPage) return;
+        unShowPage(currentPage);
+        showPage(page);
+    }
     public void showTable(){
-        CICInfoTablePage cicInfoTablePage = new CICInfoTablePage();
-        showPane.getChildren().add(cicInfoTablePage.getRoot());
+        switchPage(cicInfoTablePage);
+    }
+
+    public ManagePage(){
+        super();
+        PageManager.getManager().setManagePage(this);
+        Thread thread = new Thread(()->{
+
+        });
+        cicInfoTablePage = new CICInfoTablePage();
+        showPage(cicInfoTablePage);
+    }
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+
     }
 }
