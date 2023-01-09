@@ -22,7 +22,7 @@ public class Window extends Page{
         Thread thread = new Thread(()->{
             Platform.runLater(()->{
                 Stage stage = new Stage();
-                stage.setResizable(false);
+//                stage.setResizable(false);
                 Scene scene = new Scene(window.getRoot());
                 scene.setFill(Color.TRANSPARENT);
                 stage.setScene(scene);

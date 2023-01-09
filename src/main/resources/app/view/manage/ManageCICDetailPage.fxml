@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
@@ -15,7 +16,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="575.0" prefWidth="750.0" style="-fx-background-color: #EEEEEE;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #EEEEEE;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Separator layoutY="153.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="75.0">
          <effect>
@@ -193,17 +194,35 @@
             </AnchorPane>
         </content>
       </ScrollPane>
-      <JFXButton buttonType="RAISED" layoutX="91.0" layoutY="456.0" prefHeight="50.0" prefWidth="150.0" ripplerFill="#194181" style="-fx-background-color: red; -fx-background-radius: 10;" text="Xóa" textFill="WHITE" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="30.0">
-         <font>
-            <Font name="SansSerif Regular" size="24.0" />
-         </font>
-      </JFXButton>
-      <JFXButton buttonType="RAISED" layoutX="101.0" layoutY="466.0" prefHeight="50.0" prefWidth="150.0" ripplerFill="#194181" style="-fx-background-color: green; -fx-background-radius: 10;" text="Chỉnh sửa" textFill="WHITE" AnchorPane.bottomAnchor="100.0" AnchorPane.rightAnchor="30.0">
-         <font>
-            <Font name="SansSerif Regular" size="24.0" />
-         </font>
-      </JFXButton>
-      <JFXButton buttonType="RAISED" contentDisplay="CENTER" layoutX="350.0" layoutY="10.0" onMouseClicked="#exit" prefHeight="30.0" prefWidth="30.0" ripplerFill="#df1616" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="12.0">
+      <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="20.0">
+         <children>
+            <JFXButton buttonType="RAISED" prefHeight="70.0" prefWidth="250.0" ripplerFill="#194181" style="-fx-background-color: blue; -fx-background-radius: 10;" text="Yêu cầu xác thực" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="SansSerif Regular" size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="15.0" />
+               </VBox.margin>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" prefHeight="70.0" prefWidth="250.0" ripplerFill="#194181" style="-fx-background-color: red; -fx-background-radius: 10;" text="Xóa" textFill="WHITE">
+               <font>
+                  <Font name="SansSerif Regular" size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="15.0" />
+               </VBox.margin>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" prefHeight="70.0" prefWidth="250.0" ripplerFill="#194181" style="-fx-background-color: green; -fx-background-radius: 10;" text="Chỉnh sửa" textFill="WHITE">
+               <font>
+                  <Font name="SansSerif Regular" size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="15.0" />
+               </VBox.margin>
+            </JFXButton>
+         </children>
+      </VBox>
+      <JFXButton buttonType="RAISED" contentDisplay="CENTER" onMouseClicked="#exit" prefHeight="30.0" prefWidth="30.0" ripplerFill="#df1616" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="12.0">
          <graphic>
             <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true">
                <image>
@@ -214,11 +233,6 @@
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
-      </JFXButton>
-      <JFXButton buttonType="RAISED" layoutX="111.0" layoutY="476.0" prefHeight="50.0" prefWidth="150.0" ripplerFill="#194181" style="-fx-background-color: blue; -fx-background-radius: 10;" text="Yêu cầu xác thực" textFill="WHITE" wrapText="true" AnchorPane.bottomAnchor="170.0" AnchorPane.rightAnchor="30.0">
-         <font>
-            <Font name="SansSerif Regular" size="16.0" />
-         </font>
       </JFXButton>
    </children>
 </AnchorPane>
