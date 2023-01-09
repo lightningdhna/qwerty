@@ -17,7 +17,7 @@ public class IdentificationTable extends DatabaseConnection{
         }
         hasTable = true;
         String query = "create table identification_table(\n" +
-                "    id int identity(1, 1),\n" +
+                "    id int identity(1, 1) primary key,\n" +
                 "    account_id int not null unique,\n" +
                 "    cic_number varchar(20) not null unique\n" +
                 ")";
@@ -37,6 +37,21 @@ public class IdentificationTable extends DatabaseConnection{
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return null;
+        return "";
     }
+
+    public int getAccountIDByCICNumber(String cicNumber) {
+        createTable();
+        String query = String.format("select account_id from identification_table where cic_number = '%s'", cicNumber);
+        try {
+            ResultSet rs = executeQuery(query);
+            if (rs.next()) {
+                return rs.getInt(1);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return 0;
+    }
+
 }

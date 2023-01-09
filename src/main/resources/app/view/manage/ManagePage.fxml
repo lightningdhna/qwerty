@@ -21,7 +21,7 @@
                <graphic>
                   <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../image/cryo.jpg" />
+                        <Image url="@../../../icon/icons8-search.gif" />
                      </image>
                   </ImageView>
                </graphic>
@@ -48,11 +48,11 @@
                   </LinearGradient>
                </textFill>
             </JFXButton>
-            <JFXButton graphicTextGap="20.0" prefHeight="70.0" prefWidth="225.0" style="-fx-alignment: center-left;" text="bruh" wrapText="true">
+            <JFXButton graphicTextGap="20.0" prefHeight="70.0" prefWidth="225.0" style="-fx-alignment: center-left;" text="Danh sách hộ khẩu" wrapText="true">
                <graphic>
                   <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../image/cryo.jpg" />
+                        <Image url="@../../../icon/icons8-search.gif" />
                      </image>
                   </ImageView>
                </graphic>
@@ -79,11 +79,11 @@
                   </LinearGradient>
                </textFill>
             </JFXButton>
-            <JFXButton graphicTextGap="20.0" prefHeight="70.0" prefWidth="225.0" style="-fx-alignment: center-left;" text=":)" wrapText="true">
+            <JFXButton graphicTextGap="20.0" prefHeight="70.0" prefWidth="225.0" style="-fx-alignment: center-left;" text="Sự kiện" wrapText="true">
                <graphic>
                   <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../image/cryo.jpg" />
+                        <Image url="@../../../icon/form.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -112,7 +112,7 @@
             </JFXButton>
          </children>
       </VBox>
-      <Pane fx:id="showPane" layoutX="287.0" layoutY="-12.0" opacity="0.9" prefHeight="575.0" prefWidth="750.0" style="-fx-background-color: #efefef; -fx-background-radius: 20;" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="0.0">
+      <Pane layoutX="287.0" layoutY="-12.0" opacity="0.9" prefHeight="500.0" prefWidth="750.0" style="-fx-background-color: #efefef; -fx-background-radius: 20;" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="75.0">
          <effect>
             <DropShadow blurType="GAUSSIAN" offsetX="-1.0" offsetY="2.0" spread="0.04">
                <color>
@@ -121,5 +121,6 @@
             </DropShadow>
          </effect>
       </Pane>
+      <AnchorPane fx:id="showPane" prefHeight="200.0" prefWidth="200.0" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="0.0" />
    </children>
 </AnchorPane>

@@ -24,7 +24,7 @@ public class CICTable extends DatabaseConnection {
             cicList.add(new CIC(
                     rs.getString("cic_number"),
                     rs.getString("name"),
-                    rs.getString("other_name"),
+                    rs.getString("other_name")==null?"":  rs.getString("other_name"),
                     rs.getDate("date_of_birth").toLocalDate(),
                     rs.getString("gender"),
                     rs.getString("place_of_origin"),
@@ -32,13 +32,13 @@ public class CICTable extends DatabaseConnection {
                     rs.getString("place_of_temporary_residence"),
                     rs.getString("nationality"),
                     rs.getString("ethnic"),
-                    rs.getString("passport_number"),
-                    rs.getString("personal_identification"),
-                    rs.getDate("date_of_expiry").toLocalDate(),
+                    rs.getString("passport_number")==null?"":rs.getString("passport_number"),
+                    rs.getString("personal_identification")==null?"":rs.getString("personal_identification"),
+                    rs.getDate("date_of_expiry") == null ? LocalDate.now():rs.getDate("date_of_expiry").toLocalDate(),
                     rs.getString("verify_state"),
-                    rs.getDate("date_verify").toLocalDate(),
-                    rs.getString("id_verifier"),
-                    rs.getString("note"),
+                    rs.getDate("date_verify") == null ? LocalDate.now(): rs.getDate("date_verify").toLocalDate(),
+                    rs.getInt("id_verifier"),
+                    rs.getString("note")==null?"": rs.getString("note"),
                     rs.getString("front_cic_image_url"),
                     rs.getString("back_cic_image_url")
             ));
@@ -66,10 +66,10 @@ public class CICTable extends DatabaseConnection {
                     ethnic nvarchar(50) not null,
                     passport_number varchar(50) ,
                     personal_identification nvarchar(200) ,
-                    date_of_expiry date ,
+                    date_of_expiry date not null,
                     verify_state varchar(10) not null,
-                    date_verify date ,
-                    id_verifier int ,
+                    date_verify date not null,
+                    id_verifier int not null unique,
                     note nvarchar(200),
                     front_cic_image_url varchar(200) not null,
                     back_cic_image_url varchar(200) not null
@@ -108,7 +108,7 @@ public class CICTable extends DatabaseConnection {
                     back_cic_image_url
                 ) values (
                     '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s',
-                    '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s'
+                    '%s', '%s', '%s', '%s', '%s', '%d', '%s', '%s', '%s'
             )
             """,
                 cic.getCicNumber(),
