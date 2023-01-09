@@ -25,7 +25,7 @@ public class ManageController {
         tableView.setRowFactory(tv -> {
             TableRow<CICRowInfo> tableRow = new TableRow<>();
             tableRow.setOnMouseClicked(event -> {
-                if (! tableRow.isEmpty() && event.getButton()== MouseButton.PRIMARY && event.getClickCount() == 2) {
+                if (! tableRow.isEmpty() && event.getButton()== MouseButton.PRIMARY && event.getClickCount() == 1) {
                     CICRowInfo cicRow = tableRow.getItem();
                     ManageCICDetailWindow detailPage = new ManageCICDetailWindow();
                     detailPage.setInfo(cicRow);
