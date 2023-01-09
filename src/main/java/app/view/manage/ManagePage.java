@@ -14,7 +14,7 @@ public class ManagePage extends Window {
     @FXML
     Pane showPane;
     Page currentPage;
-    CICInfoTablePage cicInfoTablePage;
+    CICInfoTablePage cicInfoTablePage = new CICInfoTablePage();
     public void showPage(Page page ){
         currentPage = page;
         if(!showPane.getChildren().contains(page.getRoot()))
@@ -39,6 +39,6 @@ public class ManagePage extends Window {
         Thread thread = new Thread(()->{
 
         });
-        cicInfoTablePage = new CICInfoTablePage();
+//        cicInfoTablePage = new CICInfoTablePage();
     }
 }
