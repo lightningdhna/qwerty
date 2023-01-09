@@ -21,9 +21,12 @@ public class CICInfoTablePage extends Window implements Initializable {
 //        page.setInfo(info);
         add(page);
     };
+    public CICInfoTablePage(){
+        ManageController.setInfo(this,tableView);
+    }
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        ManageController.setInfo(this,tableView);
+
     }
     public void addCICWindow(){
         addWindow(new AddCICInfoWindow());
