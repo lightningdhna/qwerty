@@ -2,11 +2,12 @@ package app.view.manage;
 
 import app.PageManager;
 import app.model.Page;
+import app.model.Window;
 import app.model.manage.CICRowInfo;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
-public class ManageCICDetailPage extends Page {
+public class ManageCICDetailPage extends Window {
     CICRowInfo cicInfo;
     @FXML
     Label nameLabel,cicNumberLabel,dobLabel,originLocationLabel,residenceLocationLabel,temporaryLocalLabel,

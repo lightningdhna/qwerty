@@ -22,7 +22,7 @@
             <Bloom />
          </effect>
       </Separator>
-      <Label alignment="CENTER" layoutX="109.0" prefHeight="76.0" prefWidth="442.0" text="Thông tin nhân khẩu" textFill="#2596be" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+      <Label alignment="CENTER" layoutX="109.0" prefHeight="76.0" prefWidth="442.0" style="-fx-background-color: #DDDDDD; -fx-background-radius: 10;" text="Thông tin nhân khẩu" textFill="#2596be" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <font>
             <Font name="SansSerif Bold" size="35.0" />
          </font>
@@ -203,7 +203,7 @@
             <Font name="SansSerif Regular" size="24.0" />
          </font>
       </JFXButton>
-      <JFXButton buttonType="RAISED" contentDisplay="CENTER" layoutX="350.0" layoutY="10.0" onMouseClicked="#close" prefHeight="30.0" prefWidth="30.0" ripplerFill="#df1616" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+      <JFXButton buttonType="RAISED" contentDisplay="CENTER" layoutX="350.0" layoutY="10.0" onMouseClicked="#exit" prefHeight="30.0" prefWidth="30.0" ripplerFill="#df1616" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="12.0">
          <graphic>
             <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true">
                <image>
@@ -214,6 +214,11 @@
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="111.0" layoutY="476.0" prefHeight="50.0" prefWidth="150.0" ripplerFill="#194181" style="-fx-background-color: blue; -fx-background-radius: 10;" text="Yêu cầu xác thực" textFill="WHITE" wrapText="true" AnchorPane.bottomAnchor="170.0" AnchorPane.rightAnchor="30.0">
+         <font>
+            <Font name="SansSerif Regular" size="16.0" />
+         </font>
       </JFXButton>
    </children>
 </AnchorPane>

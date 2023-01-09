@@ -2,6 +2,7 @@ package app.view.manage;
 
 import app.PageManager;
 import app.model.Page;
+import app.model.Window;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.Pane;
@@ -9,7 +10,7 @@ import javafx.scene.layout.Pane;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class ManagePage extends Page implements Initializable {
+public class ManagePage extends Window implements Initializable {
     @FXML
     Pane showPane;
     Page currentPage;

@@ -31,7 +31,8 @@ public class ManageController {
                     CICRowInfo cicRow = tableRow.getItem();
                     ManageCICDetailPage detailPage = new ManageCICDetailPage();
                     detailPage.setInfo(cicRow);
-                    PageManager.getManager().getManagePage().showPage(detailPage);
+//                    PageManager.getManager().getManagePage().switchPage(detailPage);
+                    PageManager.getManager().getManagePage().addWindow(detailPage);
                 }
             });
             return tableRow ;
