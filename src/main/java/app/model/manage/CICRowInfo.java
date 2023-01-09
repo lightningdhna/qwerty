@@ -5,6 +5,7 @@ import components.demogrpahic.CIC;
 public class CICRowInfo extends CIC {
     private String householdNumber = "houseHoldNumber";
     private String accountUsername = "account username ";
+    private String verifierUsername = " verifier ";
     public String getUsername(){
         return accountUsername;
     }
@@ -19,5 +20,8 @@ public class CICRowInfo extends CIC {
     }
     public CICRowInfo(){
         super();
+    }
+    public String getVerifierUsername(){
+        return this.verifierUsername;
     }
 }

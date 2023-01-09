@@ -1,8 +1,219 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="500.0" prefWidth="750.0" style="-fx-background-color: #FF0000;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
-
+<AnchorPane prefHeight="575.0" prefWidth="750.0" style="-fx-background-color: #EEEEEE;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Separator layoutY="153.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="75.0">
+         <effect>
+            <Bloom />
+         </effect>
+      </Separator>
+      <Label alignment="CENTER" layoutX="109.0" prefHeight="76.0" prefWidth="442.0" text="Thông tin nhân khẩu" textFill="#2596be" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <font>
+            <Font name="SansSerif Bold" size="35.0" />
+         </font>
+      </Label>
+      <ScrollPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="80.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="600.0" prefWidth="745.0">
+               <children>
+                  <VBox AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="10.0">
+                     <children>
+                        <HBox>
+                           <children>
+                              <VBox prefWidth="250.0">
+                                 <children>
+                                    <Label prefHeight="50.0" prefWidth="250.0" text="Họ và tên">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="25.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="50.0" prefWidth="250.0" text="Số CCCD">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="25.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="50.0" prefWidth="250.0" text="Ngày sinh">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="25.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="50.0" prefWidth="250.0" text="Quê quán">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="25.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="50.0" prefWidth="250.0" text="Nơi cư trú">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="25.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="50.0" prefWidth="250.0" text="Nơi tạm trú">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="25.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox prefWidth="500.0">
+                                 <children>
+                                    <Label fx:id="nameLabel" prefHeight="50.0">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="25.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="cicNumberLabel" prefHeight="50.0">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="25.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="dobLabel" prefHeight="50.0">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="25.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="originLocationLabel" prefHeight="50.0">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="25.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="residenceLocationLabel" prefHeight="50.0">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="25.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="temporaryLocalLabel" prefHeight="50.0">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="25.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <Separator prefWidth="200.0" />
+                        <HBox>
+                           <children>
+                              <VBox prefWidth="250.0">
+                                 <children>
+                                    <Label prefHeight="50.0" prefWidth="250.0" text="Trạng thái xác thực" wrapText="true">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="25.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="50.0" prefWidth="250.0" text="Tài khoản liên kết" wrapText="true">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="25.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="50.0" prefWidth="250.0" text="Ngày xác thực" wrapText="true">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="25.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="50.0" prefWidth="250.0" text="Người xác thực" wrapText="true">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="25.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox prefWidth="500.0">
+                                 <children>
+                                    <Label fx:id="verifyStateLabel" prefHeight="50.0">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="25.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="usernameLabel" prefHeight="50.0">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="25.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="dateVerify" prefHeight="50.0">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="25.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="verifierUsernameLabel" prefHeight="50.0">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="25.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <Separator prefWidth="200.0" />
+                        <HBox>
+                           <children>
+                              <VBox prefWidth="250.0">
+                                 <children>
+                                    <Label prefHeight="50.0" prefWidth="250.0" text="Số hộ khẩu" wrapText="true">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="25.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox prefWidth="500.0">
+                                 <children>
+                                    <Label fx:id="householdNumberLabel" prefHeight="50.0">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="25.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <Pane prefHeight="300.0" prefWidth="200.0" />
+                     </children>
+                  </VBox>
+                  <Separator orientation="VERTICAL" prefHeight="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="0.0">
+                     <effect>
+                        <BoxBlur />
+                     </effect>
+                  </Separator>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      <JFXButton buttonType="RAISED" layoutX="91.0" layoutY="456.0" prefHeight="50.0" prefWidth="150.0" ripplerFill="#194181" style="-fx-background-color: red; -fx-background-radius: 10;" text="Xóa" textFill="WHITE" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="30.0">
+         <font>
+            <Font name="SansSerif Regular" size="24.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="101.0" layoutY="466.0" prefHeight="50.0" prefWidth="150.0" ripplerFill="#194181" style="-fx-background-color: green; -fx-background-radius: 10;" text="Chỉnh sửa" textFill="WHITE" AnchorPane.bottomAnchor="100.0" AnchorPane.rightAnchor="30.0">
+         <font>
+            <Font name="SansSerif Regular" size="24.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" contentDisplay="CENTER" layoutX="350.0" layoutY="10.0" onMouseClicked="#close" prefHeight="30.0" prefWidth="30.0" ripplerFill="#df1616" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../../../icon/icons8-undo-52.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
 </AnchorPane>
