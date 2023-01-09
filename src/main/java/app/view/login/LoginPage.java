@@ -39,9 +39,8 @@ public class LoginPage extends Page implements Initializable {
         }
         LoginController.login(this,new Account(username,password));
     }
-
+    MainPage mainPage = new MainPage();
     public void setMainPage(){
-        MainPage mainPage = new MainPage();
         getRoot().getScene().setRoot(mainPage.getRoot());
         new ZoomIn(mainPage.getRoot()).play();
 

@@ -3,8 +3,7 @@ package app.controller;
 import app.PageManager;
 import app.model.manage.CICRowInfo;
 import app.view.manage.CICInfoTablePage;
-import app.view.manage.ManageCICDetailPage;
-import components.demogrpahic.CIC;
+import app.view.manage.ManageCICDetailWindow;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.TableColumn;
@@ -12,7 +11,6 @@ import javafx.scene.control.TableRow;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseButton;
-import service.DemographicManagementService;
 
 public class ManageController {
     public static void setInfo(CICInfoTablePage page, TableView tableView){
@@ -29,7 +27,7 @@ public class ManageController {
             tableRow.setOnMouseClicked(event -> {
                 if (! tableRow.isEmpty() && event.getButton()== MouseButton.PRIMARY && event.getClickCount() == 2) {
                     CICRowInfo cicRow = tableRow.getItem();
-                    ManageCICDetailPage detailPage = new ManageCICDetailPage();
+                    ManageCICDetailWindow detailPage = new ManageCICDetailWindow();
                     detailPage.setInfo(cicRow);
 //                    PageManager.getManager().getManagePage().switchPage(detailPage);
                     PageManager.getManager().getManagePage().addWindow(detailPage);

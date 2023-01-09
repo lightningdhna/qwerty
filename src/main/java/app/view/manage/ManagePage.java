@@ -10,17 +10,18 @@ import javafx.scene.layout.Pane;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class ManagePage extends Window implements Initializable {
+public class ManagePage extends Window {
     @FXML
     Pane showPane;
     Page currentPage;
-    CICInfoTablePage cicInfoTablePage;
+    CICInfoTablePage cicInfoTablePage = new CICInfoTablePage();
     public void showPage(Page page ){
         currentPage = page;
         if(!showPane.getChildren().contains(page.getRoot()))
             showPane.getChildren().add(page.getRoot());
     }
     public void unShowPage(Page page){
+        if(page==null) return;
         showPane.getChildren().remove(page.getRoot());
     }
     public void switchPage(Page page){
@@ -38,11 +39,6 @@ public class ManagePage extends Window implements Initializable {
         Thread thread = new Thread(()->{
 
         });
-        cicInfoTablePage = new CICInfoTablePage();
-        showPage(cicInfoTablePage);
-    }
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-
+//        cicInfoTablePage = new CICInfoTablePage();
     }
 }
