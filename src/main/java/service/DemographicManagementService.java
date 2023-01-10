@@ -77,14 +77,17 @@ public class DemographicManagementService extends Service{
     public List<CIC> searchCICByName(String searchString) {
         return CICTable.getTable().searchCICByName(searchString);
     }
-//    public static void main(String args[]){
-//        DatabaseConnection.createConnection();
-//        //Thêm 019826
-//        getService().addCIC(new CIC("019826","quân","", LocalDate.of(2001,10,2),
-//                "Male","dsadá","dsadsa","dấdsa","dsađấ","đas",
-//                "","dsadsá",LocalDate.of(2001,10,2),"dsadá",
-//                LocalDate.of(2001,10,2), 6,"", "dsadsadsa","dsadas"));
-//
+    public static void main(String args[]){
+        DatabaseConnection.createConnection();
+        //Thêm 019826
+        CIC cic1 = new CIC("020g02","Quân","", LocalDate.of(2000,10,2),
+                "sdsdj","dsa9855d","nhà số 10,cách 10km","ddsa","dsa","das",
+                "0123","dsads",LocalDate.of(2001,10,2),"dsad",
+                LocalDate.of(2001,10,2), 6,"", "dsadsadsa","dsadas");
+        System.out.println(CICTable.getTable().canAdd(cic1));
+        if(CICTable.getTable().canAdd(cic1) == "OK"){
+        getService().addCIC(cic1);};
+
 //        for (CIC cic : getService().getAllCICInfo()) {
 //            System.out.println(cic.toString());
 //        }
@@ -119,5 +122,5 @@ public class DemographicManagementService extends Service{
 //        for (CIC cic : getService().searchCICByName(" ĐắC")) {
 //            System.out.println(cic.toString());
 //        }
-//    }
+    }
 }
