@@ -20,12 +20,12 @@
             <DropShadow />
          </effect>
          <children>
-            <TextField prefHeight="40.0" prefWidth="400.0" style="-fx-background-radius: 10;">
+            <TextField fx:id="searchText" prefHeight="40.0" prefWidth="400.0" style="-fx-background-radius: 10;">
                <HBox.margin>
                   <Insets left="5.0" top="5.0" />
                </HBox.margin>
             </TextField>
-            <JFXButton prefHeight="40.0" prefWidth="40.0">
+            <JFXButton onMouseClicked="#search" prefHeight="40.0" prefWidth="40.0">
                <HBox.margin>
                   <Insets left="5.0" top="5.0" />
                </HBox.margin>
@@ -46,7 +46,7 @@
                   </ImageView>
                </graphic>
             </JFXButton>
-            <JFXButton prefHeight="40.0" prefWidth="40.0">
+            <JFXButton onMouseClicked="#reload" prefHeight="40.0" prefWidth="40.0">
                <graphic>
                   <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                      <image>

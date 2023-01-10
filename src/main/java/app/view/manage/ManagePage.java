@@ -40,5 +40,6 @@ public class ManagePage extends Window {
 
         });
 //        cicInfoTablePage = new CICInfoTablePage();
+        showPage(cicInfoTablePage);
     }
 }

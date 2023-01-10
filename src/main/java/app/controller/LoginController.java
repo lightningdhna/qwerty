@@ -46,7 +46,7 @@ public class LoginController {
         }
         else{
             page.loginFail();
-        };
+        }
     }
     public static void signUp(SignUpPage page, Account account, String email){
         if(AccountManagementService.getManager().add(account)){

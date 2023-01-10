@@ -37,7 +37,7 @@ public class SignUpPage extends Page {
     public void signUpFail(){
         Alert alert = new Alert(Alert.AlertType.WARNING);
         alert.setTitle("SIGN UP FAIL");
-        alert.setContentText("USERNAME IS ALREADY USED");
+        alert.setContentText("Tên tài khoản đã được sử dụng");
         alert.setX(900);
         alert.setY(250);
         alert.show();
@@ -45,7 +45,7 @@ public class SignUpPage extends Page {
     public void signUpSuccess(){
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("SIGN UP SUCCESS");
-        alert.setContentText("Your account has been created");
+        alert.setContentText("Tạo tài khoản thành công.\n Sử dụng đăng kí thông tin để đăng nhập");
         alert.setX(900);
         alert.setY(250);
         alert.show();
@@ -54,7 +54,7 @@ public class SignUpPage extends Page {
     public void warningBlank(){
         Alert alert = new Alert(Alert.AlertType.WARNING);
         alert.setTitle("LOGIN FAIL");
-        alert.setContentText("Đìn đủ thông tin vào đi! Bruh...");
+        alert.setContentText("Vui lòng điền đầy đủ thông tin");
         alert.setX(900);
         alert.setY(250);
         alert.show();
@@ -62,7 +62,7 @@ public class SignUpPage extends Page {
     public void warningWrongRetypepass(){
         Alert alert = new Alert(Alert.AlertType.WARNING);
         alert.setTitle("LOGIN FAIL");
-        alert.setContentText("Mật khẩu điền lại sai r -_-! Bruh...");
+        alert.setContentText("Mật khẩu điền lại không khớp");
         alert.setX(900);
         alert.setY(250);
         alert.show();

@@ -11,8 +11,19 @@ public class ManageCICDetailWindow extends Window {
     @FXML
     Label nameLabel,cicNumberLabel,dobLabel,originLocationLabel,residenceLocationLabel,temporaryLocalLabel,
             verifyStateLabel,usernameLabel,dateVerify,verifierUsernameLabel,householdNumberLabel;
+
+    @FXML
+    Label  passportNumberLabel, ethnicLabel,nationalityLabel,genderLabel,otherNameLabel;
+    @FXML
+    TextArea noteLabel;
     public void setInfo(CICRowInfo cicInfo){
         this.cicInfo = cicInfo;
+        noteLabel.setText(cicInfo.getNote());
+        passportNumberLabel.setText(cicInfo.getPassportNumber());
+        ethnicLabel.setText(cicInfo.getEthnic());
+        nationalityLabel.setText(cicInfo.getNationality());
+        genderLabel.setText(cicInfo.getGender());
+        otherNameLabel.setText(cicInfo.getOtherName());
         nameLabel.setText(cicInfo.getName());
         cicNumberLabel.setText(cicInfo.getCICNumber());
         dobLabel.setText(cicInfo.getDateOfBirth().toString());
@@ -24,6 +35,7 @@ public class ManageCICDetailWindow extends Window {
         dateVerify.setText(cicInfo.getDateVerify().toString());
         verifierUsernameLabel.setText(cicInfo.getVerifierUsername());
         householdNumberLabel.setText(cicInfo.getHouseholdNumber());
+
     }
 
     public void close(){
@@ -32,7 +44,7 @@ public class ManageCICDetailWindow extends Window {
 
 
     public void edit(){
-        add(new EditCICInfoWindow(cicInfo));
+        add(new UpdateCICInfoWindow(cicInfo));
     }
 
 }

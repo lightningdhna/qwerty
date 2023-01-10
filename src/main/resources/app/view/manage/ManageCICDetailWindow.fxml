@@ -55,7 +55,7 @@
                                     <Font name="SansSerif Regular" size="25.0" />
                                  </font>
                               </Label>
-                              <Label prefHeight="50.0" prefWidth="250.0" text="Tên khác">
+                              <Label fx:id="otherNameLabel" prefHeight="50.0" prefWidth="250.0">
                                  <font>
                                     <Font name="SansSerif Regular" size="25.0" />
                                  </font>
@@ -69,7 +69,7 @@
                                     <Font name="SansSerif Regular" size="25.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="cicNumberLabel" prefHeight="50.0" prefWidth="250.0" text="Số CCCD">
+                              <Label fx:id="cicNumberLabel" prefHeight="50.0" prefWidth="250.0">
                                  <font>
                                     <Font name="SansSerif Regular" size="25.0" />
                                  </font>
@@ -83,7 +83,7 @@
                                     <Font name="SansSerif Regular" size="25.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="dobLabel" prefHeight="50.0" prefWidth="250.0" text="Ngày sinh">
+                              <Label fx:id="dobLabel" prefHeight="50.0" prefWidth="250.0">
                                  <font>
                                     <Font name="SansSerif Regular" size="25.0" />
                                  </font>
@@ -97,7 +97,7 @@
                                     <Font name="SansSerif Regular" size="25.0" />
                                  </font>
                               </Label>
-                              <Label prefHeight="50.0" prefWidth="250.0" text="Giới tính">
+                              <Label fx:id="genderLabel" prefHeight="50.0" prefWidth="250.0">
                                  <font>
                                     <Font name="SansSerif Regular" size="25.0" />
                                  </font>
@@ -111,7 +111,7 @@
                                     <Font name="SansSerif Regular" size="25.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="originLocationLabel" prefHeight="50.0" prefWidth="250.0" text="Quê quán">
+                              <Label fx:id="originLocationLabel" prefHeight="50.0" prefWidth="250.0">
                                  <font>
                                     <Font name="SansSerif Regular" size="25.0" />
                                  </font>
@@ -125,7 +125,7 @@
                                     <Font name="SansSerif Regular" size="25.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="residenceLocationLabel" prefHeight="50.0" prefWidth="250.0" text="Nơi thường trú">
+                              <Label fx:id="residenceLocationLabel" prefHeight="50.0" prefWidth="250.0">
                                  <font>
                                     <Font name="SansSerif Regular" size="25.0" />
                                  </font>
@@ -139,7 +139,7 @@
                                     <Font name="SansSerif Regular" size="25.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="temporaryLocalLabel" prefHeight="50.0" prefWidth="250.0" text="Nơi tạm trú">
+                              <Label fx:id="temporaryLocalLabel" prefHeight="50.0" prefWidth="250.0">
                                  <font>
                                     <Font name="SansSerif Regular" size="25.0" />
                                  </font>
@@ -153,7 +153,7 @@
                                     <Font name="SansSerif Regular" size="25.0" />
                                  </font>
                               </Label>
-                              <Label prefHeight="50.0" prefWidth="250.0" text="Quốc tịch">
+                              <Label fx:id="nationalityLabel" prefHeight="50.0" prefWidth="250.0">
                                  <font>
                                     <Font name="SansSerif Regular" size="25.0" />
                                  </font>
@@ -167,7 +167,7 @@
                                     <Font name="SansSerif Regular" size="25.0" />
                                  </font>
                               </Label>
-                              <Label prefHeight="50.0" prefWidth="250.0" text="Dân tộc">
+                              <Label fx:id="ethnicLabel" prefHeight="50.0" prefWidth="250.0">
                                  <font>
                                     <Font name="SansSerif Regular" size="25.0" />
                                  </font>
@@ -181,7 +181,7 @@
                                     <Font name="SansSerif Regular" size="25.0" />
                                  </font>
                               </Label>
-                              <Label prefHeight="50.0" prefWidth="250.0">
+                              <Label fx:id="passportNumberLabel" prefHeight="50.0" prefWidth="250.0">
                                  <font>
                                     <Font name="SansSerif Regular" size="25.0" />
                                  </font>
@@ -195,7 +195,7 @@
                                     <Font name="SansSerif Regular" size="25.0" />
                                  </font>
                               </Label>
-                              <TextArea editable="false" pickOnBounds="false" prefHeight="200.0" prefWidth="500.0" wrapText="true">
+                              <TextArea fx:id="noteLabel" editable="false" pickOnBounds="false" prefHeight="200.0" prefWidth="500.0" wrapText="true">
                                  <font>
                                     <Font name="SansSerif Regular" size="24.0" />
                                  </font>

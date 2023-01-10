@@ -53,7 +53,7 @@ public class LoginPage extends Page implements Initializable {
     public void loginFail(){
         Alert alert = new Alert(Alert.AlertType.WARNING);
         alert.setTitle("LOGIN FAIL");
-        alert.setContentText("Bruh... sai cmn mật khẩu hay sao ròi");
+        alert.setContentText("Thông tin sai :)");
         alert.setX(900);
         alert.setY(250);
         alert.show();
@@ -61,7 +61,7 @@ public class LoginPage extends Page implements Initializable {
     public void warningBlank(){
         Alert alert = new Alert(Alert.AlertType.WARNING);
         alert.setTitle("LOGIN FAIL");
-        alert.setContentText("Đìn đủ thông tin vào đi! Bruh...");
+        alert.setContentText("Vui lòng điền đủ thông tin.");
         alert.setX(900);
         alert.setY(250);
         alert.show();

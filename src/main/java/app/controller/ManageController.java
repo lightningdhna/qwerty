@@ -4,6 +4,7 @@ import app.PageManager;
 import app.model.manage.CICRowInfo;
 import app.view.manage.CICInfoTablePage;
 import app.view.manage.ManageCICDetailWindow;
+import components.demogrpahic.CIC;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.TableColumn;
@@ -11,16 +12,24 @@ import javafx.scene.control.TableRow;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseButton;
+import service.DemographicManagementService;
 
 public class ManageController {
-    public static void setInfo(CICInfoTablePage page, TableView tableView){
+    public static void setTableInfo(CICInfoTablePage page, TableView tableView){
         ObservableList<CICRowInfo> rowInfos =FXCollections.observableArrayList();
-//        for(CIC cic : DemographicManagementService.getService().getAllCICInfo()){
-//            RowInfo rowInfo = (RowInfo) cic;
-//        }
-       CICRowInfo rowInfo = new CICRowInfo();
-        rowInfos.add(rowInfo);
-        rowInfos.add(rowInfo);
+        for(CIC cic : DemographicManagementService.getService().getAllCICInfo()){
+            rowInfos.add(DemographicManagementService.getService().convertToCICRowInfo(cic));
+        }
+        showTable(rowInfos,tableView);
+    }
+    public static void searchTableInfo(CICInfoTablePage page, TableView tableView, String name){
+        ObservableList<CICRowInfo> rowInfos =FXCollections.observableArrayList();
+        for(CIC cic : DemographicManagementService.getService().searchCICByName(name)){
+            rowInfos.add(DemographicManagementService.getService().convertToCICRowInfo(cic));
+        }
+        showTable(rowInfos,tableView);
+    }
+    static void showTable(ObservableList<CICRowInfo> rowInfos, TableView tableView){
         tableView.setItems(rowInfos);
         tableView.setRowFactory(tv -> {
             TableRow<CICRowInfo> tableRow = new TableRow<>();
