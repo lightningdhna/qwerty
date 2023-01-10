@@ -32,18 +32,18 @@ public class MyWindow extends Page{
                 stage.initStyle(StageStyle.TRANSPARENT);
                 stage.show();
 
-                AtomicReference<Double> xOffset = new AtomicReference<>((double) 0);
-                AtomicReference<Double> yOffset = new AtomicReference<>((double) 0);
-                root.setOnMousePressed((MouseEvent event) -> {
-                    xOffset.set(event.getSceneX());
-                    yOffset.set(event.getSceneY());
-                });
+                    AtomicReference<Double> xOffset = new AtomicReference<>((double) 0);
+                    AtomicReference<Double> yOffset = new AtomicReference<>((double) 0);
+                    root.setOnMousePressed((MouseEvent event) -> {
+                        xOffset.set(event.getSceneX());
+                        yOffset.set(event.getSceneY());
+                    });
 
-                // Move around here
-                root.setOnMouseDragged((MouseEvent event) -> {
-                    stage.setX(event.getScreenX() - xOffset.get());
-                    stage.setY(event.getScreenY() - yOffset.get());
-                });
+                    // Move around here
+                    root.setOnMouseDragged((MouseEvent event) -> {
+                        stage.setX(event.getScreenX() - xOffset.get());
+                        stage.setY(event.getScreenY() - yOffset.get());
+                    });
             });
         });
         thread.start();
