@@ -15,15 +15,17 @@ import javafx.scene.input.MouseButton;
 import service.DemographicManagementService;
 
 public class ManageController {
+
+    static ObservableList<CICRowInfo> rowInfos =FXCollections.observableArrayList();
     public static void setTableInfo(CICInfoTablePage page, TableView tableView){
-        ObservableList<CICRowInfo> rowInfos =FXCollections.observableArrayList();
+        rowInfos.clear();
         for(CIC cic : DemographicManagementService.getService().getAllCICInfo()){
             rowInfos.add(DemographicManagementService.getService().convertToCICRowInfo(cic));
         }
         showTable(rowInfos,tableView);
     }
     public static void searchTableInfo(CICInfoTablePage page, TableView tableView, String name){
-        ObservableList<CICRowInfo> rowInfos =FXCollections.observableArrayList();
+        rowInfos.clear();
         for(CIC cic : DemographicManagementService.getService().searchCICByName(name)){
             rowInfos.add(DemographicManagementService.getService().convertToCICRowInfo(cic));
         }
@@ -31,6 +33,9 @@ public class ManageController {
     }
     static void showTable(ObservableList<CICRowInfo> rowInfos, TableView tableView){
         tableView.setItems(rowInfos);
+    }
+
+    public static void initTableView(CICInfoTablePage page, TableView tableView){
         tableView.setRowFactory(tv -> {
             TableRow<CICRowInfo> tableRow = new TableRow<>();
             tableRow.setOnMouseClicked(event -> {

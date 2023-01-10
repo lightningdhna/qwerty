@@ -18,6 +18,7 @@ public class CICInfoTablePage extends Window  {
         add(page);
     };
     public CICInfoTablePage(){
+        ManageController.initTableView(this,tableView);
         ManageController.setTableInfo(this,tableView);
     }
     public void addCICWindow(){

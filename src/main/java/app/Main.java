@@ -19,6 +19,7 @@ public class Main extends Application {
         accountID = id;
     }
     public static void main(String... args){
+        System.out.println("Phạm Duy Hưng");
         Thread thread = new Thread(DatabaseConnection::startConnecting);
         thread.start();
         launch();

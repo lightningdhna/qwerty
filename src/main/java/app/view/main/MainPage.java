@@ -36,10 +36,13 @@ public class MainPage extends Page  {
     @FXML
     AnchorPane rootPane;
     @FXML
+    JFXButton smb1,smb2,smb3,smb4,smb5,smb6;
+    @FXML
     JFXButton homeButton,accountButton, registerButton, verifyButton, manageButton, statisticButton, settingButton,testButton;
     @FXML
     Label pageInfoLabel;
     JFXButton [] buttons;
+    JFXButton smButtons[];
     Page[] pages;
     String [] pageName = {"Home", "Account", "Register", "Verify","Manage", "Statistic"};
 
@@ -52,6 +55,7 @@ public class MainPage extends Page  {
     }
     public void unShowBigTaskBar(){
         rootPane.getChildren().remove(bigTaskBar);
+//        bigTaskBar.toBack();
     }
     public void abc(){
         System.out.println("abc");
@@ -65,10 +69,17 @@ public class MainPage extends Page  {
                 return i;
             }
         }
+        for(int i=0;i<smButtons.length;i++){
+            if(button==smButtons[i]){
+                return i;
+            }
+        }
         return -1;
     }
 
     public void showPage(int index){
+        if(index<0 || index >= pages.length)
+            return;
         Page page = pages[index];
         switchToPage(page, 100,100);
         new FadeIn(page.getRoot()).play();
@@ -85,6 +96,7 @@ public class MainPage extends Page  {
             showPage(index);
         }
     };
+
     public MainPage(){
         super();
         rootPane.getChildren().remove(bigTaskBar);
@@ -97,11 +109,16 @@ public class MainPage extends Page  {
         ManagePage managePage = new ManagePage();
         StatisticPage statisticPage = new StatisticPage();
 
-        buttons = new JFXButton[]{homeButton,accountButton, registerButton, verifyButton, manageButton, statisticButton,settingButton};
-        pages   =  new Page[]    {homePage  ,  accountPage, registerPage  , verifyPage  , managePage  , statisticPage  , statisticPage};
+
+        smButtons= new JFXButton[]{smb1,smb2,smb3,smb4,smb5,smb6};
+        buttons = new JFXButton[]{homeButton,accountButton, registerButton, verifyButton, manageButton, statisticButton};
+        pages   =  new Page[]    {homePage  ,  accountPage, registerPage  , verifyPage  , managePage  , statisticPage  };
 
         for(var button : buttons){
-            button.addEventHandler(MouseEvent.ANY,buttonEventHandler);
+            button.addEventHandler(MouseEvent.MOUSE_CLICKED,buttonEventHandler);
+        }
+        for(var button : smButtons){
+            button.addEventHandler(MouseEvent.MOUSE_CLICKED,buttonEventHandler);
         }
     }
     public void logOut(){
