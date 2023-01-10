@@ -6,9 +6,11 @@ import components.demogrpahic.CIC;
 import components.database.CICTable;
 import app.model.manage.CICRowInfo;
 
+import java.sql.ResultSet;
 import java.sql.SQLDataException;
 import java.sql.SQLException;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 //Nguyên 2,4
@@ -31,9 +33,9 @@ public class DemographicManagementService extends Service{
     public boolean deleteCIC(String cicNumber) { return CICTable.getTable().delete(cicNumber);}
     public CIC getCICInfoByAccountID(int accountID){
         String cicNumber = IdentificationTable.getTable().getCICNumberByAccountID(accountID);
-        if(cicNumber == null){
+        if(cicNumber == ""){
             System.out.println("Không tìm thấy thông tin nhân khẩu với accountID: " + accountID);
-            return null;
+            return new CIC();
         }
         return getCICInfoByCICNumber(cicNumber);
     }
@@ -41,7 +43,7 @@ public class DemographicManagementService extends Service{
         List<CIC> cic = CICTable.getTable().getCICByCICNumber(cicNumber);
         if(cic.size()==0){
             System.out.println("Không tìm thấy thông tin nhân khẩu với số CIC: " + cicNumber);
-            return null;
+            return new CIC();
         }
         return cic.get(0);
     }
@@ -78,39 +80,43 @@ public class DemographicManagementService extends Service{
 //    public static void main(String args[]){
 //        DatabaseConnection.createConnection();
 //        //Thêm 019826
-//        getService().addCIC(new CIC("019826","Na","", LocalDate.of(2001,10,2),
+//        getService().addCIC(new CIC("019826","quân","", LocalDate.of(2001,10,2),
 //                "Male","dsadá","dsadsa","dấdsa","dsađấ","đas",
 //                "","dsadsá",LocalDate.of(2001,10,2),"dsadá",
-//                LocalDate.of(2001,10,2), 5,"", "dsadsadsa","dsadas"));
+//                LocalDate.of(2001,10,2), 6,"", "dsadsadsa","dsadas"));
 //
 //        for (CIC cic : getService().getAllCICInfo()) {
 //            System.out.println(cic.toString());
 //        }
 //        System.out.println();
 //
-//        //In 019826 bằng CICNumber
+//        //Tìm CIC bằng CICNumber với giá trị đúng
 //        System.out.println(getService().getCICInfoByCICNumber("019826").toString());
 //        System.out.println(getService().getCICInfoByAccountID(4).toString());
+//        System.out.println();
+//        //Tìm CIC bằng CICNumber với giá trị sai
+//        System.out.println(getService().getCICInfoByCICNumber("012345").toString());
+//        System.out.println(getService().getCICInfoByAccountID(10).toString());
 //        System.out.println();
 //
 //        //update 019826
 //        getService().updateCIC(new CIC("019826","Thay đổi","", LocalDate.of(2001,10,2),
 //                "Male","123","123","d123","123","đas",
 //                "","dsadsá",LocalDate.of(2001,10,2),"dsadá",
-//                LocalDate.of(2001,10,2), 5,"", "dsadsadsa","dsadas"));
+//                LocalDate.of(2001,10,2), 6,"", "dsadsadsa","dsadas"));
 //        System.out.println(getService().getCICInfoByCICNumber("019826").toString());
 //        System.out.println();
 //        //Xóa 019826
 //        getService().deleteCIC("019826");
-////        System.out.println(getService().getCICInfoByCICNumber("019826").toString()+"\n");
+//        //System.out.println(getService().getCICInfoByCICNumber("019826").toString()+"\n");
 //
-//        //Tìm bằng tên mai
-//        for (CIC cic : getService().searchCICByName(" mAi ")) {
+//        //Tìm bằng tên
+//        for (CIC cic : getService().searchCICByName(" Hà ")) {
 //            System.out.println(cic.toString());
 //        }
 //        System.out.println();
 //
-//        for (CIC cic : getService().searchCICByName("Nguyễn")) {
+//        for (CIC cic : getService().searchCICByName(" ĐắC")) {
 //            System.out.println(cic.toString());
 //        }
 //    }

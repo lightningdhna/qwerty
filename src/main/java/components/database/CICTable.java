@@ -58,7 +58,7 @@ public class CICTable extends DatabaseConnection {
                     name nvarchar(100) not null ,
                     other_name nvarchar(100),
                     date_of_birth date not null,
-                    gender varchar(10) not null,
+                    gender nvarchar(10) not null,
                     place_of_origin nvarchar(100) not null,
                     place_of_residence nvarchar(100) not null,
                     place_of_temporary_residence nvarchar(100) not null,
@@ -67,7 +67,7 @@ public class CICTable extends DatabaseConnection {
                     passport_number varchar(50) ,
                     personal_identification nvarchar(200) ,
                     date_of_expiry date not null,
-                    verify_state varchar(10) not null,
+                    verify_state nvarchar(100) not null,
                     date_verify date not null,
                     id_verifier int not null unique,
                     note nvarchar(200),
@@ -93,7 +93,6 @@ public class CICTable extends DatabaseConnection {
     public boolean add(CIC cic) {
         createTable();
         if (checkExist(cic.getCICNumber())){
-            System.out.println("Đã tồn tại CIC với cicNumber: "+cic.getCICNumber());
             return false;
         }
         String query = String.format(
@@ -119,8 +118,8 @@ public class CICTable extends DatabaseConnection {
                     front_cic_image_url,
                     back_cic_image_url
                 ) values (
-                    '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s',
-                    '%s', '%s', '%s', '%s', '%s', '%d', '%s', '%s', '%s'
+                    '%s', N'%s', N'%s', '%s', N'%s', N'%s',N'%s', N'%s', N'%s', N'%s',
+                    '%s', N'%s', '%s', N'%s', '%s', '%d', N'%s', '%s', '%s'
             )
             """,
                 cic.getCICNumber(),
@@ -242,7 +241,6 @@ public class CICTable extends DatabaseConnection {
     public List<CIC> getCICByCICNumber(String cicNumber) {
         createTable();
         if (!checkExist(cicNumber)){
-            System.out.println("Không tìm thấy thông tin nhân với cicNumber: "+cicNumber);
             return new ArrayList<>();
         }
         String query = String.format(
