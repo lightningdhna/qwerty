@@ -192,7 +192,7 @@
                </RadialGradient>
             </ripplerFill>
          </JFXButton>
-         <JFXButton fx:id="registerButton" ellipsisString="" prefHeight="60.0" prefWidth="325.0" style="-fx-alignment: center-left; -fx-background-radius: 15; -fx-border-radius: 15;" text="Đăng kí" textFill="WHITE" VBox.vgrow="ALWAYS">
+         <JFXButton fx:id="registerButton" ellipsisString="" prefHeight="60.0" prefWidth="325.0" style="-fx-alignment: center-left; -fx-background-radius: 15; -fx-border-radius: 15;" text="Sự kiện" textFill="WHITE" VBox.vgrow="ALWAYS">
             <font>
                <Font name="SansSerif Bold" size="30.0" />
             </font>

@@ -5,6 +5,7 @@ import app.model.manage.CICRowInfo;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
+import animatefx.animation.*;
 
 public class PersonalInfoPage extends Window {
     @FXML
