@@ -94,7 +94,7 @@
             <DropShadow />
          </effect>
       </Pane>
-      <Label alignment="CENTER" layoutY="28.0" opacity="0.85" prefHeight="91.0" prefWidth="794.0" style="-fx-background-color: transparent;" text="Phần mềm quản lí phát thưởng" textAlignment="CENTER" textFill="#2596be" wrapText="true" AnchorPane.topAnchor="28.0">
+      <Label alignment="CENTER" layoutX="5.0" layoutY="226.0" opacity="0.85" prefHeight="91.0" prefWidth="794.0" style="-fx-background-color: transparent;" text="Phần mềm quản lí phát thưởng" textAlignment="CENTER" textFill="WHITE" wrapText="true" AnchorPane.topAnchor="226.0">
          <font>
             <Font name="SansSerif Bold" size="40.0" />
          </font>
