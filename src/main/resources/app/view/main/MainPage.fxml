@@ -36,7 +36,7 @@
          </ImageView>
          <Label fx:id="pageInfoLabel" layoutX="60.0" layoutY="25.0" text="Home">
             <font>
-               <Font name="SansSerif Bold" size="30.0" />
+               <Font name="SansSerif Bold" size="40.0" />
             </font>
             <effect>
                <Reflection fraction="0.45" topOpacity="0.14" />

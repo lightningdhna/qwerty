@@ -30,4 +30,5 @@ module com.cnpm.qwerty {
     opens components.demogrpahic to javafx.base;
     opens app.controller to javafx.base;
     opens app.model.manage to javafx.base;
+    opens app.view.account to javafx.fxml;
 }
