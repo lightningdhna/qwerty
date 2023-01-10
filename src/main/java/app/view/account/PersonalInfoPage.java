@@ -1,13 +1,12 @@
 package app.view.account;
 
-import app.model.Window;
+import app.model.MyWindow;
 import app.model.manage.CICRowInfo;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
-import animatefx.animation.*;
 
-public class PersonalInfoPage extends Window {
+public class PersonalInfoPage extends MyWindow {
     @FXML
     AnchorPane nkPane,nk2Pane;
 

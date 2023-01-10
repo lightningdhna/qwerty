@@ -2,15 +2,11 @@ package app.view.manage;
 
 import app.PageManager;
 import app.model.Page;
-import app.model.Window;
+import app.model.MyWindow;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.layout.Pane;
 
-import java.net.URL;
-import java.util.ResourceBundle;
-
-public class ManagePage extends Window {
+public class ManagePage extends MyWindow {
     @FXML
     Pane showPane;
     Page currentPage;

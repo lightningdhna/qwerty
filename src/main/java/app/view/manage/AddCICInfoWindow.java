@@ -1,6 +1,6 @@
 package app.view.manage;
 
-import app.model.Window;
+import app.model.MyWindow;
 import components.demogrpahic.CIC;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -8,7 +8,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import service.DemographicManagementService;
 
-public class AddCICInfoWindow extends Window {
+public class AddCICInfoWindow extends MyWindow {
     @FXML
     TextField name,otherName,cicNumber,placeOfOrigin,placeOfResidence, placeOfTemporary, nationality, ethnic, passportNumber;
     @FXML DatePicker dob;

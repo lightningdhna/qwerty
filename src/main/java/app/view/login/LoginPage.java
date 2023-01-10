@@ -7,16 +7,21 @@ import com.jfoenix.controls.JFXCheckBox;
 import components.account.Account;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import animatefx.animation.*;
+import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.concurrent.atomic.AtomicReference;
 
 public class LoginPage extends Page implements Initializable {
 
@@ -41,9 +46,24 @@ public class LoginPage extends Page implements Initializable {
     }
     MainPage mainPage = new MainPage();
     public void setMainPage(){
-        getRoot().getScene().setRoot(mainPage.getRoot());
+        Scene scene =getRoot().getScene();
+        Parent root = mainPage.getRoot();
+        Stage stage = (Stage) scene.getWindow();
+        scene.setRoot(root);
         new ZoomIn(mainPage.getRoot()).play();
 
+        AtomicReference<Double> xOffset = new AtomicReference<>((double) 0);
+        AtomicReference<Double> yOffset = new AtomicReference<>((double) 0);
+        root.setOnMousePressed((MouseEvent event) -> {
+            xOffset.set(event.getSceneX());
+            yOffset.set(event.getSceneY());
+        });
+
+        // Move around here
+        root.setOnMouseDragged((MouseEvent event) -> {
+            stage.setX(event.getScreenX() - xOffset.get());
+            stage.setY(event.getScreenY() - yOffset.get());
+        });
     }
     public void signUp(){
         SignUpPage signUpPage = new SignUpPage();

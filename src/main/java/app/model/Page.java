@@ -4,6 +4,7 @@ import animatefx.animation.*;
 import app.PageManager;
 import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
@@ -45,7 +46,6 @@ public class Page {
         }
         root = fxmlLoader.getRoot();
         this.type=type;
-
     }
 
     public AnchorPane getRoot(){
