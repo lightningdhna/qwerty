@@ -2,6 +2,7 @@
 
 <?import com.jfoenix.controls.JFXButton?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -19,12 +20,12 @@
             <DropShadow />
          </effect>
          <children>
-            <TextField prefHeight="40.0" prefWidth="400.0" style="-fx-background-radius: 10;">
+            <TextField fx:id="searchText" prefHeight="40.0" prefWidth="400.0" style="-fx-background-radius: 10;">
                <HBox.margin>
                   <Insets left="5.0" top="5.0" />
                </HBox.margin>
             </TextField>
-            <JFXButton prefHeight="40.0" prefWidth="40.0">
+            <JFXButton onMouseClicked="#search" prefHeight="40.0" prefWidth="40.0">
                <HBox.margin>
                   <Insets left="5.0" top="5.0" />
                </HBox.margin>
@@ -45,6 +46,15 @@
                   </ImageView>
                </graphic>
             </JFXButton>
+            <JFXButton onMouseClicked="#reload" prefHeight="40.0" prefWidth="40.0">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../icon/back.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
          </children>
       </HBox>
       <ScrollPane layoutY="29.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="750.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="75.0">
@@ -59,6 +69,9 @@
                         <TableColumn prefWidth="90.40005493164062" text="Trạng thái xác thực" />
                         <TableColumn prefWidth="115.20001220703125" text="Tài khoản" />
                      </columns>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </TableView>
                </children>
             </AnchorPane>

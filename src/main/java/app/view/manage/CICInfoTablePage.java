@@ -1,17 +1,13 @@
 package app.view.manage;
 
 import app.controller.ManageController;
-import app.model.Page;
 import app.model.Window;
 import app.model.manage.CICRowInfo;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 
-import java.net.URL;
-import java.util.ResourceBundle;
-
-public class CICInfoTablePage extends Window implements Initializable {
+public class CICInfoTablePage extends Window  {
 
     @FXML
     TableView tableView;
@@ -22,13 +18,18 @@ public class CICInfoTablePage extends Window implements Initializable {
         add(page);
     };
     public CICInfoTablePage(){
-        ManageController.setInfo(this,tableView);
-    }
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-
+        ManageController.initTableView(this,tableView);
+        ManageController.setTableInfo(this,tableView);
     }
     public void addCICWindow(){
         addWindow(new AddCICInfoWindow());
+    }
+    public void reload(){
+        ManageController.setTableInfo(this,tableView);
+    }
+    @FXML
+    TextField searchText;
+    public void search(){
+        ManageController.searchTableInfo(this,tableView, searchText.getText());
     }
 }

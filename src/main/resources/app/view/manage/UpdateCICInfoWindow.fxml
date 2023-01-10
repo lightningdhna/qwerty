@@ -226,7 +226,7 @@
       </ScrollPane>
       <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="20.0">
          <children>
-            <JFXButton buttonType="RAISED" prefHeight="70.0" prefWidth="250.0" ripplerFill="#194181" style="-fx-background-color: green; -fx-background-radius: 10;" text="Cập nhật" textFill="WHITE">
+            <JFXButton buttonType="RAISED" onMouseClicked="#updateInfo" prefHeight="70.0" prefWidth="250.0" ripplerFill="#194181" style="-fx-background-color: green; -fx-background-radius: 10;" text="Cập nhật" textFill="WHITE">
                <font>
                   <Font name="SansSerif Regular" size="24.0" />
                </font>

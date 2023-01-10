@@ -1,6 +1,5 @@
 package app.view.manage;
 
-import app.PageManager;
 import app.model.Window;
 import app.model.manage.CICRowInfo;
 import components.demogrpahic.CIC;
@@ -10,7 +9,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import service.DemographicManagementService;
 
-public class EditCICInfoWindow extends Window {
+public class UpdateCICInfoWindow extends Window {
     CICRowInfo cicInfo;
     @FXML
     TextField name,otherName,cicNumber,placeOfOrigin,placeOfResidence, placeOfTemporary, nationality, ethnic, passportNumber;
@@ -35,15 +34,40 @@ public class EditCICInfoWindow extends Window {
         gender.setValue(cicInfo.getGender());
         note.setText(cicInfo.getNote());
     }
-    public EditCICInfoWindow(){
+    public UpdateCICInfoWindow(){
         ObservableList<String> genderList = FXCollections.observableArrayList();
         genderList.addAll("Nam", "Nữ","Khác");
         gender.setItems(genderList);
     }
-    public EditCICInfoWindow(CICRowInfo cicInfo){
+    public UpdateCICInfoWindow(CICRowInfo cicInfo){
         this();
         setInfo(cicInfo);
     }
+    public void updateInfo(){
+        CIC info = new CIC();
+        info.setCICNumber(cicNumber.getText());
+        info.setName(name.getText());
+        info.setOtherName(otherName.getText());
+        info.setPlaceOfOrigin(placeOfOrigin.getText());
+        info.setPlaceOfResidence(placeOfResidence.getText());
+        info.setPlaceOfTemporaryResidence(placeOfTemporary.getText());
+        info.setNationality(nationality.getText());
+        info.setEthnic(ethnic.getText());
+        info.setPassportNumber(passportNumber.getText());
+        info.setDateOfBirth(dob.getValue());
+        info.setGender(gender.getValue());
+        info.setNote(note.getText());
+        {
+            DemographicManagementService.getService().updateCIC(info);
+            close();
+            updateSuccess();
+        }
+    }
 
-
+    public void updateSuccess(){
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Thành công");
+        alert.setContentText("Đã cập nhật thông tin nhân khẩu vào hệ thống");
+        alert.show();
+    }
 }

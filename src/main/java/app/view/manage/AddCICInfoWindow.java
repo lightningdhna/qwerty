@@ -5,10 +5,7 @@ import components.demogrpahic.CIC;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import service.DemographicManagementService;
 
 public class AddCICInfoWindow extends Window {
@@ -27,7 +24,8 @@ public class AddCICInfoWindow extends Window {
 
     }
     public void addNewCIC(){
-        CIC info = new CIC(cicNumber.getText());
+        CIC info = new CIC();
+        info.setCICNumber(cicNumber.getText());
         info.setName(name.getText());
         info.setOtherName(otherName.getText());
         info.setPlaceOfOrigin(placeOfOrigin.getText());
@@ -39,9 +37,18 @@ public class AddCICInfoWindow extends Window {
         info.setDateOfBirth(dob.getValue());
         info.setGender(gender.getValue());
         info.setNote(note.getText());
-//        if(DemographicManagementService.getService().canAdd(info))
-        DemographicManagementService.getService().addCIC(info);
+//        if(DemographicManagementService.getService().)
+        {
+            DemographicManagementService.getService().addCIC(info);
+            addSuccess();
+        }
         exit();
+    }
+    public void addSuccess(){
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Thành công");
+        alert.setContentText("Đã thêm thông tin nhân khẩu vào hệ thống");
+        alert.show();
     }
 
 }

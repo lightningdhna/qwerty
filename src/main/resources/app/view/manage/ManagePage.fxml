@@ -79,7 +79,7 @@
                   </LinearGradient>
                </textFill>
             </JFXButton>
-            <JFXButton graphicTextGap="20.0" prefHeight="70.0" prefWidth="225.0" style="-fx-alignment: center-left;" text="Sự kiện" wrapText="true">
+            <JFXButton graphicTextGap="20.0" prefHeight="70.0" prefWidth="225.0" style="-fx-alignment: center-left;" text="Quản lí sự kiện" wrapText="true">
                <graphic>
                   <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -110,9 +110,37 @@
                   </LinearGradient>
                </textFill>
             </JFXButton>
+            <JFXButton graphicTextGap="20.0" prefHeight="70.0" prefWidth="225.0" style="-fx-alignment: center-left;" text="Lịch sử sự kiện" wrapText="true">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../icon/form.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="SansSerif Regular" size="20.0" />
+               </font>
+               <textFill>
+                  <LinearGradient cycleMethod="REFLECT" endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.12941177189350128" green="0.1882352977991104" blue="0.6784313917160034" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.20392157137393951" green="0.6509804129600525" blue="0.6313725709915161" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </JFXButton>
          </children>
       </VBox>
-      <Pane layoutX="287.0" layoutY="-12.0" opacity="0.9" prefHeight="500.0" prefWidth="750.0" style="-fx-background-color: #efefef; -fx-background-radius: 20;" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="75.0">
+      <Pane layoutX="287.0" layoutY="-12.0" opacity="0.9" prefHeight="500.0" prefWidth="750.0" style="-fx-background-color: #efefef; -fx-background-radius: 20;" AnchorPane.bottomAnchor="45.0" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="75.0">
          <effect>
             <DropShadow blurType="GAUSSIAN" offsetX="-1.0" offsetY="2.0" spread="0.04">
                <color>

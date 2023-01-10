@@ -1,4 +1,4 @@
--- use db;
+﻿-- use db;
 --
 -- create table cic_table(
 -- cic_number varchar(100) primary key,
@@ -14,21 +14,29 @@
 -- passport_number varchar(50) ,
 -- personal_identification nvarchar(200) ,
 -- date_of_expiry date not null,
--- verify_state varchar(10) not null,
+-- verify_state varchar(100) not null,
 -- date_verify date not null,
 -- id_verifier int not null unique,
 -- note nvarchar(200),
 -- front_cic_image_url varchar(200) not null,
 -- back_cic_image_url varchar(200) not null
 -- );
--- INSERT INTO cic_table(name,other_name,date_of_birth,gender,place_of_origin,place_of_residence,place_of_temporary_residence,
--- 					  nationality,ethnic,passport_number,personal_identification,date_of_expiry,verify_state,date_verify,id_verifier,
--- 					  note,front_cic_image_url,back_cic_image_url)
--- VALUES('019825','Huy','fdf', 2001-10-5,'Male','dsad','dsadsa','ddsa','dsajj','ghjs','fdsf','dsadsk',2001-10-5,'dsadd',2001-10-5, 1,'fsdf', 'dsadsadsa','dsadas'),
--- 	  ('012254','Hoan','fdf', 2001-10-5,'Male','dsad','dsadsa','ddsa','dsa','uuas','fdsf','dsadsj',2001-10-5,'dsadd',2001-10-5, 2,'fsdf', 'dsadsadsa','dsadas'),
--- 	  ('12231D','Ngoc','fdf', 2001-10-5,'Male','dsad','dsadsa','ddsa','dsa','jjas','fdsf','dsadsg',2001-10-5,'dsadd',2001-10-5, 3,'fsdf', 'dsadsadsa','dsadas'),
--- 	  ('019826','Dung','fdf', 2001-10-5,'Male','dsad','dsadsa','ddsa','dsauty','iias','fdsf','dsadsg',2001-10-5,'dsadd',2001-10-5, 4,'fsdf', 'dsadsadsa','dsadas');
--- SELECT * FROM cic_table;
+--drop table cic_table;
+ --INSERT INTO cic_table(cic_number,name,other_name,date_of_birth,gender,place_of_origin,place_of_residence,place_of_temporary_residence,
+ --					  nationality,ethnic,passport_number,personal_identification,date_of_expiry,verify_state,date_verify,id_verifier,
+ --					  note,front_cic_image_url,back_cic_image_url)
+ --VALUES(N'182734232', N'Nguyễn Ngọc Hoàng', N'', '2000-2-1', N'Nam', N'Thôn Phượng Hoàng, xã Kỳ Lân, huyện Hoa Nam, tỉnh Thái Bình', N'Thôn Phượng Hoàng, xã Kỳ Lân, huyện Hoa Nam, Tỉnh Thái Bình',
+	--N'', N'Việt Nam', N'Kinh', N'832432472432', N'', '2031-12-31', N'Đã xác thực', '2023-1-9', 1, N'', N'ImageFrontCIC', N'ImageBackCIC'),
+	--(N'187864324', N'Phan Đắc Di', N'', '2001-9-13', N'Nam', N'Đường Nguyên Xá, phường Cầu Diễn, quận Nam Từ Liêm, thành phố Hà Nội', N'Đường Nguyên Xá, phường Cầu Diễn, quận Nam Từ Liêm, thành phố Hà Nội',
+	--N'', N'Việt Nam', N'Kinh', N'774372436423', N'', '2031-12-31', N'Đã xác thực', '2023-1-9', 2, N'', N'ImageFrontCIC', N'ImageBackCIC'),
+	--(N'187868778', N'Hà Thị Hồng', N'', '1999-12-21', N'Nữ', N'Tổ dân phố 6, phường Gia Khánh, quận Long Biên, thành phố Hà Nội', N'Tổ dân phố 6, phường Gia Khánh, quận Long Biên, thành phố Hà Nội',
+	--N'', N'Việt Nam', N'Kinh', N'252353759384', N'', '2031-12-31', N'Đã xác thực', '2023-1-9', 3, N'', N'ImageFrontCIC', N'ImageBackCIC'),
+	--(N'184723643', N'Lê Hà Thu', N'', '1998-12-22', N'Nam', N'xóm Đình Thôn, xã Hòa An, huyện Tuy Hòa, tỉnh Bình Dương', N'xóm Đình Thôn, xã Hòa An, huyện Tuy Hòa, tỉnh Bình Dương',
+	--N'', N'Việt Nam', N'Kinh', N'798273743294', N'', '2031-12-31', N'Đã xác thực', '2023-1-9', 4, N'', N'ImageFrontCIC', N'ImageBackCIC'),
+	--(N'187424832', N'Trần Văn Thanh', N'', '2000-2-12', N'Nam', N'Thôn Bình Đại, xã An Phú, huyện Can Lộc, tỉnh Hà Tĩnh', N'Thôn Bình Đại, xã An Phú, huyện Can Lộc, tỉnh Hà Tĩnh',
+	--N'', N'Việt Nam', N'Kinh', N'732341423843', N'', '2031-12-31', N'Đã xác thực', '2023-1-9', 5, N'', N'ImageFrontCIC', N'ImageBackCIC')
+ SELECT * FROM cic_table;
+SELECT * FROM cic_table WHERE LOWER(name) LIKE N'%ĐắC%';
 --
 --
 -- create table identification_table(

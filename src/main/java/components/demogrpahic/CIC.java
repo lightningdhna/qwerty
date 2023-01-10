@@ -55,52 +55,44 @@ public class CIC {
         this.backCICImageURL = backCICImageURL;
     }
 
-    public LocalDate getDateOfBirth() {
-        return dateOfBirth;
-    }
-
-    public LocalDate getDateOfExpiry() {
-        return dateOfExpiry;
-    }
-
-    public String getBackCICImageURL() {
-        return backCICImageURL;
-    }
-
-    public LocalDate getDateVerify() {
-        return dateVerify;
-    }
-
-    public String getEthnic() {
-        return ethnic;
-    }
-
-    public String getFrontCICImageURL() {
-        return frontCICImageURL;
-    }
-
-    public String getGender() {
-        return gender;
-    }
-
-    public int getIdVerifier() {
-        return idVerifier;
+    public String getCICNumber() {
+        return cicNumber;
     }
 
     public String getName() {
         return name;
     }
 
+    public String getOtherName() {
+        return otherName;
+    }
+
+    public LocalDate getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public String getPlaceOfOrigin() {
+        return placeOfOrigin;
+    }
+
+    public String getPlaceOfResidence() {
+        return placeOfResidence;
+    }
+
+    public String getPlaceOfTemporaryResidence() {
+        return placeOfTemporaryResidence;
+    }
+
     public String getNationality() {
         return nationality;
     }
 
-    public String getNote() {
-        return note;
-    }
-
-    public String getOtherName() {
-        return otherName;
+    public String getEthnic() {
+        return ethnic;
     }
 
     public String getPassportNumber() {
@@ -110,74 +102,53 @@ public class CIC {
     public String getPersonalIdentification() {
         return personalIdentification;
     }
-    public String getPlaceOfOrigin() {
-        return placeOfOrigin;
-    }
 
-
-    public String getPlaceOfResidence() {
-        return placeOfResidence;
+    public LocalDate getDateOfExpiry() {
+        return dateOfExpiry;
     }
 
     public String getVerifyState() {
         return verifyState;
     }
-    public String getPlaceOfTemporaryResidence() {
-        return placeOfTemporaryResidence;
+
+    public LocalDate getDateVerify() {
+        return dateVerify;
     }
 
-    public String getCicNumber() {
-        return cicNumber;
+    public int getIdVerifier() {
+        return idVerifier;
     }
-    public void setName(String name){
+
+    public String getNote() {
+        return note;
+    }
+
+    public String getFrontCICImageURL() {
+        return frontCICImageURL;
+    }
+
+    public String getBackCICImageURL() {
+        return backCICImageURL;
+    }
+
+    public void setCICNumber(String cicNumber) {
+        this.cicNumber = cicNumber;
+    }
+
+    public void setName(String name) {
         this.name = name;
-    }
-
-    public void setDateOfBirth(LocalDate dateOfBirth) {
-        this.dateOfBirth = dateOfBirth;
-    }
-
-    public void setDateOfExpiry(LocalDate dateOfExpiry) {
-        this.dateOfExpiry = dateOfExpiry;
-    }
-
-    public void setDateVerify(LocalDate dateVerify) {
-        this.dateVerify = dateVerify;
-    }
-
-    public void setEthnic(String ethnic) {
-        this.ethnic = ethnic;
-    }
-
-    public void setFrontCICImageURL(String frontCICImageURL) {
-        this.frontCICImageURL = frontCICImageURL;
-    }
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-
-    public void setIdVerifier(int idVerifier) {
-        this.idVerifier = idVerifier;
-    }
-
-    public void setNationality(String nationality) {
-        this.nationality = nationality;
-    }
-
-    public void setNote(String note) {
-        this.note = note;
     }
 
     public void setOtherName(String otherName) {
         this.otherName = otherName;
     }
 
-    public void setPassportNumber(String passportNumber) {
-        this.passportNumber = passportNumber;
+    public void setDateOfBirth(LocalDate dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
     }
 
-    public void setPersonalIdentification(String personalIdentification) {
-        this.personalIdentification = personalIdentification;
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 
     public void setPlaceOfOrigin(String placeOfOrigin) {
@@ -192,23 +163,53 @@ public class CIC {
         this.placeOfTemporaryResidence = placeOfTemporaryResidence;
     }
 
+    public void setNationality(String nationality) {
+        this.nationality = nationality;
+    }
+
+    public void setEthnic(String ethnic) {
+        this.ethnic = ethnic;
+    }
+
+    public void setPassportNumber(String passportNumber) {
+        this.passportNumber = passportNumber;
+    }
+
+    public void setPersonalIdentification(String personalIdentification) {
+        this.personalIdentification = personalIdentification;
+    }
+
+    public void setDateOfExpiry(LocalDate dateOfExpiry) {
+        this.dateOfExpiry = dateOfExpiry;
+    }
+
     public void setVerifyState(String verifyState) {
         this.verifyState = verifyState;
     }
 
+    public void setDateVerify(LocalDate dateVerify) {
+        this.dateVerify = dateVerify;
+    }
+
+    public void setIdVerifier(int idVerifier) {
+        this.idVerifier = idVerifier;
+    }
+
+    public void setNote(String note) {
+        this.note = note;
+    }
+
+    public void setFrontCICImageURL(String frontCICImageURL) {
+        this.frontCICImageURL = frontCICImageURL;
+    }
 
     public void setBackCICImageURL(String backCICImageURL) {
         this.backCICImageURL = backCICImageURL;
     }
-    public CIC(String ID){
-        this.cicNumber = ID;
-    }
+
     public CIC(){};
-    public String getCICNumber(){
-        return this.cicNumber;
-    }
     public boolean equals(CIC obj) {
-        return this.cicNumber.equals( obj.getCicNumber());
+        return this.cicNumber.equals( obj.getCICNumber());
     }
 
     @Override
