@@ -17,8 +17,7 @@ public class IdentificationTable extends DatabaseConnection{
         }
         hasTable = true;
         String query = "create table identification_table(\n" +
-                "    id int identity(1, 1) primary key,\n" +
-                "    account_id int not null unique,\n" +
+                "    account_id int primary key,\n" +
                 "    cic_number varchar(20) not null unique\n" +
                 ")";
         try {
