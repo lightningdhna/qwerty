@@ -60,7 +60,7 @@
             <Image url="@../../../icon/icon-light/password-1.png" />
          </image>
       </ImageView>
-      <JFXButton buttonType="RAISED" contentDisplay="CENTER" layoutX="350.0" onMouseClicked="#exit" prefHeight="30.0" prefWidth="30.0" ripplerFill="#df1616" style="-fx-background-radius: 0 15 0 0;" AnchorPane.topAnchor="0.0">
+      <JFXButton buttonType="RAISED" contentDisplay="CENTER" layoutX="350.0" onMouseClicked="#exit" prefHeight="30.0" prefWidth="30.0" ripplerFill="#df1616" styleClass="jfx-button-main-view-icon" stylesheets="@../../../css/button.css" AnchorPane.topAnchor="0.0">
          <graphic>
             <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true">
                <image>
@@ -72,7 +72,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </JFXButton>
-      <JFXButton buttonType="RAISED" contentDisplay="CENTER" layoutX="44.0" layoutY="69.0" onMouseClicked="#backToLogin" prefHeight="30.0" prefWidth="30.0" ripplerFill="#df1616" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="50.0">
+      <JFXButton buttonType="RAISED" contentDisplay="CENTER" layoutX="44.0" layoutY="69.0" onMouseClicked="#backToLogin" prefHeight="30.0" prefWidth="30.0" ripplerFill="#df1616" styleClass="jfx-button-main-view-icon" stylesheets="@../../../css/button.css" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="50.0">
          <graphic>
             <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true">
                <image>
@@ -89,7 +89,7 @@
             <Image url="@../../../icon/icon-light/mail-1.png" />
          </image>
       </ImageView>
-      <JFXButton buttonType="RAISED" layoutX="78.0" layoutY="558.0" onMouseClicked="#signUp" prefHeight="66.0" prefWidth="228.0" ripplerFill="#194181" style="-fx-background-color: green; -fx-background-radius: 10;" text="Register" textFill="WHITE">
+      <JFXButton buttonType="RAISED" layoutX="115.0" layoutY="491.0" onMouseClicked="#signUp" prefHeight="66.0" prefWidth="179.0" ripplerFill="#194181" styleClass="jfx-button-signup" stylesheets="@../../../css/button.css" text="Register" textFill="WHITE">
          <font>
             <Font name="SansSerif Regular" size="24.0" />
          </font>
