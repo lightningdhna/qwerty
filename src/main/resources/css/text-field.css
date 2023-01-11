@@ -1,0 +1,8 @@
+.text-field-login{
+    -fx-background-color: white;
+    -fx-background-radius: 15 15 15 15;
+    -fx-text-fill: black;
+}
+.text-field-login:hover{
+    -fx-font-size:  15px;
+}
