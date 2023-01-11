@@ -37,11 +37,11 @@ public class DatabaseConnection {
         try {
             String dbURL =String.format(
                     """
-                    jdbc:sqlserver:// %s : %s ;
-                    databaseName= %s ;"+
+                    jdbc:sqlserver://%s;
+                    databaseName=%s;"+
                     encrypt=true; trustServerCertificate=true;
                     sslProtocol=TLSv1.2
-                    """,serverName, port , databaseName
+                    """,serverName, databaseName
             );
             conn = DriverManager.getConnection(dbURL, user, password);
             statement=conn.createStatement();
@@ -53,7 +53,7 @@ public class DatabaseConnection {
         createConnection(serverName, user, password,databaseName, "1433");
     }
     public static void createConnection(){
-        createConnection("DESKTOP-9UGDV8N\\SQLEXPRESS","sa","1842002","db");
+        createConnection("DESKTOP-2021EYY","sa","kimhung29042002","Project_SE");
     }
 
 }

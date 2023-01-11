@@ -25,49 +25,46 @@
                   <Insets left="5.0" top="5.0" />
                </HBox.margin>
             </TextField>
-            <JFXButton onMouseClicked="#search" prefHeight="40.0" prefWidth="40.0">
-               <HBox.margin>
-                  <Insets left="5.0" top="5.0" />
-               </HBox.margin>
+            <JFXButton alignment="BOTTOM_LEFT" contentDisplay="CENTER" onMouseClicked="#search" prefHeight="40.0" prefWidth="40.0" styleClass="jfx-button-icon" stylesheets="@../../../css/button.css">
                <graphic>
                   <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../icon/search.png" />
+                        <Image url="@../../../icon/icon-light/search-1.png" />
                      </image>
                   </ImageView>
                </graphic>
             </JFXButton>
-            <JFXButton onMouseClicked="#addCICWindow" prefHeight="40.0" prefWidth="40.0">
+            <JFXButton contentDisplay="CENTER" onMouseClicked="#addCICWindow" prefHeight="40.0" prefWidth="40.0" styleClass="jfx-button-icon" stylesheets="@../../../css/button.css">
                <graphic>
                   <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../icon/add.png" />
+                        <Image url="@../../../icon/icon-light/add-new-1.png" />
                      </image>
                   </ImageView>
                </graphic>
             </JFXButton>
-            <JFXButton onMouseClicked="#reload" prefHeight="40.0" prefWidth="40.0">
+            <JFXButton contentDisplay="CENTER" onMouseClicked="#reload" prefHeight="40.0" prefWidth="40.0" styleClass="jfx-button-icon" stylesheets="@../../../css/button.css">
                <graphic>
                   <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../icon/back.png" />
+                        <Image url="@../../../icon/icon-light/refresh-1.png" />
                      </image>
                   </ImageView>
                </graphic>
             </JFXButton>
          </children>
       </HBox>
-      <ScrollPane layoutY="29.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="750.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="75.0">
+      <ScrollPane layoutY="29.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="750.0" stylesheets="@../../../css/scroll-pane.css" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="75.0">
          <content>
-            <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="725.0">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="500.0" prefWidth="734.0">
                <children>
-                  <TableView fx:id="tableView" prefHeight="500.0" prefWidth="725.0" AnchorPane.topAnchor="0.0">
+                  <TableView fx:id="tableView" prefHeight="500.0" prefWidth="735.0" stylesheets="@../../../css/table-view.css" AnchorPane.topAnchor="0.0">
                      <columns>
-                        <TableColumn prefWidth="75.0" text="Số CCCD" />
-                        <TableColumn prefWidth="75.0" text="Họ Tên" />
-                        <TableColumn prefWidth="83.20001220703125" text="Số hộ khẩu" />
-                        <TableColumn prefWidth="90.40005493164062" text="Trạng thái xác thực" />
-                        <TableColumn prefWidth="115.20001220703125" text="Tài khoản" />
+                        <TableColumn maxWidth="100.0" minWidth="100.0" prefWidth="100.0" text="Số CCCD" />
+                        <TableColumn maxWidth="180.0" minWidth="180.0" prefWidth="180.0" text="Họ Tên" />
+                        <TableColumn maxWidth="120.0" minWidth="120.0" prefWidth="120.0" text="Số hộ khẩu" />
+                        <TableColumn maxWidth="155.0" minWidth="155.0" prefWidth="155.0" text="Trạng thái xác thực" />
+                        <TableColumn maxWidth="177.0" minWidth="177.0" prefWidth="177.0" text="Tài khoản" />
                      </columns>
                      <cursor>
                         <Cursor fx:constant="HAND" />

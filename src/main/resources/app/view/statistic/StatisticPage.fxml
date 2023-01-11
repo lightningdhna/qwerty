@@ -3,8 +3,6 @@
 <?import com.jfoenix.controls.JFXButton?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.effect.DropShadow?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
@@ -17,14 +15,7 @@
    <children>
       <VBox AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <JFXButton graphicTextGap="20.0" prefHeight="70.0" prefWidth="225.0" style="-fx-alignment: center-left;" text="Thống kê thu chi" wrapText="true">
-               <graphic>
-                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../image/cryo.jpg" />
-                     </image>
-                  </ImageView>
-               </graphic>
+            <JFXButton graphicTextGap="20.0" prefHeight="70.0" prefWidth="225.0" styleClass="jfx-button-taskbar-children" stylesheets="@../../../css/button.css" text="Thống kê thu chi" wrapText="true">
                <font>
                   <Font name="SansSerif Regular" size="20.0" />
                </font>
@@ -48,14 +39,7 @@
                   </LinearGradient>
                </textFill>
             </JFXButton>
-            <JFXButton graphicTextGap="20.0" prefHeight="70.0" prefWidth="225.0" style="-fx-alignment: center-left;" text="Quản lí danh sách thưởng" wrapText="true">
-               <graphic>
-                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../image/cryo.jpg" />
-                     </image>
-                  </ImageView>
-               </graphic>
+            <JFXButton graphicTextGap="20.0" prefHeight="70.0" prefWidth="225.0" styleClass="jfx-button-taskbar-children" stylesheets="@../../../css/button.css" text="Quản lí danh sách thưởng" wrapText="true">
                <font>
                   <Font name="SansSerif Regular" size="20.0" />
                </font>
@@ -77,13 +61,6 @@
                </textFill>
             </JFXButton>
             <JFXButton graphicTextGap="20.0" prefHeight="70.0" prefWidth="225.0" style="-fx-alignment: center-left;" text=" 1 +1 = 2" wrapText="true">
-               <graphic>
-                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../image/cryo.jpg" />
-                     </image>
-                  </ImageView>
-               </graphic>
                <font>
                   <Font name="SansSerif Regular" size="20.0" />
                </font>
