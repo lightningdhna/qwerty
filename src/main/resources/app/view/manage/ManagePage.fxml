@@ -3,8 +3,6 @@
 <?import com.jfoenix.controls.JFXButton?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.effect.DropShadow?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
@@ -15,16 +13,9 @@
 
 <AnchorPane prefHeight="620.0" prefWidth="1100.0" style="-fx-background-radius: 0 0 15 0; -fx-background-color: transparent;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <VBox AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <VBox prefHeight="304.0" prefWidth="235.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <JFXButton graphicTextGap="20.0" onMouseClicked="#showTable" prefHeight="70.0" prefWidth="225.0" style="-fx-alignment: center-left;" text="Danh sách nhân khẩu" wrapText="true">
-               <graphic>
-                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../icon/icons8-search.gif" />
-                     </image>
-                  </ImageView>
-               </graphic>
+            <JFXButton graphicTextGap="20.0" onMouseClicked="#showTable" prefHeight="70.0" prefWidth="225.0" styleClass="jfx-button-taskbar-children" stylesheets="@../../../css/button.css" text="Danh sách nhân khẩu" wrapText="true">
                <font>
                   <Font name="SansSerif Regular" size="20.0" />
                </font>
@@ -48,14 +39,7 @@
                   </LinearGradient>
                </textFill>
             </JFXButton>
-            <JFXButton graphicTextGap="20.0" prefHeight="70.0" prefWidth="225.0" style="-fx-alignment: center-left;" text="Danh sách hộ khẩu" wrapText="true">
-               <graphic>
-                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../icon/icons8-search.gif" />
-                     </image>
-                  </ImageView>
-               </graphic>
+            <JFXButton graphicTextGap="20.0" prefHeight="70.0" prefWidth="225.0" styleClass="jfx-button-taskbar-children" stylesheets="@../../../css/button.css" text="Danh sách hộ khẩu" wrapText="true">
                <font>
                   <Font name="SansSerif Regular" size="20.0" />
                </font>
@@ -79,14 +63,7 @@
                   </LinearGradient>
                </textFill>
             </JFXButton>
-            <JFXButton graphicTextGap="20.0" prefHeight="70.0" prefWidth="225.0" style="-fx-alignment: center-left;" text="Quản lí sự kiện" wrapText="true">
-               <graphic>
-                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../icon/form.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
+            <JFXButton graphicTextGap="20.0" prefHeight="70.0" prefWidth="225.0" styleClass="jfx-button-taskbar-children" stylesheets="@../../../css/button.css" text="Quản lý sự kiện" wrapText="true">
                <font>
                   <Font name="SansSerif Regular" size="20.0" />
                </font>
@@ -110,14 +87,7 @@
                   </LinearGradient>
                </textFill>
             </JFXButton>
-            <JFXButton graphicTextGap="20.0" prefHeight="70.0" prefWidth="225.0" style="-fx-alignment: center-left;" text="Lịch sử sự kiện" wrapText="true">
-               <graphic>
-                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../icon/form.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
+            <JFXButton graphicTextGap="20.0" prefHeight="70.0" prefWidth="225.0" styleClass="jfx-button-taskbar-children" stylesheets="@../../../css/button.css" text="Lịch sử sự kiện" wrapText="true">
                <font>
                   <Font name="SansSerif Regular" size="20.0" />
                </font>
