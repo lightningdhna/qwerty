@@ -1,6 +1,6 @@
 package app.view.manage;
 
-import app.model.Window;
+import app.model.MyWindow;
 import app.model.manage.CICRowInfo;
 import components.demogrpahic.CIC;
 import javafx.collections.FXCollections;
@@ -9,7 +9,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import service.DemographicManagementService;
 
-public class UpdateCICInfoWindow extends Window {
+public class UpdateCICInfoWindow extends MyWindow {
     CICRowInfo cicInfo;
     @FXML
     TextField name,otherName,cicNumber,placeOfOrigin,placeOfResidence, placeOfTemporary, nationality, ethnic, passportNumber;

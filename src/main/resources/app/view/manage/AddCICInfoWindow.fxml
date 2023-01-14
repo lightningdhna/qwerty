@@ -31,11 +31,11 @@
             <Font name="SansSerif Bold" size="35.0" />
          </font>
       </Label>
-      <JFXButton buttonType="RAISED" contentDisplay="CENTER" onMouseClicked="#exit" prefHeight="30.0" prefWidth="30.0" ripplerFill="#df1616" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="12.0">
+      <JFXButton buttonType="RAISED" contentDisplay="CENTER" onMouseClicked="#exit" prefHeight="30.0" prefWidth="30.0" ripplerFill="#df1616" styleClass="jfx-button-main-view-icon" stylesheets="@../../../css/button.css" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="12.0">
          <graphic>
             <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true">
                <image>
-                  <Image url="@../../../icon/icons8-undo-52.png" />
+                  <Image url="@../../../icon/exit.png" />
                </image>
             </ImageView>
          </graphic>
@@ -43,7 +43,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </JFXButton>
-      <ScrollPane layoutX="-14.0" layoutY="92.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
+      <ScrollPane layoutX="-14.0" layoutY="92.0" prefHeight="200.0" prefWidth="200.0" stylesheets="@../../../css/scroll-pane.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
         <content>
           <AnchorPane minHeight="0.0" minWidth="0.0">
                <children>
@@ -60,6 +60,9 @@
                                  <HBox.margin>
                                     <Insets />
                                  </HBox.margin>
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
                               </TextField>
                            </children>
                         </HBox>
@@ -74,6 +77,9 @@
                                  <HBox.margin>
                                     <Insets />
                                  </HBox.margin>
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
                               </TextField>
                            </children>
                         </HBox>
@@ -88,6 +94,9 @@
                                  <HBox.margin>
                                     <Insets />
                                  </HBox.margin>
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
                               </TextField>
                            </children>
                         </HBox>
@@ -130,6 +139,9 @@
                                  <HBox.margin>
                                     <Insets />
                                  </HBox.margin>
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
                               </TextField>
                            </children>
                         </HBox>
@@ -144,6 +156,9 @@
                                  <HBox.margin>
                                     <Insets />
                                  </HBox.margin>
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
                               </TextField>
                            </children>
                         </HBox>
@@ -158,6 +173,9 @@
                                  <HBox.margin>
                                     <Insets />
                                  </HBox.margin>
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
                               </TextField>
                            </children>
                         </HBox>
@@ -172,6 +190,9 @@
                                  <HBox.margin>
                                     <Insets />
                                  </HBox.margin>
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
                               </TextField>
                            </children>
                         </HBox>
@@ -186,6 +207,9 @@
                                  <HBox.margin>
                                     <Insets />
                                  </HBox.margin>
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
                               </TextField>
                            </children>
                         </HBox>
@@ -200,6 +224,9 @@
                                  <HBox.margin>
                                     <Insets />
                                  </HBox.margin>
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
                               </TextField>
                            </children>
                         </HBox>
@@ -212,7 +239,7 @@
                               </Label>
                               <TextArea fx:id="note" prefHeight="200.0" prefWidth="500.0" wrapText="true">
                                  <font>
-                                    <Font name="SansSerif Regular" size="24.0" />
+                                    <Font name="SansSerif Regular" size="16.0" />
                                  </font>
                               </TextArea>
                            </children>
@@ -226,7 +253,7 @@
       </ScrollPane>
       <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="20.0">
          <children>
-            <JFXButton buttonType="RAISED" onMouseClicked="#addNewCIC" prefHeight="70.0" prefWidth="250.0" ripplerFill="#194181" style="-fx-background-color: green; -fx-background-radius: 10;" text="Thêm" textFill="WHITE">
+            <JFXButton buttonType="RAISED" onMouseClicked="#addNewCIC" prefHeight="70.0" prefWidth="250.0" ripplerFill="#194181" styleClass="jfx-button-feature-add" stylesheets="@../../../css/button.css" text="Thêm" textFill="WHITE">
                <font>
                   <Font name="SansSerif Regular" size="24.0" />
                </font>

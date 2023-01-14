@@ -1,12 +1,12 @@
 package app.view.manage;
 
 import app.PageManager;
-import app.model.Window;
+import app.model.MyWindow;
 import app.model.manage.CICRowInfo;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 
-public class ManageCICDetailWindow extends Window {
+public class ManageCICDetailWindow extends MyWindow {
     CICRowInfo cicInfo;
     @FXML
     Label nameLabel,cicNumberLabel,dobLabel,originLocationLabel,residenceLocationLabel,temporaryLocalLabel,

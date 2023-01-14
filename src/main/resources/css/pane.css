@@ -1,0 +1,18 @@
+.pane-icon{
+    -fx-background-color: #EDEDED;
+    -fx-border-radius: 15 15 15 15;
+    -fx-background-radius: 15 15 15 15;
+}
+.pane-taskbar{
+    -fx-background-color: #EDEDED;
+    -fx-background-radius: 15 50 0 15;
+    -fx-border-radius: 15 50 0 15;
+}
+.pane-taskbar-children{
+    -fx-background-color: #EDEDED;
+    -fx-background-radius: 15 0 0 15;
+}
+.pane-login{
+    -fx-background-radius: 15 15 15 15;
+    -fx-background-color: #efefef;
+}

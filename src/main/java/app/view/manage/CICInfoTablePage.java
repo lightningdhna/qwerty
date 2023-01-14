@@ -1,13 +1,13 @@
 package app.view.manage;
 
 import app.controller.ManageController;
-import app.model.Window;
+import app.model.MyWindow;
 import app.model.manage.CICRowInfo;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 
-public class CICInfoTablePage extends Window  {
+public class CICInfoTablePage extends MyWindow {
 
     @FXML
     TableView tableView;
@@ -18,6 +18,7 @@ public class CICInfoTablePage extends Window  {
         add(page);
     };
     public CICInfoTablePage(){
+        ManageController.initTableView(this,tableView);
         ManageController.setTableInfo(this,tableView);
     }
     public void addCICWindow(){

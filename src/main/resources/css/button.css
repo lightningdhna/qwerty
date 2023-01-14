@@ -1,0 +1,162 @@
+.jfx-button-login{
+    -fx-background-color: linear-gradient(#000046, #1cb5e0);
+    -fx-background-insets: 0,1,2,3;
+    -fx-background-radius: 26 26 26 26;
+    -fx-padding: 12 30 12 30;
+    -fx-text-fill: white;
+    -fx-font-size: 20px;
+}
+.jfx-button-login:hover{
+    -fx-background-color: linear-gradient(#1a2980, #26d0ce);
+    -fx-font-weight:bold;
+}
+.jfx-button-login:pressed{
+    -fx-background-color: linear-gradient(#1a3030, #26d0ce);
+}
+
+.jfx-button-signup{
+    -fx-background-color: linear-gradient(#000046, #1cb5e0);
+    -fx-background-insets: 0,1,2,3;
+    -fx-background-radius: 26 26 26 26;
+    -fx-padding: 12 30 12 30;
+    -fx-text-fill: white;
+    -fx-font-size: 20px;
+}
+.jfx-button-signup:hover{
+    -fx-background-color: linear-gradient(#1a2980, #26d0ce);
+    -fx-font-weight:bold;
+}
+.jfx-button-signup:pressed{
+    -fx-background-color: linear-gradient(#1a3030, #26d0ce);
+}
+
+.jfx-button-main-view{
+    -fx-background-color: transparent;
+    -fx-alignment: center-left;
+    -fx-font-family: Sans-Serif;
+    -fx-background-radius: 15 15 15 15;
+    -fx-border-radius: 15 15 15 15;
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+}
+.jfx-button-main-view:hover{
+    -fx-border-color: #536976;
+    -fx-background-color: transparent;
+    -fx-font-weight: bold;
+    -fx-font-size: 25px;
+}
+.jfx-button-main-view:focused{
+    -fx-border-color: #292E49;
+    -fx-font-size: 24px;
+}
+
+.jfx-button-taskbar-children{
+    -fx-background-color: transparent;
+    -fx-alignment: center-left;
+    -fx-font-family: Sans-Serif;
+    -fx-background-radius: 15 15 15 15;
+    -fx-border-radius: 15 15 15 15;
+    -fx-text-fill: #4286f4;
+    -fx-font-weight: bold;
+    -fx-font-size: 20px;
+}
+.jfx-button-taskbar-children:hover{
+    -fx-border-color: #536976;
+    -fx-background-color: transparent;
+    -fx-font-weight: bold;
+    -fx-font-size: 21px;
+}
+.jfx-button-taskbar-children:focused{
+    -fx-border-color: #292E49;
+    -fx-font-size: 20px;
+}
+.jfx-button-taskbar-children:pressed{
+    -fx-background-color: linear-gradient(#525252, #3d72b4);
+}
+
+.jfx-button-main-view-icon{
+    -fx-background-color: transparent;
+    -fx-alignment: center-left;
+    -fx-font-family: Sans-Serif;
+    -fx-background-radius: 15 15 15 15;
+    -fx-border-radius: 15 15 15 15;
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+}
+.jfx-button-main-view-icon:hover{
+    -fx-border-color: rgba(44, 83, 100, 0.7);
+    -fx-background-color: transparent;
+}
+.jfx-button-main-view-icon:focused{
+    -fx-border-color: rgba(44, 83, 100, 0.7);
+}
+
+.jfx-button-icon{
+    -fx-background-color: transparent;
+    -fx-alignment: center-left;
+    -fx-font-family: Sans-Serif;
+    -fx-background-radius: 15 15 15 15;
+}
+.jfx-button-icon:hover{
+    -fx-background-color: #607d8b;
+}
+.jfx-button-signup-back{
+    -fx-background-color: transparent;
+    -fx-background-radius: 15 15 15 15;
+    -fx-border-radius: 15 15 15 15;
+}
+.jfx-button-signup-back:hover{
+    -fx-border-color: rgba(44, 83, 100, 0.7);
+    -fx-background-color: transparent;
+    -fx-font-weight: bold;
+}
+
+.jfx-button-feature-add{
+    -fx-background-color: linear-gradient(#3CA55C, #52c234);
+    -fx-background-insets: 0,1,2,3;
+    -fx-background-radius: 26 26 26 26;
+    -fx-padding: 12 30 12 30;
+    -fx-text-fill: white;
+    -fx-font-size: 20px;
+}
+.jfx-button-feature-add:hover{
+    -fx-background-color: linear-gradient(#52c234, #134E5E);
+    -fx-font-weight:bold;
+}
+.jfx-button-feature-add:pressed{
+    -fx-background-color: linear-gradient(#52c234, #134E5E);
+}
+
+.jfx-button-feature-request{
+    -fx-background-color: linear-gradient(#302b63, #26d0ce);
+    -fx-background-insets: 0,1,2,3;
+    -fx-background-radius: 26 26 26 26;
+    -fx-padding: 12 30 12 30;
+    -fx-text-fill: white;
+    -fx-font-size: 20px;
+}
+.jfx-button-feature-request:hover{
+    -fx-background-color: linear-gradient(#000046, #1cb5e0);
+    -fx-font-weight:bold;
+}
+.jfx-button-feature-request:pressed{
+    -fx-background-color: linear-gradient(#000046, #1cb5e0);
+}
+
+
+.jfx-button-feature-delete{
+    -fx-background-color: linear-gradient(#CB356B, #BD3F32);
+    -fx-background-insets: 0,1,2,3;
+    -fx-background-radius: 26 26 26 26;
+    -fx-padding: 12 30 12 30;
+    -fx-text-fill: white;
+    -fx-font-size: 20px;
+}
+.jfx-button-feature-delete:hover{
+    -fx-background-color: linear-gradient(#ED213A, #93291E);
+    -fx-font-weight:bold;
+}
+.jfx-button-feature-delete:pressed{
+    -fx-background-color: linear-gradient(#ED213A, #93291E);
+}
+

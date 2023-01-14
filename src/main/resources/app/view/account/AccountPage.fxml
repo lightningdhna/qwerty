@@ -3,8 +3,6 @@
 <?import com.jfoenix.controls.JFXButton?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.effect.DropShadow?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
@@ -17,14 +15,7 @@
    <children>
       <VBox AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <JFXButton graphicTextGap="20.0" onMouseClicked="#showInfoPage" prefHeight="70.0" prefWidth="225.0" style="-fx-alignment: center-left;" text="Thông tin cá nhân" wrapText="true">
-               <graphic>
-                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../icon/icons8-search.gif" />
-                     </image>
-                  </ImageView>
-               </graphic>
+            <JFXButton graphicTextGap="20.0" onMouseClicked="#showInfoPage" prefHeight="70.0" prefWidth="225.0" styleClass="jfx-button-taskbar-children" stylesheets="@../../../css/button.css" text="Thông tin cá nhân" wrapText="true">
                <font>
                   <Font name="SansSerif Regular" size="20.0" />
                </font>
@@ -36,12 +27,12 @@
                      <stops>
                         <Stop>
                            <color>
-                              <Color red="0.12919999659061432" green="0.18982522189617157" blue="0.6800000071525574" />
+                              <Color red="0.5137255191802979" green="0.3764705955982208" blue="0.7647058963775635" />
                            </color>
                         </Stop>
                         <Stop offset="1.0">
                            <color>
-                              <Color red="0.2030409425497055" green="0.6526315808296204" blue="0.6301520466804504" />
+                              <Color red="0.18039216101169586" green="0.7490196228027344" blue="0.5686274766921997" />
                            </color>
                         </Stop>
                      </stops>
