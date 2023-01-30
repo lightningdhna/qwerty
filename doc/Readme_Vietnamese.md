@@ -3,6 +3,14 @@
 [Readme English](..\Readme.md)
 
 ## Mục lục
+
+<!-- TOC -->
+* [1. Yêu cầu](#yêu-cầu)
+* [2. Cấu hình SQL Server](#cấu-hình-sql-server)
+* [3. Chạy chương trình](#chạy-chương-trình)
+* [4. Những người đóng góp](#những-người-đóng-góp)
+<!-- TOC -->
+
 # Yêu cầu
 [SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads) phiên bản 2022 hoặc mới hơn,
 chọn phiên bản phù hợp với hệ điều hành và cấu hình máy tính của bạn.
