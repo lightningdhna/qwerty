@@ -57,7 +57,7 @@ yêu cầu về bảo mật an toàn thông tin, yêu cầu hiệu năng của h
 
     Kiểm tra button "Sign In" highlighted khi hover mouse.
 
-    Kiểm tra button "Sign In"" đổi màu khi mouse click.
+    Kiểm tra button "Sign In" đổi màu khi mouse click.
 
     Kiểm tra prompt text Username, Password mờ hoặc xoá khi click vào Username, Password textbox.
 
