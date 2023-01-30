@@ -88,4 +88,4 @@ Ví dụ:
 1. [Nguyễn Kim Hùng](https://github.com/NguyenKimHung2002)
 2. [Phạm Duy Hưng](https://github.com/lightningdhna)
 3. [Lê Thành Nguyên](https://github.com/gachu)
-4. [Trần Anh Quốc]()
+4. [Trần Anh Quốc](https://github.com/love123bg)
