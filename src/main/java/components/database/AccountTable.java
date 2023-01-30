@@ -36,14 +36,6 @@ public class AccountTable extends DatabaseConnection {
                     [access authority] varchar(20) not null default 'user',
                     constraint checkValue check( username like '_%' and password like '_%' )
                 )
-                
-                
-                
-                
-                
-                
-                
-                
                 """;
         try {
             execute(query);

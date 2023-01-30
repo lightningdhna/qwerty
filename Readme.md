@@ -8,6 +8,7 @@
 * [2. SQL Server Configuration](#sql-server-configuration)
 * [3. Run Program](#run-program)
 * [4. Contributors](#contributors)
+* [5. Support user and tester](#support-user-and-tester)
 <!-- TOC -->
 # Requirement
 [SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads) version 2022 or later, 
@@ -87,3 +88,7 @@ Example:
 2. [Phạm Duy Hưng](https://github.com/lightningdhna)
 3. [Lê Thành Nguyên](https://github.com/love123bg)
 4. [Trần Anh Quốc](https://github.com/gachu)
+
+# Support user and tester
+1. If you are a user, you will be supported when you go to [Feedback support](doc\feedback.md)
+2. If you are a tester, you will be supported when you go to [Testcases](doc\testcase.md) and [Test Report](doc\testReport.md)

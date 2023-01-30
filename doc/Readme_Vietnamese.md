@@ -80,7 +80,7 @@ Ví dụ:
 
 ### 3. Tạo tài khoản của bạn
 
-1. Cách thứ nhất: Sửu dụng chức năng đăng ký.
+1. Cách thứ nhất: Sử dụng chức năng đăng ký.
 2. Cách thứ hai: `Refresh` Database > click phải chuột `dbo.account_table` > mở `Edit Top 200 Rows` > _Thêm một tài khoản để sử dụng_ > _Đăng nhập với tài khoản của bạn_.
 
 # Những người đóng góp
@@ -89,3 +89,7 @@ Ví dụ:
 2. [Phạm Duy Hưng](https://github.com/lightningdhna)
 3. [Lê Thành Nguyên](https://github.com/love123bg)
 4. [Trần Anh Quốc](https://github.com/gachu)
+
+# Hỗ trợ user và tester
+1. Nếu bạn là một user, bạn sẽ nhận được hỗ trợ khi đi tới [Feedback support](feedback.md)
+2. Nếu bạn là một tester, bạn sẽ nhận được hỗ trợ khi đi tới [Testcases](testcase.md) và [Test Report](testReport.md)
