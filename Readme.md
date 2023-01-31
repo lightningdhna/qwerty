@@ -22,6 +22,8 @@ choose the version that suits your operating system and computer configuration.
 
 # SQL Server Configuration
 
+*References from video [Connect Intellij to SQL Server](https://www.youtube.com/watch?v=RF-_vchtV58)*
+
 ## Enable SQL Server Authentication Account
 
 Make sure to restart the SQL Server service after configuration.

@@ -23,6 +23,8 @@ chọn phiên bản phù hợp với hệ điều hành và cấu hình máy tí
 
 # Cấu hình SQL Server 
 
+*Tham khảo từ video [Connect Intellij to SQL Server](https://www.youtube.com/watch?v=RF-_vchtV58)*
+
 ## Kích hoạt tài khoản xác thực SQL Server
 
 Đảm bảo rẳng khởi động lại dịch vụ SQL Server sau khi cấu hình.
@@ -94,5 +96,5 @@ Ví dụ:
 
 Bạn có thể xem hướng dẫn sử dụng phần mềm [tại đây](softwareManuals.md).
 
-1. Nếu bạn là một user, bạn sẽ nhận được hỗ trợ khi đi tới [Feedback support](feedback.md)
+1. Nếu bạn là một user, bạn sẽ nhận được hỗ trợ khi đi tới [Feedback support](feedback.md) hoặc đi thẳng tới [Comment](https://husteduvn-my.sharepoint.com/:w:/g/personal/hung_nk200260_sis_hust_edu_vn/ESBPLxHU7AlNsod2YY1EUJEBZzVmkfaS67cUxmS7pTMRZQ?e=JVxhjk)
 2. Nếu bạn là một tester, bạn sẽ nhận được hỗ trợ khi đi tới [Testcases](testcase.md) và [Test Report](testReport.md)
