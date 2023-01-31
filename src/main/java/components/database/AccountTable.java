@@ -12,7 +12,7 @@ import java.util.List;
 
 public class AccountTable extends DatabaseConnection {
 
-    private static boolean hasTable = true;
+    private static boolean hasTable = false;
     public static List<Account> castResultSet(ResultSet rs) throws SQLException {
         List<Account> accounts = new ArrayList<>();
         while(rs.next()){

@@ -3,6 +3,7 @@ package app.view.manage;
 import app.PageManager;
 import app.model.Page;
 import app.model.MyWindow;
+import app.view.message.Mes;
 import javafx.fxml.FXML;
 import javafx.scene.layout.Pane;
 
@@ -24,6 +25,9 @@ public class ManagePage extends MyWindow {
         if(page==currentPage) return;
         unShowPage(currentPage);
         showPage(page);
+    }
+    public void notDone(){
+        Mes.messageUnfinished();
     }
     public void showTable(){
         switchPage(cicInfoTablePage);

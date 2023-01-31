@@ -1,4 +1,4 @@
-module com.cnpm.qwerty {
+module view {
     requires javafx.controls;
     requires javafx.fxml;
 

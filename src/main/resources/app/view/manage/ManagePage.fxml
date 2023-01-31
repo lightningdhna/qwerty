@@ -39,7 +39,7 @@
                   </LinearGradient>
                </textFill>
             </JFXButton>
-            <JFXButton graphicTextGap="20.0" prefHeight="70.0" prefWidth="225.0" styleClass="jfx-button-taskbar-children" stylesheets="@../../../css/button.css" text="Danh sách hộ khẩu" wrapText="true">
+            <JFXButton graphicTextGap="20.0" onMouseClicked="#notDone" prefHeight="70.0" prefWidth="225.0" styleClass="jfx-button-taskbar-children" stylesheets="@../../../css/button.css" text="Danh sách hộ khẩu" wrapText="true">
                <font>
                   <Font name="SansSerif Regular" size="20.0" />
                </font>
@@ -63,7 +63,7 @@
                   </LinearGradient>
                </textFill>
             </JFXButton>
-            <JFXButton graphicTextGap="20.0" prefHeight="70.0" prefWidth="225.0" styleClass="jfx-button-taskbar-children" stylesheets="@../../../css/button.css" text="Quản lý sự kiện" wrapText="true">
+            <JFXButton graphicTextGap="20.0" onMouseClicked="#notDone" prefHeight="70.0" prefWidth="225.0" styleClass="jfx-button-taskbar-children" stylesheets="@../../../css/button.css" text="Quản lý sự kiện" wrapText="true">
                <font>
                   <Font name="SansSerif Regular" size="20.0" />
                </font>
@@ -87,7 +87,7 @@
                   </LinearGradient>
                </textFill>
             </JFXButton>
-            <JFXButton graphicTextGap="20.0" prefHeight="70.0" prefWidth="225.0" styleClass="jfx-button-taskbar-children" stylesheets="@../../../css/button.css" text="Lịch sử sự kiện" wrapText="true">
+            <JFXButton graphicTextGap="20.0" onMouseClicked="#notDone" prefHeight="70.0" prefWidth="225.0" styleClass="jfx-button-taskbar-children" stylesheets="@../../../css/button.css" text="Lịch sử sự kiện" wrapText="true">
                <font>
                   <Font name="SansSerif Regular" size="20.0" />
                </font>
