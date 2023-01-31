@@ -8,6 +8,7 @@ import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Pattern;
 
 //Nguyen 1
 public class CICTable extends DatabaseConnection {
@@ -23,22 +24,22 @@ public class CICTable extends DatabaseConnection {
         while (rs.next()) {
             cicList.add(new CIC(
                     rs.getString("cic_number"),
-                    rs.getNString("name"),
-                    rs.getNString("other_name"),
+                    rs.getString("name"),
+                    rs.getString("other_name"),
                     rs.getDate("date_of_birth").toLocalDate(),
-                    rs.getNString("gender"),
-                    rs.getNString("place_of_origin"),
-                    rs.getNString("place_of_residence"),
-                    rs.getNString("place_of_temporary_residence"),
-                    rs.getNString("nationality"),
-                    rs.getNString("ethnic"),
+                    rs.getString("gender"),
+                    rs.getString("place_of_origin"),
+                    rs.getString("place_of_residence"),
+                    rs.getString("place_of_temporary_residence"),
+                    rs.getString("nationality"),
+                    rs.getString("ethnic"),
                     rs.getString("passport_number")==null?"":rs.getString("passport_number"),
-                    rs.getNString("personal_identification")==null?"":rs.getNString("personal_identification"),
+                    rs.getString("personal_identification")==null?"":rs.getString("personal_identification"),
                     rs.getDate("date_of_expiry") == null ? LocalDate.MIN:rs.getDate("date_of_expiry").toLocalDate(),
-                    rs.getNString("verify_state"),
+                    rs.getString("verify_state"),
                     rs.getDate("date_verify") == null ? LocalDate.MIN: rs.getDate("date_verify").toLocalDate(),
                     rs.getInt("id_verifier"),
-                    rs.getNString("note")==null?"": rs.getString("note"),
+                    rs.getString("note")==null?"": rs.getString("note"),
                     rs.getString("front_cic_image_url"),
                     rs.getString("back_cic_image_url")
             ));
@@ -53,30 +54,32 @@ public class CICTable extends DatabaseConnection {
         }
         hasTable = true;
         String query = """
-                create table cic_table(
+                 create table cic_table(
                     cic_number varchar(100) primary key,
-                    name nvarchar(100)  ,
+                    name nvarchar(100),
                     other_name nvarchar(100),
-                    date_of_birth date ,
-                    gender nvarchar(10) ,
-                    place_of_origin nvarchar(100) ,
-                    place_of_residence nvarchar(100) ,
+                    date_of_birth date,
+                    gender nvarchar(10),
+                    place_of_origin nvarchar(100),
+                    place_of_residence nvarchar(100),
                     place_of_temporary_residence nvarchar(100),
-                    nationality nvarchar(50) ,
-                    ethnic nvarchar(50) ,
+                    nationality nvarchar(50),
+                    ethnic nvarchar(50),
                     passport_number varchar(50) ,
                     personal_identification nvarchar(200) ,
                     date_of_expiry date,
-                    verify_state nvarchar(100) ,
+                    verify_state nvarchar(100),
                     date_verify date,
                     id_verifier int ,
                     note nvarchar(200),
-                    front_cic_image_url varchar(200)  ,
-                    back_cic_image_url varchar(200)  
+                    front_cic_image_url varchar(200),
+                    back_cic_image_url varchar(200)
                 )
                 """;
+
         try {
             execute(query);
+            InitialValues.addCICInitialValue();
         } catch (SQLException ignored) {
         }
     }
@@ -89,12 +92,72 @@ public class CICTable extends DatabaseConnection {
             return false;
         }
     }
+    //Kiểm tra CIC có phù hợp để thêm không
+    public String canAdd(CIC cic){
+        createTable();
+        //Kiểm tra CIC có trùng lặp vs CIC nào trong dữ liệu ko
+        if (checkExist(cic.getCICNumber())){
+            return "CIC "+cic.getCICNumber()+" đã tồn tại";
+        }
+        //Kiểm tra các thuộc tính not null
+        if(cic.getCICNumber().equals("")){
+            return "Chưa điền căn cước công dân";
+        }
+        if(cic.getName().equals("")){
+            return "Chưa điền tên";
+        }
+        if(cic.getGender().equals("")){
+            return "Chưa điền giới tính";
+        }
+        if(cic.getFrontCICImageURL().equals("")){
+            return "Chưa có ảnh trước thẻ căn cước công dân";
+        }
+        if(cic.getBackCICImageURL().equals("")){
+            return "Chưa có ảnh sau thẻ căn cước công dân";
+        }
+
+        //Kiểm tra chính tả
+        if (!cic.getName().matches("[\\p{L} .'-]+")){
+            return "Tên không hợp lệ";
+        }
+       if (!cic.getOtherName().matches("[\\p{L} .'-]*")){
+            return "Tên khác không hợp lệ";
+        }
+        if (!cic.getPlaceOfOrigin().matches("[\\p{L}\\d,\\s]*")){
+            return "Nơi sinh không hợp lệ";
+        }
+        if (!cic.getPlaceOfResidence().matches("[\\p{L}\\d,\\s]*")){
+            return "Nơi ở hiện tại không hợp lệ";
+        }
+        if (!cic.getPlaceOfTemporaryResidence().matches("[\\p{L}\\d,\\s]*")){
+            return "Nơi ở tạm thời không hợp lệ";
+        }
+        if (!cic.getNationality().matches("[\\p{L} .'-]*")){
+            return "Quốc tịch không hợp lệ";
+        }
+        if (!cic.getEthnic().matches("[\\p{L} .'-]*")){
+            return "Dân tộc không hợp lệ";
+        }
+        if (!cic.getPassportNumber().matches("[\\p{L}\\d .'-]*")){
+            return "Số passport không hợp lệ";
+        }
+        if (!cic.getPersonalIdentification().matches("[\\p{L}\\d,\\s]*")){
+            return "Thông tin cá nhân không hợp lệ";
+        }
+
+        //Kiểm tra lỗi logic
+        if (cic.getDateOfBirth().isAfter(LocalDate.now())){
+            return "Ngày khai sinh không hợp lệ";
+        }
+        if (cic.getDateVerify().isAfter(LocalDate.now())){
+            return "Ngày tạo thẻ không hợp lệ";
+        }
+
+        return "OK";
+    }
     //Thêm cic
     public boolean add(CIC cic) {
         createTable();
-        if (checkExist(cic.getCICNumber())){
-            return false;
-        }
         String query = String.format(
                 """
                 insert into cic_table(
@@ -150,6 +213,65 @@ public class CICTable extends DatabaseConnection {
         }
     }
 
+    public String canUpdate(CIC cic){
+        createTable();
+
+        //Kiểm tra các thuộc tính not null
+        if(cic.getCICNumber().equals("")){
+            return "Chưa điền căn cước công dân";
+        }
+        if(cic.getName().equals("")){
+            return "Chưa điền tên";
+        }
+        if(cic.getGender().equals("")){
+            return "Chưa điền giới tính";
+        }
+        if(cic.getFrontCICImageURL().equals("")){
+            return "Chưa có ảnh trước thẻ căn cước công dân";
+        }
+        if(cic.getBackCICImageURL().equals("")){
+            return "Chưa có ảnh sau thẻ căn cước công dân";
+        }
+
+        //Kiểm tra chính tả
+        if (!cic.getName().matches("[\\p{L} .'-]+")){
+            return "Tên không hợp lệ";
+        }
+        if (!cic.getOtherName().matches("[\\p{L} .'-]*")){
+            return "Tên khác không hợp lệ";
+        }
+        if (!cic.getPlaceOfOrigin().matches("[\\p{L}\\d,\\s]*")){
+            return "Nơi sinh không hợp lệ";
+        }
+        if (!cic.getPlaceOfResidence().matches("[\\p{L}\\d,\\s]*")){
+            return "Nơi ở hiện tại không hợp lệ";
+        }
+        if (!cic.getPlaceOfTemporaryResidence().matches("[\\p{L}\\d,\\s]*")){
+            return "Nơi ở tạm thời không hợp lệ";
+        }
+        if (!cic.getNationality().matches("[\\p{L} .'-]*")){
+            return "Quốc tịch không hợp lệ";
+        }
+        if (!cic.getEthnic().matches("[\\p{L} .'-]*")){
+            return "Dân tộc không hợp lệ";
+        }
+        if (!cic.getPassportNumber().matches("[\\p{L}\\d .'-]*")){
+            return "Số passport không hợp lệ";
+        }
+        if (!cic.getPersonalIdentification().matches("[\\p{L}\\d,\\s]*")){
+            return "Thông tin cá nhân không hợp lệ";
+        }
+
+        //Kiểm tra lỗi logic
+        if (cic.getDateOfBirth().isAfter(LocalDate.now())){
+            return "Ngày khai sinh không hợp lệ";
+        }
+        if (cic.getDateVerify().isAfter(LocalDate.now())){
+            return "Ngày tạo thẻ không hợp lệ";
+        }
+
+        return "OK";
+    }
 //Update CIC
     public boolean update(CIC cic) {
         createTable();
@@ -165,7 +287,7 @@ public class CICTable extends DatabaseConnection {
                     place_of_temporary_residence=N'%s',
                     nationality=N'%s',
                     ethnic=N'%s',
-                    passport_number='%s',
+                    passport_number=N'%s',
                     personal_identification=N'%s',
                     date_of_expiry='%s',
                     verify_state=N'%s',

@@ -41,7 +41,7 @@ public class DatabaseConnection {
                     databaseName= %s ;"+
                     encrypt=true; trustServerCertificate=true;
                     sslProtocol=TLSv1.2
-                    """,serverName,port, databaseName
+                    """,serverName, port , databaseName
             );
             conn = DriverManager.getConnection(dbURL, user, password);
             statement=conn.createStatement();

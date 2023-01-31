@@ -1,2 +1,2 @@
-kimhung
-123456
+user1
+pass1
