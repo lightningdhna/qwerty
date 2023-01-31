@@ -55,17 +55,17 @@ yêu cầu về bảo mật an toàn thông tin, yêu cầu hiệu năng của h
     ```shell
     Kiểm tra icon, font size, font style, font color của các text trên màn hình login & Error validation.
 
-    Kiểm tra button "Sign In" highlighted khi hover mouse.
+    Kiểm tra button "Sign in" highlighted khi hover mouse.
 
-    Kiểm tra button "Sign In" đổi màu khi mouse click.
+    Kiểm tra button "Sign in" đổi màu khi mouse click.
 
     Kiểm tra prompt text Username, Password mờ hoặc xoá khi click vào Username, Password textbox.
 
     Kiểm tra prompt text Username, Password bi xoá khi nhập value vào Username, Password textbox.
 
-    Kiểm tra Paste keyboard, right click hoạt động với username, password.
+    Kiểm tra Paste keyboard, Paste right click hoạt động với username, password.
 
-    Kiểm tra Copy keyboard, right click hoạt động với username, password.
+    Kiểm tra Copy keyboard, Copy right click hoạt động với username, password.
     ```
     
 
@@ -74,17 +74,17 @@ yêu cầu về bảo mật an toàn thông tin, yêu cầu hiệu năng của h
     **• Username**
 
     ```shell
-    Đăng nhập thành công với user hợp lệ.
+    Đăng nhập thành công với username hợp lệ.
 
-    Đăng nhập thành công với user = 1 kí tự thường / ký tự unicode / ký tự bao gồm space
+    Đăng nhập thành công với username = 1 kí tự thường / ký tự unicode / ký tự bao gồm space
 
-    Đăng nhập thành công với user = 10 kí tự thường / ký tự unicode / ký tự bao gồm space
+    Đăng nhập thành công với username = 10 kí tự thường / ký tự unicode / ký tự bao gồm space
 
-    Đăng nhập thành công với user = 20 kí tự thường / ký tự unicode / ký tự bao gồm space
+    Đăng nhập thành công với username = 20 kí tự thường / ký tự unicode / ký tự bao gồm space
 
-    Đăng nhập không thành công với user không hợp lệ. => Hiện thị tin nhắn "Thông tin sai :)"
+    Đăng nhập không thành công với username không hợp lệ. => Hiện thị tin nhắn "Thông tin sai :)"
 
-    Đăng nhập không thành công với user =null. => Hiện thị tin nhắn "Vui lòng điền đủ thông tin."
+    Đăng nhập không thành công với username =null. => Hiện thị tin nhắn "Vui lòng điền đủ thông tin."
     ```
    
     **• Password**

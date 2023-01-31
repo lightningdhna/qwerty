@@ -87,8 +87,11 @@ Example:
 1. [Nguyễn Kim Hùng](https://github.com/NguyenKimHung2002)
 2. [Phạm Duy Hưng](https://github.com/lightningdhna)
 3. [Lê Thành Nguyên](https://github.com/love123bg)
-4. [Trần Anh Quốc](https://github.com/gachu)
+4. [Trần Anh Quốc](https://github.com/quoctata2911)
 
 # Support user and tester
+
+You can view the software manual [here](doc\softwareManuals.md).
+
 1. If you are a user, you will be supported when you go to [Feedback support](doc\feedback.md)
 2. If you are a tester, you will be supported when you go to [Testcases](doc\testcase.md) and [Test Report](doc\testReport.md)
