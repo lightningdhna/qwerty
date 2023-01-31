@@ -32,4 +32,5 @@ public class CICInfoTablePage extends MyWindow {
     public void search(){
         ManageController.searchTableInfo(this,tableView, searchText.getText());
     }
+
 }

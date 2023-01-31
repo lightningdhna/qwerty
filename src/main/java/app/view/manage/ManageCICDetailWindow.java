@@ -1,8 +1,10 @@
 package app.view.manage;
 
 import app.PageManager;
+import app.controller.ManageController;
 import app.model.MyWindow;
 import app.model.manage.CICRowInfo;
+import app.view.message.Mes;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 
@@ -47,4 +49,11 @@ public class ManageCICDetailWindow extends MyWindow {
         add(new UpdateCICInfoWindow(cicInfo));
     }
 
+    public void deleteInfo(){
+        ManageController.deleteInfo(this,cicInfo);
+    }
+
+    public void notDone(){
+        Mes.messageUnfinished();
+    }
 }

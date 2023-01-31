@@ -11,4 +11,11 @@ public class Mes {
         alert.setContentText("Tính năng này chưa được nhóm phát triển\n");
         alert.show();
     }
+    
+    public static void inform(String title, String content){
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle(title);
+        alert.setContentText(content);
+        alert.show();
+    }
 }
