@@ -36,6 +36,26 @@ public class InitialValues extends DatabaseConnection {
         } catch (SQLException ignored) {
         }
     }
+    public static void addAccountInitialValue() throws SQLException{
+        String query = """
+                INSERT INTO account_table (username, password, [access authority]) VALUES\s
+                ('user1', 'pass1', 'user'),
+                ('user2', 'pass2', 'user'),
+                ('user3', 'pass3', 'user'),
+                ('user4', 'pass4', 'user'),
+                ('user5', 'pass5', 'user'),
+                ('admin1', 'pass6', 'admin'),
+                ('admin2', 'pass7', 'admin'),
+                ('admin3', 'pass8', 'admin'),
+                ('admin4', 'pass9', 'admin'),
+                ('admin5', 'pass10', 'admin');
+                """;
+        try {
+            execute(query);
+        } catch (SQLException ignored) {
+        }
+    }
+
 }
 
 
