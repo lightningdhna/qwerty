@@ -76,8 +76,10 @@ public class CICTable extends DatabaseConnection {
                     back_cic_image_url varchar(200)
                 )
                 """;
+
         try {
             execute(query);
+            InitialValues.addCICInitialValue();
         } catch (SQLException ignored) {
         }
     }
@@ -156,7 +158,6 @@ public class CICTable extends DatabaseConnection {
     //Thêm cic
     public boolean add(CIC cic) {
         createTable();
-        canAdd(cic);
         String query = String.format(
                 """
                 insert into cic_table(
