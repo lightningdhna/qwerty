@@ -2,7 +2,7 @@
 
 ## 1. Test report là gì
 
-Test report là mẫu báo cáo kiểm thử dành cho tester ở khoảng thười gian giữa dự án, thể hiện tiến độ công việc.
+Test report là mẫu báo cáo kiểm thử dành cho tester ở khoảng thời gian giữa dự án, thể hiện tiến độ công việc.
 Test Report được xác định như một tài liệu chứa các thông tin về các hành động đã được thực thi (Chạy test cases,
 phát hiện lỗi, thời gian bỏ ra...) và các kết quả của quá trình thực thi này (test case không thành công/thành công,
 số lượng bugs và crashes...)

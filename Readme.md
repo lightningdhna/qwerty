@@ -79,6 +79,17 @@ Example:
     }
 ```
 
+Run the code, if you get a library request error:
+
+```
+    requires com.microsoft.sqlserver.jdbc;
+    requires com.jfoenix;
+    requires AnimateFX;
+```
+
+please go to `File` > `Project Structure` > `Modules` > `Dependencies` > `+` > `Jars or Directory..` > *Add path of librarys* 
+in `src\main\lib` > `Apply` > `OK`. After that, rerun code.
+
 ### 3. Create Your Account
 
 1. The First way: Use the registration function

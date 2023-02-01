@@ -80,6 +80,17 @@ Ví dụ:
     }
 ```
 
+Chạy code, nếu bạn bị lỗi các thư viện sau:
+
+```
+    requires com.microsoft.sqlserver.jdbc;
+    requires com.jfoenix;
+    requires AnimateFX;
+```
+
+vui lòng đi tới `File` > `Project Structure` > `Modules` > `Dependencies` > `+` > `Jars or Directory..` > *Add path of librarys*
+trong `src\main\lib` > `Apply` > `OK`. Sau đó, chạy lại code.
+
 ### 3. Tạo tài khoản của bạn
 
 1. Cách thứ nhất: Sử dụng chức năng đăng ký.
