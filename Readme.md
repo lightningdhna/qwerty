@@ -95,5 +95,7 @@ Example:
 
 You can view the software manual [here](doc\softwareManuals.md).
 
-1. If you are a user, you will be supported when you go to [Feedback support](doc\feedback.md)
+1. If you are a user, you will be supported when you go to [Feedback support](doc\feedback.md) or go straight to [Comment](https://husteduvn-my.sharepoint.com/:w:/g/personal/hung_nk200260_sis_hust_edu_vn/ESBPLxHU7AlNsod2YY1EUJEBZzVmkfaS67cUxmS7pTMRZQ?e=JVxhjk).
 2. If you are a tester, you will be supported when you go to [Testcases](doc\testcase.md) and [Test Report](doc\testReport.md)
+
+*Note: If accessing the link on Github may get "404 not found" error, please open the doc folder and go to the desired page.*
