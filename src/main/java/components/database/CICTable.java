@@ -1,14 +1,12 @@
 package components.database;
 
-import components.database.DatabaseConnection;
-import components.demogrpahic.CIC;
+import components.demographic.CIC;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.regex.Pattern;
 
 //Nguyen 1
 public class CICTable extends DatabaseConnection {

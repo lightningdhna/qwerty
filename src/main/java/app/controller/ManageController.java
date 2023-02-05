@@ -5,7 +5,7 @@ import app.model.manage.CICRowInfo;
 import app.view.manage.CICInfoTablePage;
 import app.view.manage.ManageCICDetailWindow;
 import app.view.message.Mes;
-import components.demogrpahic.CIC;
+import components.demographic.CIC;
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;

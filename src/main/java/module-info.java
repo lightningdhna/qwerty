@@ -27,8 +27,8 @@ module view {
     exports app.view.manage;
     exports service;
     opens service to javafx.fxml;
-    opens components.demogrpahic to javafx.base;
     opens app.controller to javafx.base;
     opens app.model.manage to javafx.base;
     opens app.view.account to javafx.fxml;
+    opens components.demographic to javafx.base;
 }

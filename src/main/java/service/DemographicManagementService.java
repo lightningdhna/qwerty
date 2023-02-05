@@ -1,16 +1,10 @@
 package service;
 
-import components.database.DatabaseConnection;
 import components.database.IdentificationTable;
-import components.demogrpahic.CIC;
+import components.demographic.CIC;
 import components.database.CICTable;
 import app.model.manage.CICRowInfo;
 
-import java.sql.ResultSet;
-import java.sql.SQLDataException;
-import java.sql.SQLException;
-import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.List;
 
 //Nguyên 2,4

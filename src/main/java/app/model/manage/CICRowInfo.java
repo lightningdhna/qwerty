@@ -1,12 +1,14 @@
 package app.model.manage;
 
-import components.database.DatabaseConnection;
-import components.demogrpahic.CIC;
+import components.demographic.CIC;
 
 public class CICRowInfo extends CIC {
     private String householdNumber = "houseHoldNumber";
     private String accountUsername = "account username ";
     private String verifierUsername = " verifier ";
+    public CICRowInfo(){
+        super();
+    }
     public String getUsername(){
         return accountUsername;
     }
@@ -19,9 +21,7 @@ public class CICRowInfo extends CIC {
     public void setHouseholdNumber(String householdNumber){
         this.householdNumber = householdNumber;
     }
-    public CICRowInfo(){
-        super();
-    }
+
     public String getVerifierUsername(){
         return this.verifierUsername;
     }

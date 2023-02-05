@@ -15,7 +15,7 @@ public class ManageCICDetailWindow extends MyWindow {
             verifyStateLabel,usernameLabel,dateVerify,verifierUsernameLabel,householdNumberLabel;
 
     @FXML
-    Label  passportNumberLabel, ethnicLabel,nationalityLabel,genderLabel,otherNameLabel;
+    Label  passportNumberLabel, ethnicLabel, nationalityLabel, genderLabel, otherNameLabel;
     @FXML
     TextArea noteLabel;
     public void setInfo(CICRowInfo cicInfo){

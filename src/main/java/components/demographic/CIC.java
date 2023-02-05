@@ -1,33 +1,30 @@
-package components.demogrpahic;
+package components.demographic;
 
 import java.time.LocalDate;
 
 public class CIC {
-    String cicNumber;
-    String name="<default>";                        //Tên
-    String otherName = "";                          //Tên gọi khác nếu có
-    LocalDate dateOfBirth=LocalDate.now();          //Ngày sinh
-    String gender="<No>";                           //Giới tính
+    private String cicNumber;
+    private String name="<default>";                        //Tên
+    private String otherName = "";                          //Tên gọi khác nếu có
+    private LocalDate dateOfBirth=LocalDate.now();          //Ngày sinh
+    private String gender="<No>";                           //Giới tính
 
-    String placeOfOrigin="<default>";               // quê quán
-    String placeOfResidence="<default>";            //Thường trú
-    String placeOfTemporaryResidence = "";          //Tạm tr
-    String nationality = "Việt Nam";                //Quốc tịch
-    String ethnic = "Kinh";                         //Dân tộc
-    String passportNumber ="<default>";             //Số hộ chiếu
-    String personalIdentification ="<default>";     //Đặc điểm nhân dạng
+    private String placeOfOrigin="<default>";               // quê quán
+    private String placeOfResidence="<default>";            //Thường trú
+    private String placeOfTemporaryResidence = "";          //Tạm tr
+    private String nationality = "Việt Nam";                //Quốc tịch
+    private String ethnic = "Kinh";                         //Dân tộc
+    private String passportNumber ="<default>";             //Số hộ chiếu
+    private String personalIdentification ="<default>";     //Đặc điểm nhân dạng
 
-    LocalDate dateOfExpiry = LocalDate.now();       //Thời gian hiệu lực CIC
+    private LocalDate dateOfExpiry = LocalDate.now();       //Thời gian hiệu lực CIC
 
-    String verifyState = "No";                      //Trạng thái được xác thực
-    LocalDate dateVerify = LocalDate.now();         //Ngày được xác thực
-    int idVerifier = -1;                        //Id tài khoản người được xác thực
-    String note = "";                               //Ghi chú
-
-    String frontCICImageURL ="/";                   //Ảnh mặt trước
-
-    String backCICImageURL ="/";                    //Ảnh mặc sau
-
+    private String verifyState = "No";                      //Trạng thái được xác thực
+    private LocalDate dateVerify = LocalDate.now();         //Ngày được xác thực
+    private int idVerifier = -1;                            //Id tài khoản người xác thực
+    private String note = "";                               //Ghi chú
+    private String frontCICImageURL ="/";                   //Ảnh mặt trước
+    private String backCICImageURL ="/";                    //Ảnh mặt sau
     public CIC(String cicNumber, String name, String otherName, LocalDate dateOfBirth, String gender,
                String placeOfOrigin, String placeOfResidence, String placeOfTemporaryResidence, String nationality,
                String ethnic, String passportNumber, String personalIdentification, LocalDate dateOfExpiry,
