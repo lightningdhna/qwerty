@@ -1,21 +1,21 @@
-package app.model.manage;
+package app.model.verify;
 
 import java.time.LocalDateTime;
 
-public class RequestVerifyCIC{
-    private int idVerifier;                     //Id tài khoản người xác thực
+public class RequestVerifyHousehold{
+    private int idAccount;                     //ID Tài khoản người được xác thực
     private String householdNumber;             //Số hộ khẩu
     private LocalDateTime requestVerifyTime;    //Thời điểm yêu cầu xác thực
     private String note;                        //Ghi chú
 
-    public RequestVerifyCIC() {}
+    public RequestVerifyHousehold() {}
 
     public int getIdVerifier() {
-        return idVerifier;
+        return idAccount;
     }
 
-    public void setIdVerifier(int idVerifier) {
-        this.idVerifier = idVerifier;
+    public void setIdVerifier(int idAccount) {
+        this.idAccount = idAccount;
     }
 
     public String getHouseholdNumber() {

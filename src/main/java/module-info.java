@@ -31,4 +31,5 @@ module view {
     opens app.model.manage to javafx.base;
     opens app.view.account to javafx.fxml;
     opens components.demographic to javafx.base;
+    opens app.model.verify to javafx.base;
 }

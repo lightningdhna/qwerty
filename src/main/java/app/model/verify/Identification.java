@@ -1,4 +1,4 @@
-package app.model.manage;
+package app.model.verify;
 
 public class Identification {
     private int idAccount;              //ID tài khoản chủ hộ

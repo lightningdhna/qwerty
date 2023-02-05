@@ -1,6 +1,6 @@
 package app.model.account;
 
-public class Account{
+public class Account extends AccountInfo{
     private int idAccount;          //ID Tài khoản
     private String password;        //Mật khẩu
     private String username;        //Tên đăng nhập
@@ -8,7 +8,9 @@ public class Account{
     private AccountInfo accountInfo;//Thông tin chi tiết của tài khoản
     private String accountState;    //Trạng thái tài khoản
 
-    public Account() {}
+    public Account(int idAccount) {
+        super(idAccount);
+    }
 
     public int getIdAccount() {
         return idAccount;
