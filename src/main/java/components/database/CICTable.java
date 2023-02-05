@@ -1,6 +1,5 @@
 package components.database;
 
-import components.database.DatabaseConnection;
 import components.demogrpahic.CIC;
 
 import java.sql.ResultSet;
