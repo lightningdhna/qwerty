@@ -30,5 +30,4 @@ public class CICRowInfo extends CIC {
         this.verifierUsername = verifierUsername;
     }
 
-
 }

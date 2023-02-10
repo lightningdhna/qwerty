@@ -18,6 +18,8 @@ public class IdentificationTable extends DatabaseConnection{
         hasTable = true;
         String query = "create table identification_table(\n" +
                 "    account_id int primary key,\n" +
+                "    house_hold_number varchar(100)" +
+                "    head_relation nvarchar(100)" +
                 "    cic_number varchar(20) not null unique\n" +
                 ")";
         try {
