@@ -1,6 +1,5 @@
 package service;
 
-import components.demographic.Household;
 import components.household.HoKhau;
 
 import java.util.ArrayList;
@@ -33,5 +32,15 @@ public class Service {
     public String searchTenChuHoByID(String idChuHo) {
 
         return "chua co ten";
+    }
+
+    public ArrayList<String> getDanhSachThanhVien(String soHoKhau) {
+
+
+    }
+
+    public String getSoHoKhauBySoCC(String soCanCuoc) {
+
+        return "";
     }
 }

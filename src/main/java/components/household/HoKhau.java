@@ -88,7 +88,7 @@ public class HoKhau {
     }
 
     public ArrayList<String> getDanhSachThanhVien() {
-        return danhSachThanhVien;
+        return Service.getService().getDanhSachThanhVien(soHoKhau);
     }
 
     public void setDanhSachThanhVien(ArrayList<String> danhSachThanhVien) {

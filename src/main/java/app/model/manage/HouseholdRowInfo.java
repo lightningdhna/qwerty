@@ -1,7 +1,6 @@
 package app.model.manage;
 
 import components.demographic.CIC;
-import components.demographic.Household;
 
 import java.util.List;
 

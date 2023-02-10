@@ -1,13 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="600.0" style="-fx-background-color: #EEEEEE;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label alignment="CENTER" layoutX="78.0" layoutY="14.0" prefHeight="76.0" prefWidth="442.0" style="-fx-background-color: #DDDDDD; -fx-background-radius: 10 10 0 0;" text="Thông tin nhân khẩu">
+         <font>
+            <Font name="SansSerif Bold" size="35.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.03820662945508957" green="0.3963937759399414" blue="0.5157894492149353" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.11543859541416168" green="0.5992572903633118" blue="0.6631578803062439" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <JFXButton buttonType="RAISED" contentDisplay="CENTER" layoutX="530.0" layoutY="14.0" onMouseClicked="#exit" prefHeight="30.0" prefWidth="30.0" ripplerFill="#df1616">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../../../icon/exit.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+   </children>
 </AnchorPane>
