@@ -77,4 +77,7 @@ public class AccountInfo {
     public void setHobbies(String hobbies) {
         this.hobbies = hobbies;
     }
+
+    public AccountInfo(){};
+
 }

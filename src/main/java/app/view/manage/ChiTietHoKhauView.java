@@ -3,7 +3,7 @@ package app.view.manage;
 import app.controller.HoKhauController;
 import app.model.MyWindow;
 import app.view.message.Mes;
-import components.household.HoKhau;
+import app.model.household.HoKhau;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import service.Service;
@@ -31,9 +31,11 @@ public class ChiTietHoKhauView extends MyWindow {
     }
 
     public void chinhSuaThongTin(){
+
         ChinhSuaHoKhauView window = new ChinhSuaHoKhauView();
         window.setHoKhau(hoKhau);
-        addWindow(window);
+        add(window);
+//        exit();
     }
     public void xoa(){
         String canXoa = Service.getService().canXoa(hoKhau);

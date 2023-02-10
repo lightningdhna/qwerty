@@ -2,8 +2,8 @@ package service;
 
 
 
-import components.database.AccountTable;
-import components.account.Account;
+import app.database.AccountTable;
+import app.model.account.Account;
 
 import java.util.List;
 
@@ -28,7 +28,7 @@ public class AccountManagementService {
         List<Account> resultSearch= AccountTable.search(account);
         if(resultSearch.size()==0)
             return -1;
-        return resultSearch.get(0).getId();
+        return resultSearch.get(0).getIdAccount();
     }
 
     public boolean add(Account account){

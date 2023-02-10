@@ -2,7 +2,7 @@ package app.view.manage;
 
 import app.model.MyWindow;
 import app.model.manage.CICRowInfo;
-import components.demographic.CIC;
+import app.model.demographic.CIC;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;

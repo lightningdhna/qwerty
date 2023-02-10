@@ -1,6 +1,6 @@
-package components.database;
+package app.database;
 
-import components.household.HoKhau;
+import app.model.household.HoKhau;
 
 import java.util.ArrayList;
 

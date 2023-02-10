@@ -1,8 +1,8 @@
 package service;
 
-import components.database.IdentificationTable;
-import components.demographic.CIC;
-import components.database.CICTable;
+import app.database.IdentificationTable;
+import app.model.demographic.CIC;
+import app.database.CICTable;
 import app.model.manage.CICRowInfo;
 
 import java.util.List;

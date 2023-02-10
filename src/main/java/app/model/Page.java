@@ -114,8 +114,11 @@ public class Page {
         if(parentPage!=null) {
             parentPage.remove(this);
         }
+        for(Page page: childrenPage){
+            page.close();
+        }
         childrenPage.clear();
-        parentPage=null;
+        parentPage = null;
         root = null;
         type=null;
     }

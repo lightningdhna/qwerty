@@ -29,8 +29,7 @@ module app {
     opens app.controller to javafx.base;
     opens app.model.manage to javafx.base;
     opens app.view.account to javafx.fxml;
-    opens components.demographic to javafx.base;
-    opens app.model.verify to javafx.base;
-    opens components.household to javafx.base;
     opens app.view.manage to javafx.base, javafx.fxml;
+    opens app.model.demographic to javafx.base;
+    opens app.model.household to javafx.base;
 }

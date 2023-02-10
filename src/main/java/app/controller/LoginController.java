@@ -1,10 +1,10 @@
 package app.controller;
 
 import app.Main;
+import app.model.account.Account;
 import app.view.login.LoginPage;
 import app.view.login.SignUpPage;
 import service.AccountManagementService;
-import components.account.Account;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -18,7 +18,7 @@ public class LoginController {
 //            new FadeOut(page.getRoot()).play();
             Thread thread = new Thread(
                     () -> {
-                        Main.setAccountID(account.getId());
+                        Main.setAccountID(account.getIdAccount());
                         if(page.getCheckBoxState()){
                             try {
                                 BufferedWriter writer = new BufferedWriter(new FileWriter("src/main/resources/save/account-save.txt"));

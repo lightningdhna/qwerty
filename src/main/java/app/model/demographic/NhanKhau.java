@@ -1,4 +1,4 @@
-package components.demographic;
+package app.model.demographic;
 
 import service.Service;
 

@@ -2,7 +2,7 @@ package app.view.manage;
 
 import app.controller.HoKhauController;
 import app.model.MyWindow;
-import components.household.HoKhau;
+import app.model.household.HoKhau;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;

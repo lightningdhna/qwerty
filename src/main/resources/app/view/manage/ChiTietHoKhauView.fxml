@@ -54,9 +54,9 @@
       </JFXButton>
       <ScrollPane layoutX="28.0" layoutY="111.0" prefHeight="614.0" prefWidth="497.0" AnchorPane.leftAnchor="28.0" AnchorPane.rightAnchor="20.0">
         <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0">
+          <AnchorPane maxWidth="495.0" minHeight="0.0" minWidth="0.0">
                <children>
-                  <VBox prefHeight="200.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+                  <VBox maxWidth="475.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
                      <children>
                         <HBox minHeight="50.0">
                            <children>
@@ -83,7 +83,7 @@
                         </HBox>
                         <HBox minHeight="50.0">
                            <children>
-                              <Label prefHeight="50.0" prefWidth="150.0" text="Tên chủ hộ" textFill="#163e7a" wrapText="true">
+                              <Label prefHeight="50.0" prefWidth="150.0" text="Chủ hộ" textFill="#163e7a" wrapText="true">
                                  <font>
                                     <Font name="SansSerif Regular" size="20.0" />
                                  </font>

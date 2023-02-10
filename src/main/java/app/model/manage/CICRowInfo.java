@@ -1,6 +1,6 @@
 package app.model.manage;
 
-import components.demographic.CIC;
+import app.model.demographic.CIC;
 
 public class CICRowInfo extends CIC {
     private String householdNumber = "houseHoldNumber";

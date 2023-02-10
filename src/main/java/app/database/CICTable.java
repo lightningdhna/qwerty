@@ -1,6 +1,6 @@
-package components.database;
+package app.database;
 
-import components.demographic.CIC;
+import app.model.demographic.CIC;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

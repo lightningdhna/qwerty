@@ -14,13 +14,17 @@ import java.util.concurrent.atomic.AtomicReference;
 
 public class MyWindow extends Page{
 
-    ArrayList<Page> children = new ArrayList<>();
+    private MyWindow parentWindow = null;
+
+    private ArrayList<Page> children = new ArrayList<>();
 
     public MyWindow(){
         super();
     }
     public void addWindow(Page window){
         children.add(window);
+        this.getRoot().setDisable(true);
+        ((MyWindow)window).setParentWindow(this);
         Thread thread = new Thread(()->{
             Platform.runLater(()->{
                 Stage stage = new Stage();
@@ -48,8 +52,17 @@ public class MyWindow extends Page{
         });
         thread.start();
     }
-    public void exit(){
 
+    private void setParentWindow(MyWindow myWindow) {
+        this.parentWindow = myWindow;
+    }
+    public MyWindow getParentWindow(){
+        return this.parentWindow;
+    }
+
+    public void exit(){
+        if(getParentWindow()!=null)
+            getParentWindow().getRoot().setDisable(false);
         for(Page window: children){
             window.exit();
         }

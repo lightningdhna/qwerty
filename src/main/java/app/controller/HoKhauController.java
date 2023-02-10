@@ -1,13 +1,9 @@
 package app.controller;
 
-import app.PageManager;
-import app.model.manage.CICRowInfo;
 import app.view.manage.ChiTietHoKhauView;
 import app.view.manage.ChinhSuaHoKhauView;
 import app.view.manage.DanhSachHoKhauView;
-import app.view.manage.ManageCICDetailWindow;
-import components.database.HoKhauTable;
-import components.household.HoKhau;
+import app.model.household.HoKhau;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.TableColumn;
@@ -16,8 +12,6 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseButton;
 import service.Service;
-
-import java.util.ArrayList;
 
 public class HoKhauController {
 
@@ -83,6 +77,5 @@ public class HoKhauController {
     public void capNhatHoKhau(HoKhau hoKhau, ChinhSuaHoKhauView window){
         capNhatHoKhau(hoKhau);
         window.thongBaoDaCapNhat();
-        window.exit();
     }
 }

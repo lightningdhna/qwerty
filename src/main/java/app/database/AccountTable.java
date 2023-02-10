@@ -1,9 +1,8 @@
-package components.database;
+package app.database;
 
 
 
-import components.account.Account;
-import components.database.DatabaseConnection;
+import app.model.account.Account;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

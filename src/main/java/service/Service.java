@@ -1,7 +1,7 @@
 package service;
 
-import components.demographic.NhanKhau;
-import components.household.HoKhau;
+import app.model.demographic.NhanKhau;
+import app.model.household.HoKhau;
 
 import java.util.ArrayList;
 

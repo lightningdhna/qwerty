@@ -1,10 +1,9 @@
-package components.household;
+package app.model.household;
 
-import components.demographic.NhanKhau;
+import app.model.demographic.NhanKhau;
 import service.Service;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Objects;
 
@@ -21,11 +20,12 @@ public class HoKhau {
 
     private String idChuHo = "test id chủ hộ";
     private String diaChi = "test địa chỉ";
-    private String anhMinhChung ;
     private LocalDate thoiGianXacThuc = LocalDate.of(1900,1,1);
     private String idNguoiXacThuc = "test id ngwofi xac thuc";
     private String trangThai = "chưa xác thực";
     private String ghiChu = " ghi chú ...";
+
+    private String tenChuHo = "ten chu ho";
 
 
 
@@ -47,13 +47,9 @@ public class HoKhau {
         this.diaChi = diaChi;
     }
 
-    public String getAnhMinhChung() {
-        return anhMinhChung;
-    }
 
-    public void setAnhMinhChung(String anhMinhChung) {
-        this.anhMinhChung = anhMinhChung;
-    }
+
+
 
 
 
@@ -96,8 +92,12 @@ public class HoKhau {
     public HoKhau(String soHoKhau){
         this.soHoKhau = soHoKhau;
     }
+
+    public void setTenChuHo(String tenChuHo){
+        this.tenChuHo= tenChuHo;
+    }
     public String getTenChuHo(){
-        return Service.getService().searchTenChuHoByID(idChuHo);
+        return this.tenChuHo;
     }
 
     public String getTenNguoiXacThuc() {
@@ -117,11 +117,29 @@ public class HoKhau {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         HoKhau hoKhau = (HoKhau) o;
-        return soHoKhau.equals(hoKhau.soHoKhau) && idChuHo.equals(hoKhau.idChuHo) && diaChi.equals(hoKhau.diaChi) && anhMinhChung.equals(hoKhau.anhMinhChung) && thoiGianXacThuc.equals(hoKhau.thoiGianXacThuc) && idNguoiXacThuc.equals(hoKhau.idNguoiXacThuc) && trangThai.equals(hoKhau.trangThai) && ghiChu.equals(hoKhau.ghiChu);
+        return soHoKhau.equals(hoKhau.soHoKhau) && idChuHo.equals(hoKhau.idChuHo) && diaChi.equals(hoKhau.diaChi)  && thoiGianXacThuc.equals(hoKhau.thoiGianXacThuc) && idNguoiXacThuc.equals(hoKhau.idNguoiXacThuc) && trangThai.equals(hoKhau.trangThai) && ghiChu.equals(hoKhau.ghiChu);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(soHoKhau, idChuHo, diaChi, anhMinhChung, thoiGianXacThuc, idNguoiXacThuc, trangThai, ghiChu);
+        return Objects.hash(soHoKhau, idChuHo, diaChi, thoiGianXacThuc, idNguoiXacThuc, trangThai, ghiChu);
+    }
+
+    public HoKhau() {
+    }
+
+    public HoKhau(String soHoKhau, String idChuHo, String diaChi, LocalDate thoiGianXacThuc, String idNguoiXacThuc, String trangThai, String ghiChu, String tenChuHo) {
+        this.soHoKhau = soHoKhau;
+        this.idChuHo = idChuHo;
+        this.diaChi = diaChi;
+        this.thoiGianXacThuc = thoiGianXacThuc;
+        this.idNguoiXacThuc = idNguoiXacThuc;
+        this.trangThai = trangThai;
+        this.ghiChu = ghiChu;
+        this.tenChuHo = tenChuHo;
+    }
+
+    public HoKhau clone()  {
+        return new HoKhau(soHoKhau, idChuHo,diaChi,thoiGianXacThuc,idNguoiXacThuc,trangThai,ghiChu, tenChuHo);
     }
 }
