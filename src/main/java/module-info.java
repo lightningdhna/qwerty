@@ -1,4 +1,4 @@
-module view {
+module app {
     requires javafx.controls;
     requires javafx.fxml;
 
@@ -32,4 +32,5 @@ module view {
     opens app.view.account to javafx.fxml;
     opens components.demographic to javafx.base;
     opens app.model.verify to javafx.base;
+    opens components.household to javafx.base;
 }

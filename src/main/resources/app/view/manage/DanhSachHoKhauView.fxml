@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox prefHeight="50.0" prefWidth="600.0" style="-fx-background-color: #DEDEDE;" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <TextField fx:id="searchText" prefHeight="40.0" prefWidth="400.0" style="-fx-background-radius: 10;">
+               <HBox.margin>
+                  <Insets left="5.0" top="5.0" />
+               </HBox.margin>
+            </TextField>
+            <JFXButton alignment="BOTTOM_LEFT" contentDisplay="CENTER" prefHeight="40.0" prefWidth="40.0" styleClass="jfx-button-icon" stylesheets="@../../../css/button.css">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../icon/icon-light/search-1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton contentDisplay="CENTER" prefHeight="40.0" prefWidth="40.0" styleClass="jfx-button-icon" stylesheets="@../../../css/button.css">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../icon/icon-light/add-new-1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton contentDisplay="CENTER" prefHeight="40.0" prefWidth="40.0" styleClass="jfx-button-icon" stylesheets="@../../../css/button.css">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../icon/icon-light/refresh-1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </HBox>
+      <ScrollPane layoutY="29.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="750.0" stylesheets="@../../../css/scroll-pane.css" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="75.0">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="500.0" prefWidth="734.0">
+               <children>
+                  <TableView fx:id="tableView" prefHeight="500.0" prefWidth="735.0" stylesheets="@../../../css/table-view.css" AnchorPane.topAnchor="0.0">
+                     <columns>
+                        <TableColumn maxWidth="100.0" minWidth="100.0" prefWidth="100.0" text="Số hộ khẩu" />
+                        <TableColumn maxWidth="180.0" minWidth="180.0" prefWidth="180.0" text="Chủ hộ" />
+                        <TableColumn maxWidth="120.0" minWidth="120.0" prefWidth="120.0" text="Địa chỉ" />
+                        <TableColumn maxWidth="155.0" minWidth="155.0" prefWidth="155.0" text="Trạng thái xác thực" />
+                        <TableColumn maxWidth="177.0" minWidth="177.0" prefWidth="177.0" text="Ghi chú" />
+                     </columns>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </TableView>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

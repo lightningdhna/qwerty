@@ -6,12 +6,14 @@ import app.model.MyWindow;
 import app.view.message.Mes;
 import javafx.fxml.FXML;
 import javafx.scene.layout.Pane;
+import animatefx.animation.*;
 
 public class ManagePage extends MyWindow {
     @FXML
     Pane showPane;
     Page currentPage;
     CICInfoTablePage cicInfoTablePage = new CICInfoTablePage();
+    DanhSachHoKhauView hoKhauView = new DanhSachHoKhauView();
     public void showPage(Page page ){
         currentPage = page;
         if(!showPane.getChildren().contains(page.getRoot()))
@@ -41,5 +43,9 @@ public class ManagePage extends MyWindow {
         });
 //        cicInfoTablePage = new CICInfoTablePage();
         showPage(cicInfoTablePage);
+    }
+
+    public void setDanhSachHoKhauView(){
+        switchPage(hoKhauView);
     }
 }
