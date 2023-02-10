@@ -30,7 +30,7 @@ public class Test extends Application {
         launch();
         DatabaseConnection.closeConnection();
     }
-    MyWindow window = new DanhSachHoKhauView();
+    DanhSachHoKhauView window = new DanhSachHoKhauView();
     @Override
     public void start(Stage stage) {
         stage.setResizable(false);

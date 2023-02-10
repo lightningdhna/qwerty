@@ -2,6 +2,8 @@ package app.controller;
 
 import app.PageManager;
 import app.model.manage.CICRowInfo;
+import app.view.manage.ChiTietHoKhauView;
+import app.view.manage.ChinhSuaHoKhauView;
 import app.view.manage.DanhSachHoKhauView;
 import app.view.manage.ManageCICDetailWindow;
 import components.database.HoKhauTable;
@@ -26,9 +28,10 @@ public class HoKhauController {
     ObservableList<HoKhau> danhSachHK= FXCollections.observableArrayList();
     public void xoaHo(HoKhau hoKhau){
         danhSachHK.remove(hoKhau);
+        Service.getService().xoaHoKhau(hoKhau);
+
     }
     public void themHoKhau(HoKhau hoKhau, DanhSachHoKhauView page){
-
     }
     public void themHoKhau(HoKhau hoKhau){
         danhSachHK.add(hoKhau);
@@ -62,5 +65,24 @@ public class HoKhauController {
         ((TableColumn<HoKhau,String>)tableView.getColumns().get(2)).setCellValueFactory(new PropertyValueFactory<>("diaChi"));
         ((TableColumn<HoKhau,String>)tableView.getColumns().get(3)).setCellValueFactory(new PropertyValueFactory<>("trangThai"));
         ((TableColumn<HoKhau,String>)tableView.getColumns().get(4)).setCellValueFactory(new PropertyValueFactory<>("ghiChu"));
+    }
+    public void xoaHoKhau(HoKhau hoKhau, ChiTietHoKhauView page){
+        xoaHo(hoKhau);
+        page.thongBaoDaXoa();
+        page.exit();
+    }
+
+    public void capNhatHoKhau(HoKhau hoKhau){
+        for(HoKhau ho: danhSachHK){
+            if(ho.equals(hoKhau)){
+                xoaHo(ho);
+            }
+        }
+        themHoKhau(hoKhau);
+    }
+    public void capNhatHoKhau(HoKhau hoKhau, ChinhSuaHoKhauView window){
+        capNhatHoKhau(hoKhau);
+        window.thongBaoDaCapNhat();
+        window.exit();
     }
 }

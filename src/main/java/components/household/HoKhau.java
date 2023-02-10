@@ -1,12 +1,15 @@
 package components.household;
 
+import components.demographic.NhanKhau;
 import service.Service;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class HoKhau {
-    private String soHoKhau;
+    private String soHoKhau ="test số hộ khẩu";
 
     public String getIdChuHo() {
         return idChuHo;
@@ -16,14 +19,13 @@ public class HoKhau {
         this.idChuHo = idChuHo;
     }
 
-    private String idChuHo;
-    private String diaChi;
-    private String anhMinhChung;
-    private LocalDateTime thoiGianXacThuc;
-    private int idNguoiXacThuc;
-    private String trangThai;
-    private String ghiChu;
-    private ArrayList<String> danhSachThanhVien;
+    private String idChuHo = "test id chủ hộ";
+    private String diaChi = "test địa chỉ";
+    private String anhMinhChung ;
+    private LocalDate thoiGianXacThuc = LocalDate.of(1900,1,1);
+    private String idNguoiXacThuc = "test id ngwofi xac thuc";
+    private String trangThai = "chưa xác thực";
+    private String ghiChu = " ghi chú ...";
 
 
 
@@ -55,11 +57,11 @@ public class HoKhau {
 
 
 
-    public LocalDateTime getThoiGianXacThuc() {
+    public LocalDate getThoiGianXacThuc() {
         return thoiGianXacThuc;
     }
 
-    public void setThoiGianXacThuc(LocalDateTime thoiGianXacThuc) {
+    public void setThoiGianXacThuc(LocalDate thoiGianXacThuc) {
         this.thoiGianXacThuc = thoiGianXacThuc;
     }
 
@@ -79,21 +81,18 @@ public class HoKhau {
         this.ghiChu = ghiChu;
     }
 
-    public int getIdNguoiXacThuc() {
+    public String getIdNguoiXacThuc() {
         return idNguoiXacThuc;
     }
 
-    public void setIdNguoiXacThuc(int idNguoiXacThuc) {
+    public void setIdNguoiXacThuc(String idNguoiXacThuc) {
         this.idNguoiXacThuc = idNguoiXacThuc;
     }
 
-    public ArrayList<String> getDanhSachThanhVien() {
+    public ArrayList<NhanKhau> getDanhSachThanhVien() {
         return Service.getService().getDanhSachThanhVien(soHoKhau);
     }
 
-    public void setDanhSachThanhVien(ArrayList<String> danhSachThanhVien) {
-        this.danhSachThanhVien = danhSachThanhVien;
-    }
     public HoKhau(String soHoKhau){
         this.soHoKhau = soHoKhau;
     }
@@ -101,4 +100,28 @@ public class HoKhau {
         return Service.getService().searchTenChuHoByID(idChuHo);
     }
 
+    public String getTenNguoiXacThuc() {
+        return "ten nguoi xac thuc";
+    }
+    public String getMoTaThanhVien(){
+        String result = "";
+        for(NhanKhau nk : getDanhSachThanhVien()){
+            result = result + nk.getHoTen()+" , "+nk.getTuoi()+" , "+nk.getQuanHeChuHo();
+            result += "\n";
+        }
+        return result;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        HoKhau hoKhau = (HoKhau) o;
+        return soHoKhau.equals(hoKhau.soHoKhau) && idChuHo.equals(hoKhau.idChuHo) && diaChi.equals(hoKhau.diaChi) && anhMinhChung.equals(hoKhau.anhMinhChung) && thoiGianXacThuc.equals(hoKhau.thoiGianXacThuc) && idNguoiXacThuc.equals(hoKhau.idNguoiXacThuc) && trangThai.equals(hoKhau.trangThai) && ghiChu.equals(hoKhau.ghiChu);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(soHoKhau, idChuHo, diaChi, anhMinhChung, thoiGianXacThuc, idNguoiXacThuc, trangThai, ghiChu);
+    }
 }

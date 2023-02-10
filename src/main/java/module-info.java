@@ -23,7 +23,6 @@ module app {
     exports app.view.login;
     opens app.view.main to javafx.fxml;
     exports app.view.main;
-    opens app.view.manage to javafx.fxml;
     exports app.view.manage;
     exports service;
     opens service to javafx.fxml;
@@ -33,4 +32,5 @@ module app {
     opens components.demographic to javafx.base;
     opens app.model.verify to javafx.base;
     opens components.household to javafx.base;
+    opens app.view.manage to javafx.base, javafx.fxml;
 }

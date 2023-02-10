@@ -1,5 +1,6 @@
 package service;
 
+import components.demographic.NhanKhau;
 import components.household.HoKhau;
 
 import java.util.ArrayList;
@@ -34,13 +35,22 @@ public class Service {
         return "chua co ten";
     }
 
-    public ArrayList<String> getDanhSachThanhVien(String soHoKhau) {
-
+    public ArrayList<NhanKhau> getDanhSachThanhVien(String soHoKhau) {
+        ArrayList<NhanKhau> result = new ArrayList<>();
+        return result;
 
     }
 
     public String getSoHoKhauBySoCC(String soCanCuoc) {
 
+        return "";
+    }
+
+    public String canXoa(HoKhau hoKhau){
+        return "";
+    }
+
+    public String canCapNhat(HoKhau hoKhau) {
         return "";
     }
 }

@@ -56,9 +56,9 @@
       </HBox>
       <ScrollPane layoutY="29.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="750.0" stylesheets="@../../../css/scroll-pane.css" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="75.0">
          <content>
-            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="500.0" prefWidth="734.0">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="500.0" prefWidth="720.0">
                <children>
-                  <TableView fx:id="tableView" prefHeight="500.0" prefWidth="735.0" stylesheets="@../../../css/table-view.css" AnchorPane.topAnchor="0.0">
+                  <TableView fx:id="tableView" prefHeight="500.0" prefWidth="720.0" stylesheets="@../../../css/table-view.css" AnchorPane.topAnchor="0.0">
                      <columns>
                         <TableColumn maxWidth="100.0" minWidth="100.0" prefWidth="100.0" text="Số hộ khẩu" />
                         <TableColumn maxWidth="180.0" minWidth="180.0" prefWidth="180.0" text="Chủ hộ" />

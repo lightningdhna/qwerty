@@ -185,8 +185,11 @@ public class NhanKhau {
     public String getSoHoKhau(){
         return Service.getService().getSoHoKhauBySoCC(soCanCuoc);
     }
-    public ArrayList<String> getDanhSachIDThanhVien(){
+    public ArrayList<NhanKhau> getDanhSachIDThanhVien(){
         return Service.getService().getDanhSachThanhVien(getSoHoKhau());
     }
 
+    public int getTuoi(){
+        return LocalDate.now().getYear()- ngaySinh.getYear();
+    }
 }
