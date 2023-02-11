@@ -25,6 +25,8 @@ public class NhanKhau {
     private String ghiChu ="";
     private String quanHeChuHo = "";
 
+
+
     public String getQuanHeChuHo() {
         return quanHeChuHo;
     }
@@ -160,6 +162,7 @@ public class NhanKhau {
     public void setGhiChu(String ghiChu) {
         this.ghiChu = ghiChu;
     }
+
 
     public NhanKhau(String soCanCuoc, String dacDiemNhanDang, String hoTen, String tenKhac, LocalDate ngaySinh, String gioiTinh, String queQuan, String thuongTru, String tamTru, String quocTich, String danToc, String soHoChieu, String trangThai, LocalDate ngayXacThuc, String idNguoiXacThuc, String ghiChu) {
         this.soCanCuoc = soCanCuoc;

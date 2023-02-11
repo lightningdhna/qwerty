@@ -1,11 +1,11 @@
 package app.model.account;
 
-public class Account extends AccountInfo{
+public class Account extends ThongTinTaiKhoan {
     private int idAccount;          //ID Tài khoản
     private String password= "";        //Mật khẩu
     private String username = "";        //Tên đăng nhập
     private String role = "";            //Vai trò
-    private AccountInfo accountInfo ;//Thông tin chi tiết của tài khoản
+    private ThongTinTaiKhoan thongTinTaiKhoan;//Thông tin chi tiết của tài khoản
     private String accountState = "";    //Trạng thái tài khoản
 
     public Account(int idAccount) {
@@ -54,12 +54,12 @@ public class Account extends AccountInfo{
         this.role = role;
     }
 
-    public AccountInfo getAccountInfo() {
-        return accountInfo;
+    public ThongTinTaiKhoan getAccountInfo() {
+        return thongTinTaiKhoan;
     }
 
-    public void setAccountInfo(AccountInfo accountInfo) {
-        this.accountInfo = accountInfo;
+    public void setAccountInfo(ThongTinTaiKhoan thongTinTaiKhoan) {
+        this.thongTinTaiKhoan = thongTinTaiKhoan;
     }
 
     public String getAccountState() {

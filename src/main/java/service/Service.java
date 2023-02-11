@@ -1,5 +1,6 @@
 package service;
 
+import app.database.YeuCauXacThucTable;
 import app.model.demographic.NhanKhau;
 import app.model.household.HoKhau;
 import app.model.message.YeuCauXacThuc;
@@ -9,6 +10,7 @@ import app.model.message.YeuCauXacThucThanhTich;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Collection;
 
 public class Service {
 
@@ -62,46 +64,36 @@ public class Service {
 
     public ArrayList<YeuCauXacThucNhanKhau> getAllYeuCauXacThucNhanKhau(){
         ArrayList<YeuCauXacThucNhanKhau> result = new ArrayList<>();
-        //todo xử lí từ csdl
-
+        ArrayList<YeuCauXacThuc> resultFind = YeuCauXacThucTable.getTable().getAllYeuCauXacThucNhanKhau();
+        for(YeuCauXacThuc yc : resultFind){
+            result.add((YeuCauXacThucNhanKhau) yc);
+        }
         return result;
     }
 
     public ArrayList<YeuCauXacThucHoKhau> getAllYeuCauXacThucHoKhau(){
         ArrayList<YeuCauXacThucHoKhau> result = new ArrayList<>();
-
-        //todo xu li csdl
+        ArrayList<YeuCauXacThuc> resultFind = YeuCauXacThucTable.getTable().getAllYeuCauXacThucNhanKhau();
+        for(YeuCauXacThuc yc : resultFind){
+            result.add((YeuCauXacThucHoKhau) yc);
+        }
         return result;
     }
 
     public ArrayList<YeuCauXacThucThanhTich> getAllYeuCauXacThucThanhTich(){
         ArrayList<YeuCauXacThucThanhTich> result = new ArrayList<>();
-
-
+        ArrayList<YeuCauXacThuc> resultFind = YeuCauXacThucTable.getTable().getAllYeuCauXacThucNhanKhau();
+        for(YeuCauXacThuc yc : resultFind){
+            result.add((YeuCauXacThucThanhTich) yc);
+        }
         return result;
     }
 
-    public void themYeuCauXacThucNhanKhau(YeuCauXacThucNhanKhau yeuCau){
-        //todo
+    public void themYeuCauXacThuc(YeuCauXacThuc yeuCau){
+        YeuCauXacThucTable.getTable().add(yeuCau);
     }
-    public void themYeuCauXacThucHoKhau(YeuCauXacThucHoKhau yeuCau){
-        //todo
-
-    }
-    public void themYeuCauXacThucThanhTich(YeuCauXacThucThanhTich yeuCau){
-        //todo
-
-    }
-    public void xoaYeuCauXacThucNhanKhau(YeuCauXacThucNhanKhau yeuCau){
-        //todo
-    }
-    public void xoaYeuCauXacThucHoKhau(YeuCauXacThucHoKhau yeuCau){
-        //todo
-
-    }
-    public void xoaYeuCauXacThucThanhTich(YeuCauXacThucThanhTich yeuCau){
-        //todo
-
+    public void xoaYeuCauXacThuc(YeuCauXacThuc yeuCau){
+        YeuCauXacThucTable.getTable().remove(yeuCau);
     }
 
 

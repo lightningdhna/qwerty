@@ -5,7 +5,7 @@ import java.time.LocalDate;
 public class TinNhan {
 
 
-    private int maThongBao;
+    private int maThongBao = -1;
     private int idTaiKhoanGui = -1;
     private int idTaiKhoanNhan = -1;
 
@@ -69,4 +69,19 @@ public class TinNhan {
         this.ngayTao = ngayTao;
     }
 
+    public LocalDate getNgayTao() {
+        return ngayTao;
+    }
+
+    public void setNgayTao(LocalDate ngayTao) {
+        this.ngayTao = ngayTao;
+    }
+
+    public int getMaThongBao() {
+        return maThongBao;
+    }
+
+    public void setMaThongBao(int maThongBao) {
+        this.maThongBao = maThongBao;
+    }
 }

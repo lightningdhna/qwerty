@@ -9,7 +9,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AccountTable extends DatabaseConnection {
+public class TaiKhoanTable extends DatabaseConnection {
 
     private static boolean hasTable = false;
     public static List<Account> castResultSet(ResultSet rs) throws SQLException {

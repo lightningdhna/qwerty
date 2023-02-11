@@ -1,6 +1,6 @@
 package app.model.account;
 
-public class AccountInfo {
+public class ThongTinTaiKhoan {
     private int idAccount;          //ID tài khoản chứa thông tin này
     private String nickname;        //nickname
     private String avatarURL;       //Ảnh đại diện
@@ -10,7 +10,7 @@ public class AccountInfo {
     private String workplace;       //Địa điểm làm việc
     private String hobbies;         //Sở thích
 
-    public AccountInfo(int idAccount) {
+    public ThongTinTaiKhoan(int idAccount) {
         this.idAccount = idAccount;
     }
 
@@ -78,6 +78,6 @@ public class AccountInfo {
         this.hobbies = hobbies;
     }
 
-    public AccountInfo(){};
+    public ThongTinTaiKhoan(){};
 
 }
