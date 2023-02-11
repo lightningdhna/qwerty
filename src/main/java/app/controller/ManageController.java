@@ -1,7 +1,7 @@
 package app.controller;
 
-import app.PageManager;
-import app.model.manage.CICRowInfo;
+import app.view.viewmodel.PageManager;
+import app.model.demographic.CICRowInfo;
 import app.view.manage.CICInfoTablePage;
 import app.view.manage.ManageCICDetailWindow;
 import app.view.message.Mes;

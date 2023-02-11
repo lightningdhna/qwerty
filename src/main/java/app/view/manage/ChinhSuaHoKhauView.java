@@ -1,21 +1,21 @@
 package app.view.manage;
 
 import app.controller.HoKhauController;
-import app.model.MyWindow;
+import app.model.demographic.NhanKhau;
+import app.view.viewmodel.MyWindow;
 import app.view.message.Mes;
 import app.model.household.HoKhau;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.geometry.Insets;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.Background;
+import javafx.scene.effect.DropShadow;
+import javafx.scene.effect.Effect;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
-import org.controlsfx.tools.Duplicatable;
 import service.Service;
 
 public class ChinhSuaHoKhauView extends MyWindow {
@@ -33,24 +33,35 @@ public class ChinhSuaHoKhauView extends MyWindow {
 
 
     ObservableList<HBox> danhSachThanhVienHBox = FXCollections.observableArrayList();
-    private HBox taoDong(){
+    private HBox taoDong(String s1, String s2, String s3){
         HBox result = new HBox();
         TextField tf1 = new TextField();
         TextField tf2 = new TextField();
+        Label label = new Label();
 
-        tf1.setPromptText("Họ tên");
+        tf1.setPromptText("Số CCCD");
         tf2.setPromptText("Quan hệ với chủ họ");
-        tf1.setFont(Font.font("Sanserif",20));
-        tf2.setFont(Font.font("Sanserif",20));
-        tf1.setPrefSize(250,36);
-        tf2.setPrefSize(190,36);
 
-        result.setSpacing(10);
-        result.getChildren().addAll(tf1,tf2);
+        tf1.setFont(Font.font("Sanserif",16));
+        tf2.setFont(Font.font("Sanserif",16));
+        label.setFont(Font.font("Sanserif",16));
+        label.setStyle("-fx-background-radius: 0; -fx-background-color: #EEEEEE");
+
+        tf1.setPrefSize(130,36);
+        tf2.setPrefSize(110,36);
+        label.setPrefSize(200,40);
+
+        tf1.setText(s1);
+        tf2.setText(s2);
+        label.setText(s3);
+
+
+        result.setSpacing(5);
+        result.getChildren().addAll(tf1,tf2, label);
         return result;
     }
     public void themBanGhiHBox(){
-        HBox temp = taoDong();
+        HBox temp = taoDong("","","");
 
         danhSachVBox.getChildren().add(temp);
         danhSachThanhVienHBox.add(temp);
@@ -68,7 +79,9 @@ public class ChinhSuaHoKhauView extends MyWindow {
         ghiChuTextArea.setText(hoKhau.getGhiChu());
         diaChiTextField.setText(hoKhau.getDiaChi());
 
-
+        for(NhanKhau nhanKhau : hoKhau.getDanhSachThanhVien()){
+            taoDong(nhanKhau.getSoCanCuoc(),nhanKhau.getQuanHeChuHo(),nhanKhau.getHoTen());
+        }
         //...
     }
 
@@ -105,6 +118,10 @@ public class ChinhSuaHoKhauView extends MyWindow {
         Mes.inform("Cập nhật thành công","");
     }
 
-
-
+    public void xoaDong(){
+        if(danhSachThanhVienHBox.size()==0)
+            return;
+        danhSachVBox.getChildren().remove(danhSachVBox.getChildren().size()-1);
+        danhSachThanhVienHBox.remove(danhSachThanhVienHBox.size()-1);
+    }
 }

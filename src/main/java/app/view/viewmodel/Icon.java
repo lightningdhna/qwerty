@@ -1,4 +1,4 @@
-package app.model;
+package app.view.viewmodel;
 
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;

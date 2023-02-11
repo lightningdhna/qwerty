@@ -1,7 +1,5 @@
-package app;
+package app.view.viewmodel;
 
-import app.model.Page;
-import app.view.main.MainPage;
 import app.view.manage.ManagePage;
 
 public class PageManager {

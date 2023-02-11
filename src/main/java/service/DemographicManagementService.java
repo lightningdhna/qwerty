@@ -3,7 +3,7 @@ package service;
 import app.database.IdentificationTable;
 import app.model.demographic.CIC;
 import app.database.CICTable;
-import app.model.manage.CICRowInfo;
+import app.model.demographic.CICRowInfo;
 
 import java.util.List;
 

@@ -1,10 +1,8 @@
-package app.model;
+package app.view.viewmodel;
 
 import animatefx.animation.*;
-import app.PageManager;
 import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 

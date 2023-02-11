@@ -1,6 +1,7 @@
 package app.model.household;
 
 import app.model.demographic.NhanKhau;
+import javafx.util.Pair;
 import service.Service;
 
 import java.time.LocalDate;
@@ -85,6 +86,7 @@ public class HoKhau {
         this.idNguoiXacThuc = idNguoiXacThuc;
     }
 
+
     public ArrayList<NhanKhau> getDanhSachThanhVien() {
         return Service.getService().getDanhSachThanhVien(soHoKhau);
     }
@@ -116,8 +118,7 @@ public class HoKhau {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        HoKhau hoKhau = (HoKhau) o;
-        return soHoKhau.equals(hoKhau.soHoKhau) && idChuHo.equals(hoKhau.idChuHo) && diaChi.equals(hoKhau.diaChi)  && thoiGianXacThuc.equals(hoKhau.thoiGianXacThuc) && idNguoiXacThuc.equals(hoKhau.idNguoiXacThuc) && trangThai.equals(hoKhau.trangThai) && ghiChu.equals(hoKhau.ghiChu);
+        return this.soHoKhau.equals(((HoKhau) o).soHoKhau);
     }
 
     @Override
@@ -126,6 +127,7 @@ public class HoKhau {
     }
 
     public HoKhau() {
+
     }
 
     public HoKhau(String soHoKhau, String idChuHo, String diaChi, LocalDate thoiGianXacThuc, String idNguoiXacThuc, String trangThai, String ghiChu, String tenChuHo) {
@@ -142,4 +144,5 @@ public class HoKhau {
     public HoKhau clone()  {
         return new HoKhau(soHoKhau, idChuHo,diaChi,thoiGianXacThuc,idNguoiXacThuc,trangThai,ghiChu, tenChuHo);
     }
+
 }

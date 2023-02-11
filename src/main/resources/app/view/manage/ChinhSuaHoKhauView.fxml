@@ -159,7 +159,7 @@
                                     </ImageView>
                                  </graphic>
                               </JFXButton>
-                              <JFXButton onMouseClicked="#themBanGhiHBox" prefHeight="40.0" prefWidth="40.0">
+                              <JFXButton onMouseClicked="#xoaDong" prefHeight="40.0" prefWidth="40.0">
                                  <graphic>
                                     <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                                        <image>

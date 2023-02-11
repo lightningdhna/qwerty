@@ -1,8 +1,7 @@
 package app.view.main;
 
 import animatefx.animation.*;
-import app.Main;
-import app.model.Page;
+import app.view.viewmodel.Page;
 import app.view.account.AccountPage;
 import app.view.home.HomePage;
 import app.view.login.LoginPage;
@@ -14,10 +13,7 @@ import app.view.verify.VerifyPage;
 import com.jfoenix.controls.JFXButton;
 import javafx.application.Platform;
 import javafx.event.EventHandler;
-import javafx.event.EventType;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
@@ -27,8 +23,6 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
-import java.net.URL;
-import java.util.ResourceBundle;
 import java.util.concurrent.atomic.AtomicReference;
 
 public class MainPage extends Page  {
@@ -46,7 +40,7 @@ public class MainPage extends Page  {
     JFXButton [] buttons;
     JFXButton smButtons[];
     Page[] pages;
-    String [] pageName = {"Home", "Account", "Register", "Verify","Manage", "Statistic"};
+    String [] pageName = {"Dashboard", "Account", "Register", "Verify","Manage", "Statistic"};
 
 
     public void showBigTaskBar(){

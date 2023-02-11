@@ -1,6 +1,5 @@
 package app.view.message;
 
-import app.model.MyWindow;
 import javafx.scene.control.Alert;
 
 public class Mes {

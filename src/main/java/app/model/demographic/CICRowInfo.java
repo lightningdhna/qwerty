@@ -1,4 +1,4 @@
-package app.model.manage;
+package app.model.demographic;
 
 import app.model.demographic.CIC;
 

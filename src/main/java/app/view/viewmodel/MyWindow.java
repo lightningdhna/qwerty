@@ -1,4 +1,4 @@
-package app.model;
+package app.view.viewmodel;
 
 import animatefx.animation.*;
 import javafx.application.Platform;

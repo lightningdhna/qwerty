@@ -67,11 +67,7 @@ public class HoKhauController {
     }
 
     public void capNhatHoKhau(HoKhau hoKhau){
-        for(HoKhau ho: danhSachHK){
-            if(ho.equals(hoKhau)){
-                xoaHo(ho);
-            }
-        }
+        xoaHo(hoKhau);
         themHoKhau(hoKhau);
     }
     public void capNhatHoKhau(HoKhau hoKhau, ChinhSuaHoKhauView window){

@@ -12,7 +12,7 @@ public class Account extends AccountInfo{
         super(idAccount);
     }
 
-    public Account(){};
+    public Account(){}
 
     public Account(int accountID, String username,String password, String role){
         this.idAccount = accountID;

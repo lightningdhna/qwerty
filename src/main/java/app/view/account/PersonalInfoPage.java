@@ -1,7 +1,7 @@
 package app.view.account;
 
-import app.model.MyWindow;
-import app.model.manage.CICRowInfo;
+import app.view.viewmodel.MyWindow;
+import app.model.demographic.CICRowInfo;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;

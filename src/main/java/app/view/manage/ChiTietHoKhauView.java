@@ -1,7 +1,7 @@
 package app.view.manage;
 
 import app.controller.HoKhauController;
-import app.model.MyWindow;
+import app.view.viewmodel.MyWindow;
 import app.view.message.Mes;
 import app.model.household.HoKhau;
 import javafx.fxml.FXML;

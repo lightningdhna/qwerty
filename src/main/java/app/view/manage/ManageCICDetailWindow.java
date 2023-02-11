@@ -1,9 +1,9 @@
 package app.view.manage;
 
-import app.PageManager;
+import app.view.viewmodel.PageManager;
 import app.controller.ManageController;
-import app.model.MyWindow;
-import app.model.manage.CICRowInfo;
+import app.view.viewmodel.MyWindow;
+import app.model.demographic.CICRowInfo;
 import app.view.message.Mes;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;

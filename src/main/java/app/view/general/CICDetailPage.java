@@ -1,6 +1,6 @@
 package app.view.general;
 
-import app.model.Page;
+import app.view.viewmodel.Page;
 
 public class CICDetailPage extends Page {
 

@@ -2,7 +2,7 @@ package app.view.login;
 
 import animatefx.animation.ZoomOutLeft;
 import app.controller.LoginController;
-import app.model.Page;
+import app.view.viewmodel.Page;
 import app.model.account.Account;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;

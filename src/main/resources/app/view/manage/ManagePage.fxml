@@ -110,7 +110,7 @@
             </JFXButton>
          </children>
       </VBox>
-      <Pane layoutX="287.0" layoutY="-12.0" opacity="0.9" prefHeight="500.0" prefWidth="750.0" style="-fx-background-color: #efefef; -fx-background-radius: 20;" AnchorPane.bottomAnchor="45.0" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="75.0">
+      <Pane layoutX="287.0" layoutY="-12.0" opacity="0.9" prefHeight="500.0" prefWidth="750.0" style="-fx-background-color: transparent; -fx-background-radius: 20;" AnchorPane.bottomAnchor="45.0" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="75.0">
          <effect>
             <DropShadow blurType="GAUSSIAN" offsetX="-1.0" offsetY="2.0" spread="0.04">
                <color>

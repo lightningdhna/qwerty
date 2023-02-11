@@ -1,12 +1,11 @@
 package app.view.manage;
 
-import app.PageManager;
-import app.model.Page;
-import app.model.MyWindow;
+import app.view.viewmodel.PageManager;
+import app.view.viewmodel.Page;
+import app.view.viewmodel.MyWindow;
 import app.view.message.Mes;
 import javafx.fxml.FXML;
 import javafx.scene.layout.Pane;
-import animatefx.animation.*;
 
 public class ManagePage extends MyWindow {
     @FXML

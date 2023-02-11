@@ -1,6 +1,6 @@
 package app.view.account;
 
-import app.model.Page;
+import app.view.viewmodel.Page;
 import javafx.fxml.FXML;
 import javafx.scene.layout.Pane;
 
