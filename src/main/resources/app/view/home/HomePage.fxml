@@ -15,7 +15,7 @@
    <children>
       <VBox AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <JFXButton graphicTextGap="20.0" prefHeight="70.0" prefWidth="225.0" styleClass="jfx-button-taskbar-children" stylesheets="@../../../css/button.css" text="Chưa biết điền gì" wrapText="true">
+            <JFXButton graphicTextGap="20.0" prefHeight="70.0" prefWidth="225.0" styleClass="jfx-button-taskbar-children" stylesheets="@../../../css/button.css" text="  " wrapText="true">
                <font>
                   <Font name="SansSerif Regular" size="20.0" />
                </font>

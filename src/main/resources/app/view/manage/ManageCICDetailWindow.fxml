@@ -287,7 +287,7 @@
       </ScrollPane>
       <VBox layoutX="908.0" layoutY="441.0" AnchorPane.bottomAnchor="4.0" AnchorPane.rightAnchor="42.0">
          <children>
-            <JFXButton buttonType="RAISED" prefHeight="70.0" prefWidth="250.0" ripplerFill="#194181" styleClass="jfx-button-feature-request" stylesheets="@../../../css/button.css" text="Yêu cầu xác thực" textFill="WHITE" wrapText="true">
+            <JFXButton buttonType="RAISED" onMouseClicked="#notDone" prefHeight="70.0" prefWidth="250.0" ripplerFill="#194181" styleClass="jfx-button-feature-request" stylesheets="@../../../css/button.css" text="Yêu cầu xác thực" textFill="WHITE" wrapText="true">
                <font>
                   <Font name="SansSerif Regular" size="24.0" />
                </font>
@@ -295,7 +295,7 @@
                   <Insets bottom="15.0" />
                </VBox.margin>
             </JFXButton>
-            <JFXButton buttonType="RAISED" prefHeight="70.0" prefWidth="250.0" ripplerFill="#194181" styleClass="jfx-button-feature-delete" stylesheets="@../../../css/button.css" text="Xóa" textFill="WHITE">
+            <JFXButton buttonType="RAISED" onMouseClicked="#deleteInfo" prefHeight="70.0" prefWidth="250.0" ripplerFill="#194181" styleClass="jfx-button-feature-delete" stylesheets="@../../../css/button.css" text="Xóa" textFill="WHITE">
                <font>
                   <Font name="SansSerif Regular" size="24.0" />
                </font>
@@ -303,7 +303,7 @@
                   <Insets bottom="15.0" />
                </VBox.margin>
             </JFXButton>
-            <JFXButton buttonType="RAISED" onMouseClicked="#edit" prefHeight="70.0" prefWidth="250.0" ripplerFill="#194181" styleClass="jfx-button-feature-add" stylesheets="@../../../css/button.css" text="Chỉnh sửa" textFill="WHITE">
+            <JFXButton buttonType="RAISED" onMouseClicked="#edit" prefHeight="70.0" prefWidth="250.0" ripplerFill="#194181" styleClass="jfx-button-feature-add" stylesheets="@../../../css/button.css" text="Cập nhật" textFill="WHITE">
                <font>
                   <Font name="SansSerif Regular" size="24.0" />
                </font>

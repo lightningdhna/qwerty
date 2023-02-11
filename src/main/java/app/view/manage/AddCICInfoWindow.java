@@ -1,7 +1,7 @@
 package app.view.manage;
 
-import app.model.MyWindow;
-import components.demogrpahic.CIC;
+import app.view.viewmodel.MyWindow;
+import app.model.demographic.CIC;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;

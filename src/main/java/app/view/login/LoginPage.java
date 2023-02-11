@@ -1,10 +1,10 @@
 package app.view.login;
 
 import app.controller.LoginController;
-import app.model.Page;
+import app.view.viewmodel.Page;
 import app.view.main.MainPage;
 import com.jfoenix.controls.JFXCheckBox;
-import components.account.Account;
+import app.model.account.Account;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;

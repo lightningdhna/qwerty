@@ -1,8 +1,8 @@
 package app.view.manage;
 
 import app.controller.ManageController;
-import app.model.MyWindow;
-import app.model.manage.CICRowInfo;
+import app.view.viewmodel.MyWindow;
+import app.model.demographic.CICRowInfo;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -32,4 +32,5 @@ public class CICInfoTablePage extends MyWindow {
     public void search(){
         ManageController.searchTableInfo(this,tableView, searchText.getText());
     }
+
 }

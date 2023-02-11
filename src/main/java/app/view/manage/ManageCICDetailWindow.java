@@ -1,8 +1,10 @@
 package app.view.manage;
 
-import app.PageManager;
-import app.model.MyWindow;
-import app.model.manage.CICRowInfo;
+import app.view.viewmodel.PageManager;
+import app.controller.ManageController;
+import app.view.viewmodel.MyWindow;
+import app.model.demographic.CICRowInfo;
+import app.view.message.Mes;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 
@@ -13,7 +15,7 @@ public class ManageCICDetailWindow extends MyWindow {
             verifyStateLabel,usernameLabel,dateVerify,verifierUsernameLabel,householdNumberLabel;
 
     @FXML
-    Label  passportNumberLabel, ethnicLabel,nationalityLabel,genderLabel,otherNameLabel;
+    Label  passportNumberLabel, ethnicLabel, nationalityLabel, genderLabel, otherNameLabel;
     @FXML
     TextArea noteLabel;
     public void setInfo(CICRowInfo cicInfo){
@@ -47,4 +49,11 @@ public class ManageCICDetailWindow extends MyWindow {
         add(new UpdateCICInfoWindow(cicInfo));
     }
 
+    public void deleteInfo(){
+        ManageController.deleteInfo(this,cicInfo);
+    }
+
+    public void notDone(){
+        Mes.messageUnfinished();
+    }
 }

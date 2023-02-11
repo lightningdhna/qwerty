@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="550.0" style="-fx-background-color: #EEEEEE; -fx-background-radius: 15;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label alignment="CENTER" layoutX="27.0" layoutY="14.0" prefHeight="76.0" prefWidth="497.0" style="-fx-background-color: #DDDDDD; -fx-background-radius: 10 10 0 0;" text="Chỉnh sửa thông tin" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="20.0">
+         <font>
+            <Font name="SansSerif Bold" size="35.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.03820662945508957" green="0.3963937759399414" blue="0.5157894492149353" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.11543859541416168" green="0.5992572903633118" blue="0.6631578803062439" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <JFXButton buttonType="RAISED" contentDisplay="CENTER" layoutX="469.0" layoutY="15.0" onMouseClicked="#close" prefHeight="30.0" prefWidth="30.0" ripplerFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../../../icon/icon-light/verify%20(16).png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <ScrollPane layoutX="28.0" layoutY="111.0" prefHeight="614.0" prefWidth="497.0" AnchorPane.leftAnchor="28.0" AnchorPane.rightAnchor="20.0">
+         <content>
+            <AnchorPane maxWidth="495.0" minHeight="0.0" minWidth="0.0">
+               <children>
+                  <VBox prefWidth="475.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+                     <children>
+                        <HBox minHeight="50.0">
+                           <children>
+                              <Label prefHeight="50.0" prefWidth="150.0" text="Số hộ khẩu" textFill="#163e7a" wrapText="true">
+                                 <font>
+                                    <Font name="SansSerif Regular" size="20.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="soHoKhauLabel" prefHeight="50.0" prefWidth="251.0" textFill="#163e7a" wrapText="true">
+                                 <font>
+                                    <Font name="SansSerif Regular" size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox minHeight="50.0">
+                           <children>
+                              <Label prefHeight="50.0" prefWidth="150.0" text="Chủ hộ" textFill="#163e7a" wrapText="true">
+                                 <font>
+                                    <Font name="SansSerif Regular" size="20.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <TextField fx:id="tenChuHoTextField" prefHeight="36.0" prefWidth="280.0" promptText="* Điền thông tin số hộ">
+                                 <font>
+                                    <Font name="SansSerif Regular" size="20.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets top="5.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox minHeight="50.0">
+                           <children>
+                              <Label prefHeight="50.0" prefWidth="150.0" text="Địa chỉ" textFill="#163e7a" wrapText="true">
+                                 <font>
+                                    <Font name="SansSerif Regular" size="20.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <TextField fx:id="diaChiTextField" prefHeight="36.0" prefWidth="279.0" promptText="Địa chỉ">
+                                 <font>
+                                    <Font name="SansSerif Regular" size="20.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets top="5.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <Label prefHeight="50.0" prefWidth="150.0" text="Ghi chú" textFill="#163e7a" wrapText="true">
+                                 <font>
+                                    <Font name="SansSerif Regular" size="20.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <TextArea fx:id="ghiChuTextArea" prefHeight="200.0" prefWidth="278.0" wrapText="true">
+                                 <font>
+                                    <Font name="SansSerif Regular" size="20.0" />
+                                 </font>
+                              </TextArea>
+                           </children>
+                        </HBox>
+                        <HBox minHeight="50.0">
+                           <children>
+                              <Label prefHeight="50.0" prefWidth="150.0" text="Danh Sách thành viên" textFill="#163e7a" wrapText="true">
+                                 <font>
+                                    <Font name="SansSerif Regular" size="20.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <JFXButton onMouseClicked="#themBanGhiHBox" prefHeight="40.0" prefWidth="40.0">
+                                 <HBox.margin>
+                                    <Insets top="3.0" />
+                                 </HBox.margin>
+                                 <graphic>
+                                    <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../icon/icon-light/add-1.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton onMouseClicked="#xoaDong" prefHeight="40.0" prefWidth="40.0">
+                                 <graphic>
+                                    <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../icon/minimize.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <HBox.margin>
+                                    <Insets top="5.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <VBox fx:id="danhSachVBox" prefHeight="200.0" prefWidth="450.0" spacing="10.0">
+                           <padding>
+                              <Insets top="10.0" />
+                           </padding>
+                        </VBox>
+                        <Pane prefHeight="400.0" prefWidth="200.0" />
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </content>
+         <effect>
+            <DropShadow offsetY="2.0">
+               <color>
+                  <Color red="0.3368421196937561" green="0.3368421196937561" blue="0.3368421196937561" />
+               </color>
+            </DropShadow>
+         </effect>
+      </ScrollPane>
+      <JFXButton buttonType="RAISED" layoutX="20.0" layoutY="48.0" onMouseClicked="#capNhatHoKhau" prefHeight="40.0" prefWidth="150.0" ripplerFill="WHITE" style="-fx-background-color: #03722a; -fx-background-radius: 0;" text="Cập nhật" textFill="WHITE" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="20.0">
+         <font>
+            <Font name="SansSerif Regular" size="16.0" />
+         </font>
+      </JFXButton>
+   </children>
+   <effect>
+      <DropShadow />
+   </effect>
+</AnchorPane>

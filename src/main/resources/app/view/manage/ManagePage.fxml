@@ -39,7 +39,7 @@
                   </LinearGradient>
                </textFill>
             </JFXButton>
-            <JFXButton graphicTextGap="20.0" prefHeight="70.0" prefWidth="225.0" styleClass="jfx-button-taskbar-children" stylesheets="@../../../css/button.css" text="Danh sách hộ khẩu" wrapText="true">
+            <JFXButton graphicTextGap="20.0" onMouseClicked="#setDanhSachHoKhauView" prefHeight="70.0" prefWidth="225.0" styleClass="jfx-button-taskbar-children" stylesheets="@../../../css/button.css" text="Danh sách hộ khẩu" wrapText="true">
                <font>
                   <Font name="SansSerif Regular" size="20.0" />
                </font>
@@ -63,7 +63,7 @@
                   </LinearGradient>
                </textFill>
             </JFXButton>
-            <JFXButton graphicTextGap="20.0" prefHeight="70.0" prefWidth="225.0" styleClass="jfx-button-taskbar-children" stylesheets="@../../../css/button.css" text="Quản lý sự kiện" wrapText="true">
+            <JFXButton graphicTextGap="20.0" onMouseClicked="#notDone" prefHeight="70.0" prefWidth="225.0" styleClass="jfx-button-taskbar-children" stylesheets="@../../../css/button.css" text="Quản lý sự kiện" wrapText="true">
                <font>
                   <Font name="SansSerif Regular" size="20.0" />
                </font>
@@ -87,7 +87,7 @@
                   </LinearGradient>
                </textFill>
             </JFXButton>
-            <JFXButton graphicTextGap="20.0" prefHeight="70.0" prefWidth="225.0" styleClass="jfx-button-taskbar-children" stylesheets="@../../../css/button.css" text="Lịch sử sự kiện" wrapText="true">
+            <JFXButton graphicTextGap="20.0" onMouseClicked="#notDone" prefHeight="70.0" prefWidth="225.0" styleClass="jfx-button-taskbar-children" stylesheets="@../../../css/button.css" text="Lịch sử sự kiện" wrapText="true">
                <font>
                   <Font name="SansSerif Regular" size="20.0" />
                </font>
@@ -110,7 +110,7 @@
             </JFXButton>
          </children>
       </VBox>
-      <Pane layoutX="287.0" layoutY="-12.0" opacity="0.9" prefHeight="500.0" prefWidth="750.0" style="-fx-background-color: #efefef; -fx-background-radius: 20;" AnchorPane.bottomAnchor="45.0" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="75.0">
+      <Pane layoutX="287.0" layoutY="-12.0" opacity="0.9" prefHeight="500.0" prefWidth="750.0" style="-fx-background-color: transparent; -fx-background-radius: 20;" AnchorPane.bottomAnchor="45.0" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="75.0">
          <effect>
             <DropShadow blurType="GAUSSIAN" offsetX="-1.0" offsetY="2.0" spread="0.04">
                <color>

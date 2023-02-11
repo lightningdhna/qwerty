@@ -35,7 +35,7 @@
          <graphic>
             <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true">
                <image>
-                  <Image url="@../../../icon/exit.png" />
+                  <Image url="@../../../icon/icons8-undo-52.png" />
                </image>
             </ImageView>
          </graphic>
