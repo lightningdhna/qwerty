@@ -38,7 +38,6 @@ public class AccountTable extends DatabaseConnection {
                 """;
         try {
             execute(query);
-            InitialValues.addAccountInitialValue();
         } catch (SQLException ignored) {
 
         }

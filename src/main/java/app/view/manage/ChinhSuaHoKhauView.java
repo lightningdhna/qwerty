@@ -105,6 +105,7 @@ public class ChinhSuaHoKhauView extends MyWindow {
         }
 
 
+
         ((ChiTietHoKhauView)getParent()).setThongTin(hoKhau);
         HoKhauController.getController().capNhatHoKhau(hoKhau,this);
         close();

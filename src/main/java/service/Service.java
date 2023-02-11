@@ -2,7 +2,12 @@ package service;
 
 import app.model.demographic.NhanKhau;
 import app.model.household.HoKhau;
+import app.model.message.YeuCauXacThuc;
+import app.model.message.YeuCauXacThucHoKhau;
+import app.model.message.YeuCauXacThucNhanKhau;
+import app.model.message.YeuCauXacThucThanhTich;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Service {
@@ -53,4 +58,53 @@ public class Service {
     public String canCapNhat(HoKhau hoKhau) {
         return "";
     }
+
+
+    public ArrayList<YeuCauXacThucNhanKhau> getAllYeuCauXacThucNhanKhau(){
+        ArrayList<YeuCauXacThucNhanKhau> result = new ArrayList<>();
+        //todo xử lí từ csdl
+
+        return result;
+    }
+
+    public ArrayList<YeuCauXacThucHoKhau> getAllYeuCauXacThucHoKhau(){
+        ArrayList<YeuCauXacThucHoKhau> result = new ArrayList<>();
+
+        //todo xu li csdl
+        return result;
+    }
+
+    public ArrayList<YeuCauXacThucThanhTich> getAllYeuCauXacThucThanhTich(){
+        ArrayList<YeuCauXacThucThanhTich> result = new ArrayList<>();
+
+
+        return result;
+    }
+
+    public void themYeuCauXacThucNhanKhau(YeuCauXacThucNhanKhau yeuCau){
+        //todo
+    }
+    public void themYeuCauXacThucHoKhau(YeuCauXacThucHoKhau yeuCau){
+        //todo
+
+    }
+    public void themYeuCauXacThucThanhTich(YeuCauXacThucThanhTich yeuCau){
+        //todo
+
+    }
+    public void xoaYeuCauXacThucNhanKhau(YeuCauXacThucNhanKhau yeuCau){
+        //todo
+    }
+    public void xoaYeuCauXacThucHoKhau(YeuCauXacThucHoKhau yeuCau){
+        //todo
+
+    }
+    public void xoaYeuCauXacThucThanhTich(YeuCauXacThucThanhTich yeuCau){
+        //todo
+
+    }
+
+
+
+
 }

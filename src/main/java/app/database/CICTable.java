@@ -77,7 +77,6 @@ public class CICTable extends DatabaseConnection {
 
         try {
             execute(query);
-            InitialValues.addCICInitialValue();
         } catch (SQLException ignored) {
         }
     }

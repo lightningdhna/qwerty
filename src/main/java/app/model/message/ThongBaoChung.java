@@ -1,4 +1,9 @@
 package app.model.message;
 
-public class ThongBaoChung {
+public class ThongBaoChung extends TinNhan{
+
+    public ThongBaoChung(){
+        super();
+    }
+
 }

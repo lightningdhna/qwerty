@@ -2,7 +2,8 @@ package app.database;
 
 import java.sql.*;
 
-public class DatabaseConnection {
+public abstract class DatabaseConnection {
+
     private static Connection conn = null;
     private static Statement statement = null;
 
