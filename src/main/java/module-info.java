@@ -32,4 +32,5 @@ module app {
     opens app.model.household to javafx.base;
     exports app.view.viewmodel;
     opens app.view.viewmodel to javafx.fxml;
+    opens app.view.verify to javafx.fxml;
 }

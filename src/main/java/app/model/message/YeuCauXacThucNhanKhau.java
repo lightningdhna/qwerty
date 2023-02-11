@@ -6,10 +6,9 @@ public class YeuCauXacThucNhanKhau extends YeuCauXacThuc{
     public YeuCauXacThucNhanKhau(){
         super();
         setTieuDe("Yêu cầu xác thực nhân khẩu");
-        setNoiDung(soCCCD);
     }
     public YeuCauXacThucNhanKhau(String soCCCD){
-        super();
+        this();
         this.soCCCD = soCCCD;
         setNoiDung(soCCCD);
     }

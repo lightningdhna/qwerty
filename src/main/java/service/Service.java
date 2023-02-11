@@ -64,36 +64,43 @@ public class Service {
 
     public ArrayList<YeuCauXacThucNhanKhau> getAllYeuCauXacThucNhanKhau(){
         ArrayList<YeuCauXacThucNhanKhau> result = new ArrayList<>();
-        ArrayList<YeuCauXacThuc> resultFind = YeuCauXacThucTable.getTable().getAllYeuCauXacThucNhanKhau();
-        for(YeuCauXacThuc yc : resultFind){
-            result.add((YeuCauXacThucNhanKhau) yc);
-        }
+//        ArrayList<YeuCauXacThuc> resultFind = YeuCauXacThucTable.getTable().getAllYeuCauXacThucNhanKhau();
+//        for(YeuCauXacThuc yc : resultFind){
+//            result.add((YeuCauXacThucNhanKhau) yc);
+//        }
+//        todo
+        result.add(new YeuCauXacThucNhanKhau());
         return result;
     }
 
     public ArrayList<YeuCauXacThucHoKhau> getAllYeuCauXacThucHoKhau(){
         ArrayList<YeuCauXacThucHoKhau> result = new ArrayList<>();
-        ArrayList<YeuCauXacThuc> resultFind = YeuCauXacThucTable.getTable().getAllYeuCauXacThucNhanKhau();
-        for(YeuCauXacThuc yc : resultFind){
-            result.add((YeuCauXacThucHoKhau) yc);
-        }
+//        ArrayList<YeuCauXacThuc> resultFind = YeuCauXacThucTable.getTable().getAllYeuCauXacThucHoKhau();
+//        for(YeuCauXacThuc yc : resultFind){
+//            result.add((YeuCauXacThucHoKhau) yc);
+//        }
+//        todo
+        result.add(new YeuCauXacThucHoKhau());
         return result;
     }
 
     public ArrayList<YeuCauXacThucThanhTich> getAllYeuCauXacThucThanhTich(){
         ArrayList<YeuCauXacThucThanhTich> result = new ArrayList<>();
-        ArrayList<YeuCauXacThuc> resultFind = YeuCauXacThucTable.getTable().getAllYeuCauXacThucNhanKhau();
-        for(YeuCauXacThuc yc : resultFind){
-            result.add((YeuCauXacThucThanhTich) yc);
-        }
+//        ArrayList<YeuCauXacThuc> resultFind = YeuCauXacThucTable.getTable().getAllYeuCauXacThucThanhTich();
+//        for(YeuCauXacThuc yc : resultFind){
+//            result.add((YeuCauXacThucThanhTich) yc);
+//        }
+        result.add(new YeuCauXacThucThanhTich());
         return result;
     }
 
     public void themYeuCauXacThuc(YeuCauXacThuc yeuCau){
-        YeuCauXacThucTable.getTable().add(yeuCau);
+//        todo
+//        YeuCauXacThucTable.getTable().add(yeuCau);
     }
     public void xoaYeuCauXacThuc(YeuCauXacThuc yeuCau){
-        YeuCauXacThucTable.getTable().remove(yeuCau);
+        //todo
+//        YeuCauXacThucTable.getTable().remove(yeuCau);
     }
 
 

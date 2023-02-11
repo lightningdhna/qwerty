@@ -320,7 +320,12 @@
             <Font name="SansSerif Bold" size="15.0" />
          </font>
       </JFXButton>
-      <JFXButton buttonType="RAISED" layoutX="841.0" layoutY="615.0" onMouseClicked="#chapNhan" prefHeight="40.0" prefWidth="150.0" ripplerFill="WHITE" style="-fx-background-color: #03722a; -fx-background-radius: 0;" text="Chấp nhận" textFill="WHITE">
+      <JFXButton buttonType="RAISED" layoutX="872.0" layoutY="615.0" onMouseClicked="#chapNhan" prefHeight="40.0" prefWidth="150.0" ripplerFill="WHITE" style="-fx-background-color: #03722a; -fx-background-radius: 0;" text="Chấp nhận" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="872.0" layoutY="679.0" onMouseClicked="#tuChoi" prefHeight="40.0" prefWidth="150.0" ripplerFill="WHITE" style="-fx-background-color: #e12337; -fx-background-radius: 0;" text="Từ chối" textFill="WHITE">
          <font>
             <Font name="SansSerif Bold" size="16.0" />
          </font>

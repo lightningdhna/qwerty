@@ -1,6 +1,8 @@
 package app.view.manage;
 
+import app.Main;
 import app.controller.HoKhauController;
+import app.model.message.YeuCauXacThucHoKhau;
 import app.view.viewmodel.MyWindow;
 import app.view.message.Mes;
 import app.model.household.HoKhau;
@@ -46,10 +48,12 @@ public class ChiTietHoKhauView extends MyWindow {
         HoKhauController.getController().xoaHoKhau(hoKhau, this);
     }
     public void yeuCauXacThuc(){
-        // doSomeThing
+        Service.getService().themYeuCauXacThuc(new YeuCauXacThucHoKhau(hoKhau.getSoHoKhau(), Main.getAccountID()));
+        //todo check lại xem có chạy không
     }
 
     public void warnKhongTheXoa(){
+        //todo
         Mes.inform("không thể xóa hộ khẩu này",Service.getService().canXoa(hoKhau));
     }
 

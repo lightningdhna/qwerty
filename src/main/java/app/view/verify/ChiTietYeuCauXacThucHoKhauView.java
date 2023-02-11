@@ -47,5 +47,8 @@ public class ChiTietYeuCauXacThucHoKhauView extends MyWindow {
     public void chapNhan(){
         //todo
     }
+    public void tuChoi(){
+        //todo
+    }
 
 }

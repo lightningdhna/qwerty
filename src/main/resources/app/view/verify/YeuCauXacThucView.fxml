@@ -10,50 +10,54 @@
 <?import javafx.scene.text.Font?>
 
 
-<JFXButton onMouseClicked="#taoChiTietYeuCau" prefHeight="80.0" prefWidth="640.0" style="-fx-background-color: #EEEEEE;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
-   <graphic>
-      <AnchorPane prefHeight="80.0" prefWidth="640.0">
-         <children>
-            <Label fx:id="tieuDeLabel" prefHeight="46.0" prefWidth="568.0" text="Yêu cầu xác thực nhân khẩu" textFill="#3292ab">
-               <font>
-                  <Font name="SansSerif Bold" size="30.0" />
-               </font>
-            </Label>
-            <Label fx:id="noiDungLabel" layoutX="367.0" layoutY="56.0" prefHeight="23.0" prefWidth="377.0" text=" Số CCCD : 034202002278" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="50.0">
-               <font>
-                  <Font name="SansSerif Regular" size="20.0" />
-               </font>
-            </Label>
-            <Label layoutX="327.8" layoutY="50.0" prefHeight="23.0" prefWidth="89.0" text="Ngày tạo:" textFill="#c12c2c" AnchorPane.rightAnchor="161.0" AnchorPane.topAnchor="50.0">
-               <font>
-                  <Font name="SansSerif Italic" size="20.0" />
-               </font>
-            </Label>
-            <Label fx:id="thoiGianLabel" layoutX="477.8" layoutY="50.0" prefHeight="20.0" prefWidth="151.0" text="18/2/2002" textFill="#c12c2c" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="50.0">
-               <font>
-                  <Font name="SansSerif Italic" size="20.0" />
-               </font>
-            </Label>
-         </children>
-      </AnchorPane>
-   </graphic>
-   <ripplerFill>
-      <LinearGradient endX="1.0" endY="1.0">
-         <stops>
-            <Stop>
-               <color>
-                  <Color />
-               </color>
-            </Stop>
-            <Stop offset="1.0">
-               <color>
-                  <Color red="0.6700000166893005" green="0.9836675524711609" blue="1.0" />
-               </color>
-            </Stop>
-         </stops>
-      </LinearGradient>
-   </ripplerFill>
-   <effect>
-      <DropShadow />
-   </effect>
-</JFXButton>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <JFXButton layoutX="10.0" layoutY="10.0" onMouseClicked="#taoChiTietYeuCau" prefHeight="80.0" prefWidth="640.0" style="-fx-background-color: #EEEEEE;">
+         <graphic>
+            <AnchorPane prefHeight="80.0" prefWidth="640.0">
+               <children>
+                  <Label fx:id="tieuDeLabel" prefHeight="46.0" prefWidth="568.0" text="Yêu cầu xác thực nhân khẩu" textFill="#3292ab">
+                     <font>
+                        <Font name="SansSerif Bold" size="30.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="noiDungLabel" layoutX="367.0" layoutY="56.0" prefHeight="23.0" prefWidth="377.0" text=" Số CCCD : 034202002278" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="50.0">
+                     <font>
+                        <Font name="SansSerif Regular" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="327.8" layoutY="50.0" prefHeight="23.0" prefWidth="89.0" text="Ngày tạo:" textFill="#c12c2c" AnchorPane.rightAnchor="161.0" AnchorPane.topAnchor="50.0">
+                     <font>
+                        <Font name="SansSerif Italic" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="thoiGianLabel" layoutX="477.8" layoutY="50.0" prefHeight="20.0" prefWidth="151.0" text="18/2/2002" textFill="#c12c2c" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="50.0">
+                     <font>
+                        <Font name="SansSerif Italic" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </graphic>
+         <ripplerFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.6700000166893005" green="0.9836675524711609" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </ripplerFill>
+         <effect>
+            <DropShadow />
+         </effect>
+      </JFXButton>
+   </children>
+</AnchorPane>
