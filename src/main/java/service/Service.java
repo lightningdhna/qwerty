@@ -97,6 +97,20 @@ public class Service {
     }
 
 
+    public HoKhau timHoKhauBySoHoKhau(String soHoKhau) {
+        return new HoKhau();
 
+        //todo
+    }
 
+    public String timUsernameByIDTaiKhoan(int idTaiKhoan) {
+        // todo tim username thong qua id tai khoan
+
+        return "";
+    }
+
+    public String timRoleByIDTaiKhoan(int idTaiKhoan) {
+        //todo tim role bang id
+        return "admin";
+    }
 }

@@ -40,7 +40,7 @@ public class MainPage extends Page  {
     JFXButton [] buttons;
     JFXButton smButtons[];
     Page[] pages;
-    String [] pageName = {"Dashboard", "Account", "Register", "Verify","Manage", "Statistic"};
+    String [] pageName = {"Dashboard", "Tài khoản", "Đăng ký", "Xác thực","Quản lí", "Thống kê"};
 
 
     public void showBigTaskBar(){

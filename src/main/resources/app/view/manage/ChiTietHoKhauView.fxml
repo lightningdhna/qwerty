@@ -19,7 +19,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="550.0" style="-fx-background-color: #EEEEEE; -fx-background-radius: 15;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label alignment="CENTER" layoutX="27.0" layoutY="14.0" prefHeight="76.0" prefWidth="497.0" style="-fx-background-color: #DDDDDD; -fx-background-radius: 10 10 0 0;" text="Thông tin hộ khẩu" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="20.0">
+      <Label alignment="CENTER" layoutX="27.0" layoutY="14.0" prefHeight="76.0" prefWidth="497.0" style="-fx-background-color: #DDDDDD; -fx-background-radius: 0;" text="Thông tin hộ khẩu" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="20.0">
          <font>
             <Font name="SansSerif Bold" size="35.0" />
          </font>
@@ -242,17 +242,17 @@
       </ScrollPane>
       <JFXButton buttonType="RAISED" layoutX="10.0" layoutY="38.0" onMouseClicked="#yeuCauXacThuc" prefHeight="40.0" prefWidth="150.0" ripplerFill="WHITE" style="-fx-background-color: #2596be; -fx-background-radius: 0;" text="Yêu cầu xác thực" textFill="WHITE" AnchorPane.bottomAnchor="115.0" AnchorPane.rightAnchor="20.0">
          <font>
-            <Font name="SansSerif Regular" size="16.0" />
+            <Font name="SansSerif Bold" size="15.0" />
          </font>
       </JFXButton>
       <JFXButton buttonType="RAISED" layoutX="20.0" layoutY="48.0" onMouseClicked="#chinhSuaThongTin" prefHeight="40.0" prefWidth="150.0" ripplerFill="WHITE" style="-fx-background-color: #03722a; -fx-background-radius: 0;" text="Chỉnh sửa" textFill="WHITE" AnchorPane.bottomAnchor="70.0" AnchorPane.rightAnchor="20.0">
          <font>
-            <Font name="SansSerif Regular" size="16.0" />
+            <Font name="SansSerif Bold" size="16.0" />
          </font>
       </JFXButton>
       <JFXButton buttonType="RAISED" layoutX="20.0" layoutY="48.0" onMouseClicked="#xoa" prefHeight="40.0" prefWidth="150.0" ripplerFill="WHITE" style="-fx-background-color: #e12337; -fx-background-radius: 0;" text="Xóa" textFill="WHITE" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="20.0">
          <font>
-            <Font name="SansSerif Regular" size="16.0" />
+            <Font name="SansSerif Bold" size="16.0" />
          </font>
       </JFXButton>
    </children>
