@@ -23,6 +23,9 @@
     -fx-border-color: #bdbdbd;
     -fx-text-fill: black;
 }
+.table-view .table-column{
+    -fx-alignment: CENTER;
+}
 .table-row-cell{
     -fx-pref-height: 36px;
     -fx-alignment: center-left;
@@ -59,12 +62,15 @@
 }
 
 .table-view .virtual-flow .scroll-bar:vertical .thumb{
-    -fx-background-color:  #40C4FF;
+    -fx-background-color:  linear-gradient(#9CECFB, #65C7F7, #0052D4);
 }
 .table-view .virtual-flow .scroll-bar:horizontal .thumb {
-    -fx-background-color:  #40C4FF;
+    -fx-background-color:  linear-gradient(#9CECFB, #65C7F7, #0052D4);
 }
 .table-row-cell: highlighted {
     -fx-background-color: #40C4FF;
     -fx-background-radius: 15px;
 }
+/*
+linear-gradient(#9CECFB, #65C7F7, #0052D4)
+*/
