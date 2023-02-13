@@ -40,7 +40,7 @@
             </LinearGradient>
          </textFill>
       </Label>
-      <JFXButton buttonType="RAISED" contentDisplay="CENTER" layoutX="469.0" layoutY="15.0" onMouseClicked="#exit" prefHeight="30.0" prefWidth="30.0" ripplerFill="WHITE">
+      <JFXButton buttonType="RAISED" contentDisplay="CENTER" layoutX="469.0" layoutY="15.0" onMouseClicked="#exit" prefHeight="30.0" prefWidth="30.0" styleClass="jfx-button-main-view-icon" stylesheets="@../../../css/button.css" ripplerFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -52,7 +52,7 @@
             </ImageView>
          </graphic>
       </JFXButton>
-      <ScrollPane layoutX="28.0" layoutY="111.0" prefHeight="614.0" prefWidth="497.0" AnchorPane.leftAnchor="28.0" AnchorPane.rightAnchor="20.0">
+      <ScrollPane layoutX="28.0" layoutY="111.0" prefHeight="614.0" prefWidth="497.0" AnchorPane.leftAnchor="28.0" stylesheets="@../../../css/scroll-pane.css" AnchorPane.rightAnchor="20.0">
         <content>
           <AnchorPane maxWidth="495.0" minHeight="0.0" minWidth="0.0">
                <children>
@@ -240,21 +240,35 @@
             </DropShadow>
          </effect>
       </ScrollPane>
-      <JFXButton buttonType="RAISED" layoutX="10.0" layoutY="38.0" onMouseClicked="#yeuCauXacThuc" prefHeight="40.0" prefWidth="150.0" ripplerFill="WHITE" style="-fx-background-color: #2596be; -fx-background-radius: 0;" text="Yêu cầu xác thực" textFill="WHITE" AnchorPane.bottomAnchor="115.0" AnchorPane.rightAnchor="20.0">
-         <font>
-            <Font name="SansSerif Bold" size="15.0" />
-         </font>
-      </JFXButton>
-      <JFXButton buttonType="RAISED" layoutX="20.0" layoutY="48.0" onMouseClicked="#chinhSuaThongTin" prefHeight="40.0" prefWidth="150.0" ripplerFill="WHITE" style="-fx-background-color: #03722a; -fx-background-radius: 0;" text="Chỉnh sửa" textFill="WHITE" AnchorPane.bottomAnchor="70.0" AnchorPane.rightAnchor="20.0">
-         <font>
-            <Font name="SansSerif Bold" size="16.0" />
-         </font>
-      </JFXButton>
-      <JFXButton buttonType="RAISED" layoutX="20.0" layoutY="48.0" onMouseClicked="#xoa" prefHeight="40.0" prefWidth="150.0" ripplerFill="WHITE" style="-fx-background-color: #e12337; -fx-background-radius: 0;" text="Xóa" textFill="WHITE" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="20.0">
-         <font>
-            <Font name="SansSerif Bold" size="16.0" />
-         </font>
-      </JFXButton>
+      <VBox layoutX="390.0" layoutY="441.0" AnchorPane.bottomAnchor="4.0" AnchorPane.rightAnchor="42.0">
+         <children>
+            <JFXButton buttonType="RAISED" onMouseClicked="#yeuCauXacThuc" prefHeight="40.0" prefWidth="220.0" ripplerFill="WHITE" styleClass="jfx-button-feature-request" stylesheets="@../../../css/button.css" text="Yêu cầu xác thực" textFill="WHITE" AnchorPane.bottomAnchor="115.0" AnchorPane.rightAnchor="20.0">
+               <font>
+                  <Font name="SansSerif Bold" size="15.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" onMouseClicked="#chinhSuaThongTin" prefHeight="40.0" prefWidth="220.0" ripplerFill="WHITE" styleClass="jfx-button-feature-delete" stylesheets="@../../../css/button.css" text="Chỉnh sửa" textFill="WHITE" AnchorPane.bottomAnchor="70.0" AnchorPane.rightAnchor="20.0">
+               <font>
+                  <Font name="SansSerif Bold" size="16.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" onMouseClicked="#xoa" prefHeight="40.0" prefWidth="220.0" ripplerFill="WHITE" styleClass="jfx-button-feature-add" stylesheets="@../../../css/button.css" text="Xóa" textFill="WHITE" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="20.0">
+               <font>
+                  <Font name="SansSerif Bold" size="16.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="50.0" />
+               </VBox.margin>
+            </JFXButton>
+         </children>
+      </VBox>
+
    </children>
    <effect>
       <DropShadow />
