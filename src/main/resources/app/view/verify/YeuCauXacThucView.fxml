@@ -12,7 +12,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <JFXButton layoutX="10.0" layoutY="10.0" onMouseClicked="#taoChiTietYeuCau" prefHeight="80.0" prefWidth="640.0" style="-fx-background-color: #EEEEEE;">
+      <JFXButton layoutX="10.0" layoutY="10.0" onMouseClicked="#taoChiTietYeuCau" prefHeight="80.0" prefWidth="640.0" style="-fx-background-color: #DDDDDD;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <graphic>
             <AnchorPane prefHeight="80.0" prefWidth="640.0">
                <children>

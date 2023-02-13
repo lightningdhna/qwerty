@@ -1,6 +1,8 @@
 package app.view.main;
 
 import animatefx.animation.*;
+import app.model.account.Account;
+import app.view.account.AccountAvatar;
 import app.view.viewmodel.Page;
 import app.view.account.AccountPage;
 import app.view.home.HomePage;
@@ -42,6 +44,7 @@ public class MainPage extends Page  {
     Page[] pages;
     String [] pageName = {"Dashboard", "Tài khoản", "Đăng ký", "Xác thực","Quản lí", "Thống kê"};
 
+    Account account;
 
     public void showBigTaskBar(){
         if(!rootPane.getChildren().contains(bigTaskBar)) {
@@ -95,7 +98,7 @@ public class MainPage extends Page  {
         if(index!=4)
             Mes.messageUnfinished();
     };
-
+    AccountAvatar avatar = new AccountAvatar();
     public MainPage(){
         super();
         rootPane.getChildren().remove(bigTaskBar);
@@ -119,6 +122,15 @@ public class MainPage extends Page  {
         for(var button : smButtons){
             button.addEventHandler(MouseEvent.MOUSE_CLICKED,buttonEventHandler);
         }
+
+        getRoot().getChildren().add(avatar.getRoot());
+    }
+
+    public void setAccount(Account account){
+        this.account = account;
+    }
+    public AccountAvatar getAvatar(){
+        return avatar;
     }
     public void logOut(){
         exit();

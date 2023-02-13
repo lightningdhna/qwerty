@@ -32,6 +32,7 @@ public class LoginPage extends Page implements Initializable {
     @FXML
     JFXCheckBox checkBox;
 
+
     public boolean getCheckBoxState(){
         return checkBox.isSelected();
     }
@@ -42,16 +43,18 @@ public class LoginPage extends Page implements Initializable {
             warningBlank();
             return;
         }
-        LoginController.login(this,new Account(username,password));
+        Account acount = new Account(username,password);
+        LoginController.login(this,acount);
+        mainPage.getAvatar().setAccount(acount);
     }
     MainPage mainPage = new MainPage();
     public void setMainPage(){
         Scene scene =getRoot().getScene();
         Parent root = mainPage.getRoot();
+
         Stage stage = (Stage) scene.getWindow();
         scene.setRoot(root);
         new ZoomIn(mainPage.getRoot()).play();
-
         AtomicReference<Double> xOffset = new AtomicReference<>((double) 0);
         AtomicReference<Double> yOffset = new AtomicReference<>((double) 0);
         root.setOnMousePressed((MouseEvent event) -> {
@@ -64,6 +67,8 @@ public class LoginPage extends Page implements Initializable {
             stage.setX(event.getScreenX() - xOffset.get());
             stage.setY(event.getScreenY() - yOffset.get());
         });
+//        mainPage.setAccount(account);
+
     }
     public void signUp(){
         SignUpPage signUpPage = new SignUpPage();

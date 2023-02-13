@@ -15,6 +15,16 @@ public class TinNhan {
     private String ghiChu = "";
     private LocalDate ngayTao ;
 
+    private String trangThai = "";
+
+    public String getTrangThai() {
+        return trangThai;
+    }
+
+    public void setTrangThai(String trangThai) {
+        this.trangThai = trangThai;
+    }
+
     public TinNhan(){
         ngayTao = LocalDate.now();
     }
@@ -58,6 +68,7 @@ public class TinNhan {
     public void setGhiChu(String ghiChu) {
         this.ghiChu = ghiChu;
     }
+
 
     public TinNhan(int maThongBao, int idTaiKhoanGui, int idTaiKhoanNhan, String tieuDe, String noiDung, String ghiChu, LocalDate ngayTao) {
         this.maThongBao = maThongBao;

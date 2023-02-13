@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane layoutX="850.0" layoutY="10.0" style="-fx-background-color: #EEEEEE; -fx-background-radius: 15 15 0 0;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox fx:id="avatarVBox" style="-fx-background-radius: 15 15 0 0; -fx-background-color: #EEEEEE;">
+         <children>
+            <AnchorPane prefHeight="50.0" prefWidth="250.0" style="-fx-background-color: #DDDDDD; -fx-background-radius: 15;">
+               <children>
+                  <JFXButton fx:id="avatarButton" graphicTextGap="10.0" onMouseClicked="#click" prefHeight="50.0" prefWidth="250.0" text="dákdfljsalkfdas">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../icon/icon-light/username-1.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets left="-75.0" />
+                     </padding>
+                     <font>
+                        <Font name="SansSerif Regular" size="18.0" />
+                     </font>
+                     <ripplerFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.1671999990940094" green="0.4508111774921417" blue="0.7599999904632568" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </ripplerFill>
+                  </JFXButton>
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </AnchorPane>
+            <AnchorPane fx:id="anchorPane" onMouseExited="#closeAnchorPane" style="-fx-background-color: #EEEEEE; -fx-background-radius: 0 0 15 15;">
+               <children>
+                  <JFXButton prefHeight="50.0" prefWidth="250.0" text="Thông tin tài khoản" textFill="#123e7b" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font name="SansSerif Regular" size="18.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton layoutX="5.0" layoutY="33.0" prefHeight="50.0" prefWidth="250.0" text="Thông tin nhân khẩu" textFill="#123e7b" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+                     <font>
+                        <Font name="SansSerif Regular" size="18.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton layoutY="84.0" prefHeight="50.0" prefWidth="250.0" text="Thông tin hộ khẩu" textFill="#123e7b" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
+                     <font>
+                        <Font name="SansSerif Regular" size="18.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton layoutX="5.0" layoutY="135.0" onMouseClicked="#logOut" prefHeight="50.0" prefWidth="250.0" text="Đăng xuất" textFill="#123e7b" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="150.0">
+                     <font>
+                        <Font name="SansSerif Regular" size="18.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

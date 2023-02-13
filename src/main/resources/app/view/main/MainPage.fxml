@@ -374,7 +374,7 @@
       </JFXButton>
       <PointLight layoutX="222.0" layoutY="50.0" lightOn="true" />
    </Pane>
-   <JFXButton buttonType="RAISED" contentDisplay="CENTER" layoutX="360.0" layoutY="10.0" onMouseClicked="#exit" prefHeight="30.0" prefWidth="30.0" styleClass="jfx-button-main-view-icon" stylesheets="@../../../css/button.css" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+   <JFXButton buttonType="RAISED" contentDisplay="CENTER" layoutX="1140.0" layoutY="8.0" onMouseClicked="#exit" prefHeight="30.0" prefWidth="30.0" styleClass="jfx-button-main-view-icon" stylesheets="@../../../css/button.css" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="8.0">
       <graphic>
          <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true">
             <Image url="@../../../icon/exit.png" />
@@ -528,39 +528,6 @@
          </JFXButton>
       </children>
    </VBox>
-   <JFXButton buttonType="RAISED" contentDisplay="CENTER" layoutX="1086.0" onMouseClicked="#logOut" prefHeight="30.0" prefWidth="30.0" styleClass="jfx-button-main-view-icon" stylesheets="@../../../css/button.css" AnchorPane.rightAnchor="58.0" AnchorPane.topAnchor="0.0">
-      <graphic>
-         <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true">
-            <image>
-               <Image url="@../../../icon/icon-light/logout-1.png" />
-            </image>
-         </ImageView>
-      </graphic>
-      <cursor>
-         <Cursor fx:constant="HAND" />
-      </cursor>
-      <ripplerFill>
-         <RadialGradient centerX="0.5308370380149539" centerY="0.5" radius="0.3073394364173259">
-            <stops>
-               <Stop>
-                  <color>
-                     <Color red="1.0" green="1.0" blue="1.0" />
-                  </color>
-               </Stop>
-               <Stop offset="0.5208613728129207">
-                  <color>
-                     <Color red="0.9789473414421082" />
-                  </color>
-               </Stop>
-               <Stop offset="1.0">
-                  <color>
-                     <Color red="1.0" green="1.0" blue="1.0" />
-                  </color>
-               </Stop>
-            </stops>
-         </RadialGradient>
-      </ripplerFill>
-   </JFXButton>
    <effect>
       <DropShadow />
    </effect>
