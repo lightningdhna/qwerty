@@ -40,18 +40,14 @@
     -fx-font-weight: bold;
 }
 .jfx-button-main-view:hover{
-    -fx-border-color: #536976;
-    -fx-background-color: transparent;
+    -fx-background-color: linear-gradient(#8e9eab, #eef2f3);
     -fx-font-weight: bold;
     -fx-font-size: 25px;
-}
-.jfx-button-main-view:focused{
-    -fx-border-color: #292E49;
-    -fx-font-size: 24px;
 }
 
 .jfx-button-taskbar-children{
     -fx-background-color: transparent;
+    -fx-border-color : transparent;
     -fx-alignment: center-left;
     -fx-font-family: Sans-Serif;
     -fx-background-radius: 15 15 15 15;
@@ -61,18 +57,18 @@
     -fx-font-size: 20px;
 }
 .jfx-button-taskbar-children:hover{
-    -fx-border-color: #536976;
-    -fx-background-color: transparent;
+    /*-fx-border-color: #536976;*/
+    -fx-background-color: linear-gradient(#8e9eab, #eef2f3);
     -fx-font-weight: bold;
     -fx-font-size: 21px;
 }
-.jfx-button-taskbar-children:focused{
+/*.jfx-button-taskbar-children:focused{
     -fx-border-color: #292E49;
     -fx-font-size: 20px;
-}
-.jfx-button-taskbar-children:pressed{
-    -fx-background-color: linear-gradient(#525252, #3d72b4);
-}
+}*/
+/*.jfx-button-taskbar-children:pressed{
+    -fx-background-color: linear-gradient(#232526, #414345);
+}*/
 
 .jfx-button-main-view-icon{
     -fx-background-color: transparent;
@@ -84,11 +80,11 @@
     -fx-font-weight: bold;
 }
 .jfx-button-main-view-icon:hover{
-    -fx-border-color: rgba(44, 83, 100, 0.7);
-    -fx-background-color: transparent;
+    /*-fx-border-color: rgba(44, 83, 100, 0.7);*/
+    -fx-background-color: linear-gradient(#8e9eab, #eef2f3);
 }
-.jfx-button-main-view-icon:focused{
-    -fx-border-color: rgba(44, 83, 100, 0.7);
+.jfx-button-main-view-icon: pressed{
+    -fx-background-color: linear-gradient(#232526, #414345);
 }
 
 .jfx-button-icon{
@@ -159,4 +155,3 @@
 .jfx-button-feature-delete:pressed{
     -fx-background-color: linear-gradient(#ED213A, #93291E);
 }
-

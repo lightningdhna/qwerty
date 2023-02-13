@@ -42,7 +42,7 @@
             </LinearGradient>
          </textFill>
       </Label>
-      <JFXButton buttonType="RAISED" contentDisplay="CENTER" layoutX="469.0" layoutY="15.0" onMouseClicked="#close" prefHeight="30.0" prefWidth="30.0" ripplerFill="WHITE">
+      <JFXButton buttonType="RAISED" contentDisplay="CENTER" layoutX="469.0" layoutY="15.0" onMouseClicked="#close" prefHeight="30.0" prefWidth="30.0" styleClass="jfx-button-main-view-icon" stylesheets="@../../../css/button.css" ripplerFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -54,11 +54,11 @@
             </ImageView>
          </graphic>
       </JFXButton>
-      <ScrollPane layoutX="28.0" layoutY="111.0" prefHeight="614.0" prefWidth="497.0" AnchorPane.leftAnchor="28.0" AnchorPane.rightAnchor="20.0">
+      <ScrollPane layoutX="28.0" layoutY="111.0" prefHeight="614.0" prefWidth="490.0" AnchorPane.leftAnchor="28.0" AnchorPane.rightAnchor="20.0" stylesheets="@../../../css/scroll-pane.css">
          <content>
             <AnchorPane maxWidth="495.0" minHeight="0.0" minWidth="0.0">
                <children>
-                  <VBox prefWidth="475.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+                  <VBox prefWidth="460.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
                      <children>
                         <HBox minHeight="50.0">
                            <children>
@@ -147,7 +147,7 @@
                                     <Insets right="20.0" />
                                  </HBox.margin>
                               </Label>
-                              <JFXButton onMouseClicked="#themBanGhiHBox" prefHeight="40.0" prefWidth="40.0">
+                              <JFXButton onMouseClicked="#themBanGhiHBox" prefHeight="40.0" prefWidth="40.0" styleClass="jfx-button-icon" stylesheets="@../../../css/button.css">
                                  <HBox.margin>
                                     <Insets top="3.0" />
                                  </HBox.margin>
@@ -159,7 +159,7 @@
                                     </ImageView>
                                  </graphic>
                               </JFXButton>
-                              <JFXButton onMouseClicked="#xoaDong" prefHeight="40.0" prefWidth="40.0">
+                              <JFXButton onMouseClicked="#xoaDong" prefHeight="40.0" prefWidth="40.0" styleClass="jfx-button-icon" stylesheets="@../../../css/button.css">
                                  <graphic>
                                     <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -195,10 +195,13 @@
             </DropShadow>
          </effect>
       </ScrollPane>
-      <JFXButton buttonType="RAISED" layoutX="20.0" layoutY="48.0" onMouseClicked="#capNhatHoKhau" prefHeight="40.0" prefWidth="150.0" ripplerFill="WHITE" style="-fx-background-color: #03722a; -fx-background-radius: 0;" text="Cập nhật" textFill="WHITE" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="20.0">
+      <JFXButton buttonType="RAISED" layoutX="20.0" layoutY="48.0" onMouseClicked="#capNhatHoKhau" prefHeight="40.0" prefWidth="150.0" ripplerFill="WHITE" styleClass="jfx-button-feature-add" stylesheets="@../../../css/button.css" text="Cập nhật" textFill="WHITE" AnchorPane.bottomAnchor="50.0" AnchorPane.rightAnchor="50.0">
          <font>
             <Font name="SansSerif Regular" size="16.0" />
          </font>
+         <VBox.margin>
+            <Insets bottom="50.0" />
+         </VBox.margin>
       </JFXButton>
    </children>
    <effect>

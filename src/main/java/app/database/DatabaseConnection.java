@@ -54,7 +54,7 @@ public abstract class DatabaseConnection {
         createConnection(serverName, user, password,databaseName, "1433");
     }
     public static void createConnection(){
-        createConnection("DESKTOP-9UGDV8N\\SQLEXPRESS","sa","1842002","db");
+        createConnection("LAPTOP-UAFG5AK0\\KIMHUNG","sa","kimhung29042002","Project_SE");
     }
 
 }

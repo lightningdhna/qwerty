@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="575.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="575.0" prefWidth="764.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <ScrollPane layoutX="6.0" layoutY="112.0" prefHeight="200.0" prefWidth="200.0" stylesheets="@../../../css/scroll-pane.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <content>
@@ -254,7 +254,7 @@
                                                 </Label>
                                              </children>
                                           </HBox>
-                                          <JFXButton alignment="CENTER" buttonType="RAISED" prefHeight="50.0" prefWidth="250.0" ripplerFill="#194181" style="-fx-background-color: green; -fx-background-radius: 10;" text="Cập nhật" textFill="WHITE">
+                                          <JFXButton alignment="CENTER" buttonType="RAISED" prefHeight="50.0" prefWidth="250.0" ripplerFill="#194181" styleClass="jfx-button-feature-add" stylesheets="@../../../css/button.css" text="Cập nhật" textFill="WHITE">
                                              <font>
                                                 <Font name="SansSerif Regular" size="24.0" />
                                              </font>
@@ -262,7 +262,7 @@
                                                 <Insets bottom="10.0" left="400.0" />
                                              </VBox.margin>
                                           </JFXButton>
-                                          <JFXButton alignment="CENTER" buttonType="RAISED" prefHeight="50.0" prefWidth="250.0" ripplerFill="#194181" style="-fx-background-color: blue; -fx-background-radius: 10;" text="Yêu cầu xác thực" textFill="WHITE">
+                                          <JFXButton alignment="CENTER" buttonType="RAISED" prefHeight="50.0" prefWidth="250.0" ripplerFill="#194181" styleClass="jfx-button-feature-request" stylesheets="@../../../css/button.css" text="Yêu cầu xác thực" textFill="WHITE">
                                              <font>
                                                 <Font name="SansSerif Regular" size="24.0" />
                                              </font>

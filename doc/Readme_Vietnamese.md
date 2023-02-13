@@ -70,7 +70,7 @@ hoặc bạn có thể tạo cơ sở dữ liệu bằng _Công cụ hỗ trợ_
 
 ### 2. Chỉnh sửa đường dẫn tới Database
 
-Đi tới [Path to Database](..\src\main\java\components\database\DatabaseConnection.java). 
+Đi tới [Path to Database](..\src\main\java\app\database\DatabaseConnection.java). 
 Tại phương thức createConnection(), chỉnh sửa các thông tin về serverName, password and databaseName cho phù hợp thông tin cấu hình.
 
 Ví dụ:

@@ -69,7 +69,7 @@ Or you can create database by _Tool Support_.
 
 ### 2. Edit Path to Database
 
-Go to [Path to Database](src\main\java\components\database\DatabaseConnection.java).
+Go to [Path to Database](src\main\java\app\database\DatabaseConnection.java).
 At the createConnection() method edit information about the server name, password and database name to match the configuration information.
 
 Example:
