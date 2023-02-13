@@ -2,7 +2,7 @@ package app.model.event;
 
 import app.model.demographic.NhanKhau;
 
-public class DangKi {
+public class DangKiNhanThuong {
     private NhanKhau nguoiNhan;
     private String thongTin = "";
     private String ghiChu  = "";
@@ -39,11 +39,11 @@ public class DangKi {
     public void setAnhMinhChung(String anhMinhChung) {
         this.anhMinhChung = anhMinhChung;
     }
-    public DangKi(){
+    public DangKiNhanThuong(){
 
     }
 
-    public DangKi(NhanKhau nguoiNhan, String thongTin, String ghiChu, String anhMinhChung) {
+    public DangKiNhanThuong(NhanKhau nguoiNhan, String thongTin, String ghiChu, String anhMinhChung) {
         this.nguoiNhan = nguoiNhan;
         this.thongTin = thongTin;
         this.ghiChu = ghiChu;
