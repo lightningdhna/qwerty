@@ -2,8 +2,7 @@ package app.model.event;
 
 import java.time.LocalDate;
 
-public class SuKien {
-
+public class LichSuSuKien {
     private int maSuKien = -1;
 
     private String tenSuKien = "";
@@ -16,13 +15,16 @@ public class SuKien {
     private LocalDate ngayBatDau;
     private LocalDate ngayKetThuc;
 
-    private String trangThai = "chưa bắt đầu";
-    private LocalDate ngayTao;
-    private int idNguoiTao;
+    private String phanHoiChung = "";
+    private double tongGiaTri = -1;
 
+    public double getTongGiaTri() {
+        return tongGiaTri;
+    }
 
-
-    private DanhSachNhanThuong danhSach ;
+    public void setTongGiaTri(double tongGiaTri) {
+        this.tongGiaTri = tongGiaTri;
+    }
 
     public int getMaSuKien() {
         return maSuKien;
@@ -88,39 +90,15 @@ public class SuKien {
         this.ngayKetThuc = ngayKetThuc;
     }
 
-    public String getTrangThai() {
-        return trangThai;
+    public String getPhanHoiChung() {
+        return phanHoiChung;
     }
 
-    public void setTrangThai(String trangThai) {
-        this.trangThai = trangThai;
+    public void setPhanHoiChung(String phanHoiChung) {
+        this.phanHoiChung = phanHoiChung;
     }
 
-    public LocalDate getNgayTao() {
-        return ngayTao;
-    }
-
-    public void setNgayTao(LocalDate ngayTao) {
-        this.ngayTao = ngayTao;
-    }
-
-    public int getIdNguoiTao() {
-        return idNguoiTao;
-    }
-
-    public void setIdNguoiTao(int idNguoiTao) {
-        this.idNguoiTao = idNguoiTao;
-    }
-
-    public DanhSachNhanThuong getDanhSach() {
-        return danhSach;
-    }
-
-    public void setDanhSach(DanhSachNhanThuong danhSach) {
-        this.danhSach = danhSach;
-    }
-
-    public SuKien(int maSuKien, String tenSuKien, String diaDiem, String quyChe, String ghiChu, int loaiSuKien, LocalDate ngayBatDau, LocalDate ngayKetThuc, String trangThai, LocalDate ngayTao, int idNguoiTao, DanhSachNhanThuong danhSach) {
+    public LichSuSuKien(int maSuKien, String tenSuKien, String diaDiem, String quyChe, String ghiChu, int loaiSuKien, LocalDate ngayBatDau, LocalDate ngayKetThuc, String phanHoiChung) {
         this.maSuKien = maSuKien;
         this.tenSuKien = tenSuKien;
         this.diaDiem = diaDiem;
@@ -129,12 +107,9 @@ public class SuKien {
         this.loaiSuKien = loaiSuKien;
         this.ngayBatDau = ngayBatDau;
         this.ngayKetThuc = ngayKetThuc;
-        this.trangThai = trangThai;
-        this.ngayTao = ngayTao;
-        this.idNguoiTao = idNguoiTao;
-        this.danhSach = danhSach;
+        this.phanHoiChung = phanHoiChung;
     }
-    public SuKien(){
+    public LichSuSuKien(){
 
     }
 }
