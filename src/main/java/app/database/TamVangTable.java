@@ -118,7 +118,7 @@ public class TamVangTable extends DatabaseConnection {
         createTable();
         String query = String.format("""
                 delete from TamVang
-                where maThongTin = '%s';
+                where maThongTin = %d;
                 """,
                 tamVang.getMaThongTin());
         try{

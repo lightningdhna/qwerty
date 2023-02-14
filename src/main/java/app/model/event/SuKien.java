@@ -13,6 +13,16 @@ public class SuKien {
     private int loaiSuKien;
 
 
+//    tenSuKien ,
+//    diaDiem ,
+//    quyChe ,
+//    ghiChu ,
+//    loaiSuKien ,
+//    ngayBatDau,
+//    ngayKetThuc ,
+//    ngayTao ,
+//    idNguoiTao ,
+//    trangThais
     private LocalDate ngayBatDau;
     private LocalDate ngayKetThuc;
 
