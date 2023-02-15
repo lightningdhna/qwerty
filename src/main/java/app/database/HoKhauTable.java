@@ -189,5 +189,4 @@ public class HoKhauTable extends DatabaseConnection {
         return new ArrayList<>();
     }
 
-
 }

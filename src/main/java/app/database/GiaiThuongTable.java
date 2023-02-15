@@ -67,7 +67,7 @@ public class GiaiThuongTable extends DatabaseConnection{
 //        return new ArrayList<>();
 //    }
 
-    public ArrayList<GiaiThuong> getAllYeuCau(){
+    public ArrayList<GiaiThuong> getAllGiaiThuong(){
         createTable();
         String query = """
                 select *
@@ -112,6 +112,23 @@ public class GiaiThuongTable extends DatabaseConnection{
         );
         try {
             execute(query);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public ArrayList<GiaiThuong> getGiaiThuongByTen(int maSuKien, String tenGiaiThuong){
+        createTable();
+        String query = String.format("""
+                select * from NguoiNhanThuong
+                where maSuKien = %d
+                and tenGiaiThuong = N'%s';
+                
+                """,
+                maSuKien,tenGiaiThuong);
+        try {
+            ResultSet rs = executeQuery(query);
+            return castResultSet(rs);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
