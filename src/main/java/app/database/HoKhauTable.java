@@ -13,7 +13,7 @@ public class HoKhauTable extends DatabaseConnection {
 
 
     private boolean hasTable = false;
-    private static HoKhauTable table;
+    private static HoKhauTable table = new HoKhauTable();
 
     public static HoKhauTable getTable() {
         return table;
