@@ -163,6 +163,8 @@ public class NhanKhau {
         this.ghiChu = ghiChu;
     }
 
+    public NhanKhau() {
+    }
 
     public NhanKhau(String soCanCuoc, String dacDiemNhanDang, String hoTen, String tenKhac, LocalDate ngaySinh, String gioiTinh, String queQuan, String thuongTru, String tamTru, String quocTich, String danToc, String soHoChieu, String trangThai, LocalDate ngayXacThuc, String idNguoiXacThuc, String ghiChu) {
         this.soCanCuoc = soCanCuoc;

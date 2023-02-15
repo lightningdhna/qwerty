@@ -1,6 +1,7 @@
 package app.model.event;
 
 import app.model.demographic.NhanKhau;
+import service.Service;
 
 import java.time.LocalDate;
 
@@ -16,6 +17,33 @@ public class NguoiNhanThuong {
     private LocalDate ngayDuyet ;
 
     private String anhMinhChung = "";
+    private int maSuKien = -1;
+    private String tenGiaiThuong = "";
+    private String soCCCD = "";
+
+    public String getSoCCCD() {
+        return soCCCD;
+    }
+
+    public void setSoCCCD(String soCCCD) {
+        this.soCCCD = soCCCD;
+    }
+
+    public String getTenGiaiThuong() {
+        return tenGiaiThuong;
+    }
+
+    public void setTenGiaiThuong(String tenGiaiThuong) {
+        this.tenGiaiThuong = tenGiaiThuong;
+    }
+
+    public int getMaSuKien() {
+        return maSuKien;
+    }
+
+    public void setMaSuKien(int maSuKien) {
+        this.maSuKien = maSuKien;
+    }
 
     public NguoiNhanThuong(GiaiThuong giaiThuong, NhanKhau nguoiNhan, String thongTin, String ghiChu, String trangThaiDuyet, int idNguoiDuyet, LocalDate ngayDuyet, String anhMinhChung) {
         this.giaiThuong = giaiThuong;
@@ -46,6 +74,15 @@ public class NguoiNhanThuong {
     public void setNguoiNhan(NhanKhau nguoiNhan) {
         this.nguoiNhan = nguoiNhan;
     }
+
+    public void setNguoiNhan(String soCCCD){
+        setNguoiNhan(Service.getService().getNhanKhauBySoCCCD(soCCCD));
+    }
+
+    public void setGiaiThuong(int maSuKien, String tenGiaiThuong){
+        setGiaiThuong(Service.getService().getGiaiThuongByTen(maSuKien,tenGiaiThuong));
+    }
+
 
     public String getThongTin() {
         return thongTin;

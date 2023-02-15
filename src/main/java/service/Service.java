@@ -1,7 +1,8 @@
 package service;
 
-import app.database.YeuCauXacThucTable;
+import app.database.*;
 import app.model.demographic.NhanKhau;
+import app.model.event.GiaiThuong;
 import app.model.household.HoKhau;
 import app.model.message.YeuCauXacThuc;
 import app.model.message.YeuCauXacThucHoKhau;
@@ -20,27 +21,20 @@ public class Service {
         return manager;
     }
     public ArrayList<HoKhau> getAllHoKhau(){
-        ArrayList<HoKhau> result = new ArrayList<HoKhau>();
-
-        result.add(new HoKhau("ajsdlf"));
-
-        return result ;
+        return (ArrayList<HoKhau>) HoKhauTable.getTable().getAllHoKhau();
     }
 
     public boolean canAddHoKhau(HoKhau hoKhau){
         return true;
     }
     public void themHoKhau(HoKhau hoKhau){
-        //call csdl
+        HoKhauTable.getTable().add(hoKhau);
     }
     public void xoaHoKhau(HoKhau hoKhau){
         //call csdl
     }
 
-    public String searchTenChuHoByID(String idChuHo) {
 
-        return "chua co ten";
-    }
 
     public ArrayList<NhanKhau> getDanhSachThanhVien(String soHoKhau) {
         ArrayList<NhanKhau> result = new ArrayList<>();
@@ -49,8 +43,7 @@ public class Service {
     }
 
     public String getSoHoKhauBySoCC(String soCanCuoc) {
-
-        return "";
+        return NhanKhauHoKhauTable.getTable().timSoHkBangSoCC(soCanCuoc);
     }
 
     public String canXoa(HoKhau hoKhau){
@@ -120,4 +113,12 @@ public class Service {
         //todo tim role bang id
         return "admin";
     }
+
+    public NhanKhau getNhanKhauBySoCCCD(String soCCCD){
+        return NhanKhauTable.getTable().timNKBangSoCanCuoc(soCCCD).get(0);
+    }
+    public GiaiThuong getGiaiThuongByTen(int maSuKien, String tenGiaiThuong){
+        return GiaiThuongTable.getTable().getGiaiThuongByTen(maSuKien,tenGiaiThuong).get(0);
+    }
+
 }
