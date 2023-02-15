@@ -11,7 +11,7 @@ import java.util.List;
 
 public class NhanKhauTable extends DatabaseConnection {
     private boolean hasTable = false;
-    private static NhanKhauTable table;
+    private static NhanKhauTable table = new NhanKhauTable();
 
     public static NhanKhauTable getTable() {
         return table;
